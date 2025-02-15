@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Navbar.css";
+import "./Stu_Nav.css";
 import { IoIosNotifications } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
 

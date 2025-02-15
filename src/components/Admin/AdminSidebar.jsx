@@ -1,18 +1,17 @@
 import React from "react";
 import { FaHome, FaUser } from "react-icons/fa";
-import { FaUserEdit } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
+import { PiStudentFill } from "react-icons/pi";
+import { TbReportSearch } from "react-icons/tb";
 import { FaChartBar } from "react-icons/fa";
-import { IoAnalytics } from "react-icons/io5";
 import { IoIosNotifications } from "react-icons/io";
-import "./Sidebar.css";
+import "./AdminSidebar.css";
 
-const Sidebar = () => {
+const AdminSidebar = () => {
   return (
     <>
       <div className="sidebar">
         <div>
-          <h1 className="title">Student Dashboard</h1>
+          <h1 className="title">Admin Dashboard</h1>
         </div>
 
         {/* horizontal line */}
@@ -21,7 +20,7 @@ const Sidebar = () => {
         {/* Sidebar links */}
         <div className="inputs">
           <ul>
-            {/* home link: dashboard */}
+            {/* home link */}
             <li className="input">
               <a href="/" className="icon">
                 <FaHome />
@@ -29,27 +28,19 @@ const Sidebar = () => {
               </a>
             </li>
 
-            {/* create profile */}
+            {/* Students */}
             <li className="input">
               <a href="/" className="icon">
-                <FaUserEdit />
-                <span>Create Profile</span>
+                <PiStudentFill />
+                <span>Student</span>
               </a>
             </li>
 
-            {/* search job */}
+            {/* company */}
             <li className="input">
               <a href="/" className="icon">
-                <FaSearch />
-                <span>Search Job</span>
-              </a>
-            </li>
-
-            {/* notifications about new job postings */}
-            <li className="input">
-              <a href="/" className="icon">
-                <IoIosNotifications />
-                <span>Job Alert</span>
+                <FaUser />
+                <span>Company</span>
               </a>
             </li>
 
@@ -61,11 +52,11 @@ const Sidebar = () => {
               </a>
             </li>
 
-            {/* placement analytics */}
+            {/* generate placement reports */}
             <li className="input">
               <a href="/" className="icon">
-                <IoAnalytics />
-                <span>Placement Analytics</span>
+                <TbReportSearch />
+                <span>Generate Placement Report</span>
               </a>
             </li>
 
@@ -83,4 +74,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default AdminSidebar;

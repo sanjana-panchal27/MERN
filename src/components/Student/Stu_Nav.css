@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* whole navbar container */
+.navbar {
+  background-color: #fb8500;
+  height: 60px;
+  width: calc(100% - 350px); /* Navbar width minus sidebar width */
+  position: fixed;
+  left: 350px; /* Starts after sidebar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* rightside icon: notification + usercircle */
+.right-icon {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  gap: 10px;
+}
+
+/* ul */
+.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* welcome text */
+.div-name {
+  /* list-style: none; */
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+/* paragraph text styles */
+p {
+  color: black;
+}
+
+/* h2 style */
+h2 {
+  font-size: 20px;
+}
+
+/* nav-notification whole position */
+.nav-notification {
+  /* margin-left: auto; */
+  /* padding-right: 20px; */
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+/* nav: notification-icon */
+.nav-icon {
+  color: black;
+  font-size: 30px;
+  display: flex;
+  /* padding: 5px 15px; Adds spacing around icon */
+}
+
+/* user profile */
+.user-profile {
+  position: relative;
+  margin-left: 20px;
+}
+
+/* user profile btn */
+.profile-btn {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding-right: 35px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+/* user profile icon */
+.profile-icon {
+  color: black;
+  font-size: 30px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 100px;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.dropdown-menu ul {
+  list-style: none;
+}
+
+/* whole container */
+.dropdown-menu li {
+  padding: 10px;
+  text-align: center;
+}
+
+.dropdown-menu li:hover {
+  background-color: #a9a9a9;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  /* display: block; */
+}
