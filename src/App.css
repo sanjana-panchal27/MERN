@@ -1,0 +1,22 @@
+/* Ensures the content section takes up space */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Prevents content from appearing below the footer */
+.page-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Keeps footer at the bottom */
+footer {
+  background: #ff8000;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+}

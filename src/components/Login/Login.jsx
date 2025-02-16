@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa"; // Importing icons
-import "./LoginSignup.css";
+import "./Login.css";
 
 const LoginSignup = () => {
   const [action, setAction] = useState("Login"); // Defualt to login
