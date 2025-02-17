@@ -31,7 +31,9 @@ const Navbar = () => {
               </li>
 
               {/* Login btn */}
-              <li>Login</li>
+              <li>
+                <NavLink to="/login"> Login</NavLink>
+              </li>
             </ul>
           </nav>
         </div>
