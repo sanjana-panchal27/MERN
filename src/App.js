@@ -1,19 +1,23 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Navbar/Home";
-import AboutUs from "./components/Navbar/AboutUs";
-import Service from "./components/Navbar/Service";
-import Contact from "./components/Navbar/Contact";
-import FAQs from "./components/Navbar/FAQs";
-import Login from "./components/Login/Login";
+// import Navbar from "./components/Navbar/Navbar";
+// import Home from "./components/Navbar/Home";
+// import AboutUs from "./components/Navbar/AboutUs";
+// import Service from "./components/Navbar/Service";
+// import Contact from "./components/Navbar/Contact";
+// import FAQs from "./components/Navbar/FAQs";
+// import Login from "./components/Login/Login";
+// import Footer from "./components/Navbar/Footer";
+
+import StuNav from "./components/Student/StuNav";
+import StuSidebar from "./components/Student/StuSidebar";
 import "./App.css";
-import Footer from "./components/Navbar/Footer";
+import StudentHome from "./components/Student/StudentHome";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-container">
+      {/* <div className="app-container">
         <Navbar />
         <div className="page-content">
           <Routes>
@@ -26,6 +30,15 @@ function App() {
           </Routes>
         </div>
         <Footer />
+      </div> */}
+
+      <div className="student-profile">
+        <StuNav />
+        <StuSidebar />
+
+        <Routes>
+          <Route exact path="/" element={<StudentHome />} />
+        </Routes>
       </div>
     </BrowserRouter>
   );
