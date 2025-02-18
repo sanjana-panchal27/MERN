@@ -8,7 +8,7 @@ import Contact from "./components/Navbar/Contact";
 import FAQs from "./components/Navbar/FAQs";
 import Login from "./components/Login/Login";
 import "./App.css";
-import Footer from "./components/Footer";
+import Footer from "./components/Navbar/Footer";
 
 function App() {
   return (

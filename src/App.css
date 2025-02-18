@@ -10,13 +10,3 @@
   flex-grow: 1;
   padding: 20px;
 }
-
-/* Keeps footer at the bottom */
-footer {
-  background: #ff8000;
-  color: black;
-  text-align: center;
-  padding: 10px 0;
-  width: 100%;
-  position: relative;
-}

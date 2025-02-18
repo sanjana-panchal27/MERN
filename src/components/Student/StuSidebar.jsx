@@ -5,7 +5,7 @@ import { FaSearch } from "react-icons/fa";
 import { FaChartBar } from "react-icons/fa";
 import { IoAnalytics } from "react-icons/io5";
 import { IoIosNotifications } from "react-icons/io";
-import "./Stu_Sidebar.css";
+import "./StuSidebar.css";
 
 const Sidebar = () => {
   return (
