@@ -1,0 +1,83 @@
+.hero-section {
+  display: flex;
+}
+
+.hero-header {
+  text-align: center;
+  padding: 60px;
+  margin: 35px;
+  background-color: #ffd9b6;
+  color: black;
+  width: 100%;
+}
+
+.hero-header h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.hero-header p {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.hero-btn {
+  background-color: #ff8000;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 5px;
+  padding: 12px;
+  border: none;
+  margin: 10px;
+}
+
+.hero-btn:hover {
+  background-color: white;
+  transition: 0.5s;
+}
+
+.home-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}
+
+.home-company {
+  background-color: #ffd9b6;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.success-stories {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.career-guid {
+  background-color: #ffd9b6;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.testimonials {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.head-3 {
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.home-icon {
+  font-size: 25px;
+}
