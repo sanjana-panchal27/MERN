@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { FaUserEdit } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";
@@ -5,9 +6,9 @@ import { PiStudentBold } from "react-icons/pi";
 import { MdEventAvailable } from "react-icons/md";
 import { MdFeedback } from "react-icons/md";
 
-import "./Sidebar.css";
+import "./ComSidebar.css";
 
-const Sidebar = () => {
+const ComSidebar = () => {
   return (
     <>
       <div className="sidebar">
@@ -23,50 +24,50 @@ const Sidebar = () => {
           <ul>
             {/* home link */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/" className="icon">
                 <FaHome />
                 <span> Dashboard</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* Profile Create */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/c-profile" className="icon">
                 <FaUserEdit />
                 <span>Create Profile</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* post job openings */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/c-postjob" className="icon">
                 <FaBriefcase />
                 <span>Post Job Openings</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* Access Student Profiles */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/c-access" className="icon">
                 <PiStudentBold />
                 <span> Access Student Profiles</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* Shortlist & Schedule Interview */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/c-shortlist" className="icon">
                 <MdEventAvailable />
                 <span> Shortlist & Schedule Interview</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* feedback */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/c-feedback" className="icon">
                 <MdFeedback />
                 <span> Feedback</span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -75,4 +76,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default ComSidebar;

@@ -1,9 +1,10 @@
-import "./Navbar.css";
+import { NavLink } from "react-router-dom";
+import "./ComNav.css";
 import { IoIosNotifications } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
 import { useState } from "react";
 
-const Navbar = () => {
+const ComNav = () => {
   // dropdown menu navigation
   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
@@ -20,9 +21,9 @@ const Navbar = () => {
             <div className="right-icon">
               {/* unique class for navbar notification icon */}
               <li className="nav-notification">
-                <a href="/" className="nav-icon">
+                <NavLink to="/" className="nav-icon">
                   <IoIosNotifications />
-                </a>
+                </NavLink>
               </li>
 
               {/* usercicle profile */}
@@ -39,13 +40,13 @@ const Navbar = () => {
                   <div className="dropdown-menu">
                     <ul>
                       <li>
-                        <a href="/">Profile</a>
+                        <NavLink to="/">Profile</NavLink>
                       </li>
                       <li>
-                        <a href="/">Setting</a>
+                        <NavLink to="/">Setting</NavLink>
                       </li>
                       <li>
-                        <a href="/">Log Out</a>
+                        <NavLink to="/">Log Out</NavLink>
                       </li>
                     </ul>
                   </div>
@@ -59,4 +60,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default ComNav;

@@ -22,3 +22,14 @@
   height: calc(100vh - 60px); /* Align with navbar */
   background-color: white;
 }
+
+.com-container {
+  margin-left: 350px; /* Same width as sidebar */
+  flex-grow: 1; /* Takes remaining space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px); /* Align with navbar */
+  background-color: white;
+}

@@ -1,43 +1,28 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import StuNav from "./components/Student/StuNav";
-import StuSidebar from "./components/Student/StuSidebar";
-import StudentHome from "./components/Student/StudentHome";
-import StudentProfile from "./components/Student/StudentProfile";
-import SJobSearch from "./components/Student/SJobSearch";
-import SJobAlert from "./components/Student/SJobAlert";
-import STrackPerformance from "./components/Student/STrackPerformance";
-import SAnalytics from "./components/Student/SAnalytics";
-import SNotification from "./components/Student/SNotification";
-
+import ComNav from "./components/Company/ComNav";
+import ComSidebar from "./components/Company/ComSidebar";
+import CompanyHome from "./components/Company/CompanyHome";
+import CompanyProfile from "./components/Company/CompanyProfile";
+import CPostJob from "./components/Company/CPostJob";
+import CAccess from "./components/Company/CAccess";
+import CShortlist from "./components/Company/CShortlist";
+import CFeedback from "./components/Company/CFeedback";
 function App() {
   return (
     <BrowserRouter>
-      <div className="student-profile">
-        <StuNav />
-        <StuSidebar />
+      <div className="company-profile">
+        <ComNav />
+        <ComSidebar />
 
         <Routes>
-          <Route exact path="/" element={<StudentHome />} />
-          <Route exact path="/s-profile" element={<StudentProfile />}></Route>
-          <Route exact path="/s-job-search" element={<SJobSearch />}></Route>
-          <Route exact path="/s-job-alert" element={<SJobAlert />}></Route>
-          <Route
-            exact
-            path="/s-track-performance"
-            element={<STrackPerformance />}
-          ></Route>
-          <Route
-            exact
-            path="/s-placement-analytics"
-            element={<SAnalytics />}
-          ></Route>
-          <Route
-            exact
-            path="/s-notification"
-            element={<SNotification />}
-          ></Route>
+          <Route exact path="/" element={<CompanyHome />}></Route>
+          <Route exact path="/c-profile" element={<CompanyProfile />}></Route>
+          <Route exact path="/c-postjob" element={<CPostJob />}></Route>
+          <Route exact path="/c-access" element={<CAccess />}></Route>
+          <Route exact path="/c-shortlist" element={<CShortlist />}></Route>
+          <Route exact path="/c-feedback" element={<CFeedback />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
