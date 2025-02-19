@@ -23,6 +23,7 @@
   position: absolute;
   right: 20px;
   gap: 10px;
+  position: fixed;
 }
 
 /* ul */

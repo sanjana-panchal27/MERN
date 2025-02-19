@@ -1,5 +1,6 @@
 import React from "react";
-import { FaHome, FaUser } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
 import { FaUserEdit } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaChartBar } from "react-icons/fa";
@@ -10,7 +11,7 @@ import "./StuSidebar.css";
 const Sidebar = () => {
   return (
     <>
-      <div className="sidebar">
+      <div className="stu-sidebar">
         <div>
           <h1 className="title">Student Dashboard</h1>
         </div>
@@ -23,58 +24,58 @@ const Sidebar = () => {
           <ul>
             {/* home link: dashboard */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/" className="icon">
                 <FaHome />
                 <span> Dashboard</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* create profile */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/" className="icon">
                 <FaUserEdit />
                 <span>Create Profile</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* search job */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/" className="icon">
                 <FaSearch />
                 <span>Search Job</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* notifications about new job postings */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/" className="icon">
                 <IoIosNotifications />
                 <span>Job Alert</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* Track Performance */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/" className="icon">
                 <FaChartBar />
                 <span>Track Performance</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* placement analytics */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/" className="icon">
                 <IoAnalytics />
                 <span>Placement Analytics</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* notification */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/" className="icon">
                 <IoIosNotifications />
                 <span>Notification</span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

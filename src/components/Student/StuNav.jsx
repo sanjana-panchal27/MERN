@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./StuNav.css";
 import { IoIosNotifications } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
@@ -20,9 +21,9 @@ const Navbar = () => {
             <div className="right-icon">
               {/* unique class for navbar notification icon */}
               <li className="nav-notification">
-                <a href="/" className="nav-icon">
+                <NavLink to="/" className="nav-icon">
                   <IoIosNotifications />
-                </a>
+                </NavLink>
               </li>
 
               {/* usercicle profile */}
@@ -39,13 +40,13 @@ const Navbar = () => {
                   <div className="dropdown-menu">
                     <ul>
                       <li>
-                        <a href="/">Profile</a>
+                        <NavLink to="/">Profile</NavLink>
                       </li>
                       <li>
-                        <a href="/">Setting</a>
+                        <NavLink to="/">Setting</NavLink>
                       </li>
                       <li>
-                        <a href="/">Log Out</a>
+                        <NavLink to="/">Log Out</NavLink>
                       </li>
                     </ul>
                   </div>
