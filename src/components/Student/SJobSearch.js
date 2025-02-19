@@ -3,7 +3,7 @@ import React from "react";
 const SJobSearch = () => {
   return (
     <>
-      <div className="job-search">
+      <div className="stu-container">
         <h1>Job Search</h1>
       </div>
     </>

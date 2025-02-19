@@ -32,7 +32,7 @@ const Sidebar = () => {
 
             {/* create profile */}
             <li className="input">
-              <NavLink to="/" className="icon">
+              <NavLink to="/s-profile" className="icon">
                 <FaUserEdit />
                 <span>Create Profile</span>
               </NavLink>
@@ -40,7 +40,7 @@ const Sidebar = () => {
 
             {/* search job */}
             <li className="input">
-              <NavLink to="/" className="icon">
+              <NavLink to="/s-job-search" className="icon">
                 <FaSearch />
                 <span>Search Job</span>
               </NavLink>
@@ -48,7 +48,7 @@ const Sidebar = () => {
 
             {/* notifications about new job postings */}
             <li className="input">
-              <NavLink to="/" className="icon">
+              <NavLink to="/s-job-alert" className="icon">
                 <IoIosNotifications />
                 <span>Job Alert</span>
               </NavLink>
@@ -56,7 +56,7 @@ const Sidebar = () => {
 
             {/* Track Performance */}
             <li className="input">
-              <NavLink to="/" className="icon">
+              <NavLink to="/s-track-performance" className="icon">
                 <FaChartBar />
                 <span>Track Performance</span>
               </NavLink>
@@ -64,7 +64,7 @@ const Sidebar = () => {
 
             {/* placement analytics */}
             <li className="input">
-              <NavLink to="/" className="icon">
+              <NavLink to="/s-placement-analytics" className="icon">
                 <IoAnalytics />
                 <span>Placement Analytics</span>
               </NavLink>
@@ -72,7 +72,7 @@ const Sidebar = () => {
 
             {/* notification */}
             <li className="input">
-              <NavLink to="/" className="icon">
+              <NavLink to="/s-notification" className="icon">
                 <IoIosNotifications />
                 <span>Notification</span>
               </NavLink>

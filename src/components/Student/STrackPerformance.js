@@ -3,7 +3,7 @@ import React from "react";
 const STrackPerformance = () => {
   return (
     <>
-      <div className="track-performance">
+      <div className="stu-container">
         <h1>Track Performance</h1>
       </div>
     </>

@@ -5,6 +5,11 @@ import StuNav from "./components/Student/StuNav";
 import StuSidebar from "./components/Student/StuSidebar";
 import StudentHome from "./components/Student/StudentHome";
 import StudentProfile from "./components/Student/StudentProfile";
+import SJobSearch from "./components/Student/SJobSearch";
+import SJobAlert from "./components/Student/SJobAlert";
+import STrackPerformance from "./components/Student/STrackPerformance";
+import SAnalytics from "./components/Student/SAnalytics";
+import SNotification from "./components/Student/SNotification";
 
 function App() {
   return (
@@ -15,7 +20,24 @@ function App() {
 
         <Routes>
           <Route exact path="/" element={<StudentHome />} />
-          <Route exact path="/stuprofile" element={<StudentProfile />}></Route>
+          <Route exact path="/s-profile" element={<StudentProfile />}></Route>
+          <Route exact path="/s-job-search" element={<SJobSearch />}></Route>
+          <Route exact path="/s-job-alert" element={<SJobAlert />}></Route>
+          <Route
+            exact
+            path="/s-track-performance"
+            element={<STrackPerformance />}
+          ></Route>
+          <Route
+            exact
+            path="/s-placement-analytics"
+            element={<SAnalytics />}
+          ></Route>
+          <Route
+            exact
+            path="/s-notification"
+            element={<SNotification />}
+          ></Route>
         </Routes>
       </div>
     </BrowserRouter>
