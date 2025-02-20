@@ -1,19 +1,23 @@
+/* Reset Styles */
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
+/* Student Dashboard Container */
 .stu-container {
   display: grid;
-  /* text-align: center;*/
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
   padding: 80px;
   width: 100%;
   background-color: #003566;
+  align-items: start;
 }
 
+/* Profile Card */
 .profile-card {
   width: 400px;
   height: 200px;
@@ -23,14 +27,12 @@
   flex-direction: column;
   padding: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 100px;
-  /* margin-right: 950px; */
 }
 
+/* Titles and Text */
 .dash-title {
   color: #03071e;
   font-size: 24px;
-  margin-top: 5px;
   text-align: center;
 }
 
@@ -39,9 +41,9 @@
   font-size: 18px;
   margin-top: 10px;
   margin-left: 10px;
-  justify-content: flex-start;
 }
 
+/* Job Opportunity */
 .job-opportunity {
   width: 400px;
   height: 150px;
@@ -53,34 +55,14 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Icons */
 .s-dash-icon {
   margin-right: 10px;
 }
 
-.s-dash-notification {
-  width: 400px;
-  height: 200px;
-  background-color: #f9f9ed;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 100px;
-}
-
-.s-dash-guid {
-  width: 400px;
-  height: 200px;
-  background-color: #f9f9ed;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 100px;
-}
-
+/* Notifications & Updates */
+.s-dash-notification,
+.s-dash-guid,
 .s-dash-analytics {
   width: 400px;
   height: 200px;
@@ -90,14 +72,4 @@
   flex-direction: column;
   padding: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 100px;
 }
-/* .stu-home {
-  display: flex;
-  text-align: center;
-  color: white;
-  justify-content: center;
-  padding: 80px;
-  background-color: none;
-  flex-direction: column;
-} */
