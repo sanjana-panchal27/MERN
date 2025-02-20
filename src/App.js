@@ -1,36 +1,42 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AdminNavbar from "./components/Admin/AdminNavbar";
-import AdminSidebar from "./components/Admin/AdminSidebar";
-import AdminHome from "./components/Admin/AdminHome";
-import AManageC from "./components/Admin/AManageC";
-import AManageS from "./components/Admin/AManageS";
-import ATrackPerformance from "./components/Admin/ATrackPerformance";
-import AReports from "./components/Admin/AReports";
-import ANotification from "./components/Admin/ANotification";
+import StuNav from "./components/Student/StuNav";
+import StuSidebar from "./components/Student/StuSidebar";
+import StudentHome from "./components/Student/StudentHome";
+import StudentProfile from "./components/Student/StudentProfile";
+import SJobSearch from "./components/Student/SJobSearch";
+import SJobAlert from "./components/Student/SJobAlert";
+import STrackPerformance from "./components/Student/STrackPerformance";
+import SAnalytics from "./components/Student/SAnalytics";
+import SNotification from "./components/Student/SNotification";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="admin-profile">
-        <AdminNavbar />
-        <AdminSidebar />
+      <div className="student-profile">
+        <StuNav />
+        <StuSidebar />
 
         <Routes>
-          <Route exact path="/" element={<AdminHome />}></Route>
-          <Route exact path="/a-manage-student" element={<AManageS />}></Route>
-          <Route exact path="/a-manage-company" element={<AManageC />}></Route>
+          <Route exact path="/" element={<StudentHome />} />
+          <Route exact path="/s-profile" element={<StudentProfile />}></Route>
+          <Route exact path="/s-job-search" element={<SJobSearch />}></Route>
+          <Route exact path="/s-job-alert" element={<SJobAlert />}></Route>
           <Route
             exact
-            path="/a-track-performance"
-            element={<ATrackPerformance />}
+            path="/s-track-performance"
+            element={<STrackPerformance />}
           ></Route>
-          <Route exact path="/a-reports" element={<AReports />}></Route>
           <Route
             exact
-            path="/a-notification"
-            element={<ANotification />}
+            path="/s-placement-analytics"
+            element={<SAnalytics />}
+          ></Route>
+          <Route
+            exact
+            path="/s-notification"
+            element={<SNotification />}
           ></Route>
         </Routes>
       </div>

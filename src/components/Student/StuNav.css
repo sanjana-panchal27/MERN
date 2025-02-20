@@ -5,7 +5,7 @@
 
 /* whole navbar container */
 .navbar {
-  background-color: #fb8500;
+  background-color: #03071e;
   height: 60px;
   width: calc(100% - 350px); /* Navbar width minus sidebar width */
   position: fixed;
@@ -41,12 +41,12 @@
   /* list-style: none; */
   display: flex;
   flex-direction: column;
-  color: black;
+  color: white;
 }
 
 /* paragraph text styles */
 p {
-  color: black;
+  color: white;
 }
 
 /* h2 style */
@@ -65,7 +65,7 @@ h2 {
 
 /* nav: notification-icon */
 .nav-icon {
-  color: black;
+  color: white;
   font-size: 30px;
   display: flex;
   /* padding: 5px 15px; Adds spacing around icon */
@@ -91,7 +91,7 @@ h2 {
 
 /* user profile icon */
 .profile-icon {
-  color: black;
+  color: white;
   font-size: 30px;
 }
 
