@@ -1,13 +1,13 @@
 import React from "react";
 import "./StudentHome.css";
-const SJobSearch = () => {
+const SResources = () => {
   return (
     <>
       <div className="stu-container">
-        <h1>Job Search</h1>
+        <h1>Resources & Guidance</h1>
       </div>
     </>
   );
 };
 
-export default SJobSearch;
+export default SResources;

@@ -9,6 +9,7 @@ import SJobSearch from "./components/Student/SJobSearch";
 import SJobAlert from "./components/Student/SJobAlert";
 import STrackPerformance from "./components/Student/STrackPerformance";
 import SAnalytics from "./components/Student/SAnalytics";
+import SResources from "./components/Student/SResources";
 import SNotification from "./components/Student/SNotification";
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
             path="/s-placement-analytics"
             element={<SAnalytics />}
           ></Route>
+
+          <Route exact path="/s-resources" element={<SResources />}></Route>
           <Route
             exact
             path="/s-notification"

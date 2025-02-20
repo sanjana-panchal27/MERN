@@ -4,7 +4,7 @@
 }
 
 .stu-container {
-  display: flex;
+  display: grid;
   /* text-align: center;*/
   justify-content: center;
   align-items: center;
@@ -23,23 +23,74 @@
   flex-direction: column;
   padding: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 800px;
-  margin-right: 950px;
+  margin-bottom: 100px;
+  /* margin-right: 950px; */
 }
 
-.profile-card h2 {
+.dash-title {
   color: #03071e;
   font-size: 24px;
   margin-top: 5px;
   text-align: center;
 }
 
-.profile-card p {
+.dash-text {
   color: #03071e;
   font-size: 18px;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 10px;
   justify-content: flex-start;
+}
+
+.job-opportunity {
+  width: 400px;
+  height: 150px;
+  background-color: #f9f9ed;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.s-dash-icon {
+  margin-right: 10px;
+}
+
+.s-dash-notification {
+  width: 400px;
+  height: 200px;
+  background-color: #f9f9ed;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px;
+}
+
+.s-dash-guid {
+  width: 400px;
+  height: 200px;
+  background-color: #f9f9ed;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px;
+}
+
+.s-dash-analytics {
+  width: 400px;
+  height: 200px;
+  background-color: #f9f9ed;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 100px;
 }
 /* .stu-home {
   display: flex;

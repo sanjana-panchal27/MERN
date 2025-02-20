@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./StudentHome.css";
 const SNotification = () => {
   return (
     <>

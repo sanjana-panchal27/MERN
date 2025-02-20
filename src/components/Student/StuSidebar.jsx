@@ -5,7 +5,9 @@ import { FaUserEdit } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaChartBar } from "react-icons/fa";
 import { IoAnalytics } from "react-icons/io5";
+import { GrResources } from "react-icons/gr";
 import { IoIosNotifications } from "react-icons/io";
+
 import "./StuSidebar.css";
 
 const Sidebar = () => {
@@ -70,6 +72,13 @@ const Sidebar = () => {
               </NavLink>
             </li>
 
+            {/* resources */}
+            <li className="input">
+              <NavLink to="/s-resources" className="icon">
+                <GrResources />
+                <span>Resources & Guidance</span>
+              </NavLink>
+            </li>
             {/* notification */}
             <li className="input">
               <NavLink to="/s-notification" className="icon">
