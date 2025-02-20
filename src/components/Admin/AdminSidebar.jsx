@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { FaHome, FaUser } from "react-icons/fa";
 import { PiStudentFill } from "react-icons/pi";
 import { TbReportSearch } from "react-icons/tb";
@@ -22,50 +23,50 @@ const AdminSidebar = () => {
           <ul>
             {/* home link */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/" className="icon">
                 <FaHome />
                 <span> Dashboard</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* Students */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/a-manage-student" className="icon">
                 <PiStudentFill />
-                <span>Student</span>
-              </a>
+                <span>Manage Student</span>
+              </NavLink>
             </li>
 
             {/* company */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/a-manage-company" className="icon">
                 <FaUser />
-                <span>Company</span>
-              </a>
+                <span>Manage Company</span>
+              </NavLink>
             </li>
 
             {/* Track Performance */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/a-track-performance" className="icon">
                 <FaChartBar />
                 <span>Track Performance</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* generate placement reports */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/a-reports" className="icon">
                 <TbReportSearch />
                 <span>Generate Placement Report</span>
-              </a>
+              </NavLink>
             </li>
 
             {/* notification */}
             <li className="input">
-              <a href="/" className="icon">
+              <NavLink to="/a-notification" className="icon">
                 <IoIosNotifications />
                 <span>Notification</span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
