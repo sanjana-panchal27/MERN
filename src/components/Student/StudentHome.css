@@ -2,18 +2,37 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
 }
 
 /* Student Dashboard Container */
 .stu-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: 20px;
   padding: 80px;
   width: 100%;
   /* background-color: #003566; */
-  align-items: start;
+  /* align-items: start; */
+}
+
+/* Profile Card */
+.profile-card {
+  width: 500px;
+  height: 200px;
+  background-color: #f9f9ed;
+  border-radius: 10px;
+  /* display: flex;
+  flex-direction: column; */
+  padding: 10px;
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 /* Titles and Text */
@@ -37,20 +56,32 @@
   width: 75%;
   gap: 15px; /* Space between boxes */
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .s-grid-box {
+  height: 75%;
   padding: 20px;
   color: white;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease-in-out;
+}
+
+.s-grid-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .s-grid-title {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 5px;
-  align-items: flex-start;
 }
 
 .s-grid-p {
@@ -75,21 +106,10 @@
   background-color: rebeccapurple;
 }
 
-/* Profile Card */
-.profile-card {
-  width: 500px;
-  height: 200px;
-  background-color: #f9f9ed;
-  border-radius: 10px;
-  /* display: flex;
-  flex-direction: column; */
-  padding: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 /* Job Opportunity */
 .job-opportunity {
-  width: 400px;
+  max-width: 800px;
+  width: 100%;
   height: 150px;
   background-color: #f9f9ed;
   border-radius: 10px;
@@ -97,6 +117,14 @@
   flex-direction: column;
   padding: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.job-opportunity:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 /* Icons */
@@ -106,7 +134,8 @@
 
 /* Notifications & Updates */
 .s-dash-notification {
-  width: 600px;
+  max-width: 800px;
+  width: 100%;
   height: 200px;
   background-color: #f9f9ed;
   border-radius: 10px;
@@ -114,10 +143,19 @@
   flex-direction: column;
   padding: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.s-dash-notification:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .s-dash-guid {
-  width: 400px;
+  max-width: 800px;
+  width: 100%;
   height: 200px;
   background-color: #f9f9ed;
   border-radius: 10px;
@@ -125,10 +163,19 @@
   flex-direction: column;
   padding: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.s-dash-guid:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .s-dash-analytics {
-  width: 400px;
+  max-width: 800px;
+  width: 100%;
   height: 200px;
   background-color: #f9f9ed;
   border-radius: 10px;
@@ -136,9 +183,17 @@
   flex-direction: column;
   padding: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
 }
 
-/* student: create profile */
+.s-dash-analytics:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* STUDENT: CREATE PROFILE */
 .profile-container {
   gap: 30px;
   display: flex;

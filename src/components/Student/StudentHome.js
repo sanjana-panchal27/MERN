@@ -9,6 +9,23 @@ import { IoAnalyticsSharp } from "react-icons/io5";
 const StudentHome = () => {
   return (
     <div className="stu-container">
+      {/* Profile Summary - Left Side */}
+      <div className="profile-card">
+        <h2 className="dash-title">Profile Summary</h2>
+        <p className="dash-text">
+          <b>Name:</b> Sanjana Panchal
+        </p>
+        <p className="dash-text">
+          <b>UID:</b> 123456789
+        </p>
+        <p className="dash-text">
+          <b>Course:</b> B.Sc.IT
+        </p>
+        <p className="dash-text">
+          <b>Department:</b> CSA
+        </p>
+      </div>
+
       {/* total applied jobs: grid */}
       <div className="s-grid-container">
         <div className="s-grid-box blue">
@@ -33,23 +50,6 @@ const StudentHome = () => {
           <h2 className="s-grid-title">Interview Scheduled</h2>
           <p className="s-grid-p"> 5</p>
         </div>
-      </div>
-
-      {/* Profile Summary - Left Side */}
-      <div className="profile-card">
-        <h2 className="dash-title">Profile Summary</h2>
-        <p className="dash-text">
-          <b>Name:</b> Sanjana Panchal
-        </p>
-        <p className="dash-text">
-          <b>UID:</b> 123456789
-        </p>
-        <p className="dash-text">
-          <b>Course:</b> B.Sc.IT
-        </p>
-        <p className="dash-text">
-          <b>Department:</b> CSA
-        </p>
       </div>
 
       {/* Job & Internship - Right Side */}
