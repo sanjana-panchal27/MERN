@@ -12,15 +12,15 @@ const SResources = () => {
         <h1>Resources & Guidance</h1>
 
         <div className="s-resources">
-          <h2>Resume Building Tips</h2>
+          <h2 className="grid-1">Resume Building Tips</h2>
           <p>Guidelines and samples to create a strong Resume</p>
           <FaBook className="s-resource-icon" />
 
-          <h2>Interview Preparation</h2>
+          <h2 className="grid-1">Interview Preparation</h2>
           <p>Common interview questions and best practices.</p>
           <FaBriefcase className="s-resource-icon" />
 
-          <h2>Aptitude & Technical Tests</h2>
+          <h2 className="grid-1">Aptitude & Technical Tests</h2>
           <p>Practise tests and study resources for Placements.</p>
           <FaLaptopCode className="s-resource-icon" />
 

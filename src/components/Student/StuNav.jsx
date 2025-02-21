@@ -4,7 +4,7 @@ import "./StuNav.css";
 import { IoIosNotifications } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
 
-const Navbar = () => {
+const StuNav = () => {
   // dropdown menu navigation
   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
@@ -60,4 +60,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default StuNav;
