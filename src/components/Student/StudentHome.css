@@ -194,157 +194,131 @@
 }
 
 /* STUDENT: CREATE PROFILE */
+.stu-container {
+  text-align: center;
+}
+
 .profile-container {
-  gap: 30px;
-  display: flex;
-  width: 100%;
-  margin-top: 20px;
+  width: 80%;
+  background: #fff;
   padding: 20px;
-  background: #e3b324;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.s-form-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.s-form-nav button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.s-form-nav button:hover {
+  background-color: #0056b3;
 }
 
 .s-form-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 600px;
-  width: 100%;
-  gap: 15px;
-  background-color: #f9f9ed;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 15px;
-  font-size: 22px;
-  font-weight: bold;
+  width: 60%;
+  margin: auto;
+  text-align: left;
 }
 
 .s-form-section label {
-  font-size: 18px;
-  margin-bottom: 5px;
-  font-weight: 600;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 .s-form-section input {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #03071e;
-  color: white;
-  font-size: 16px;
-  outline: none;
-  border: 1px solid #fff;
-  /* max-width: 500px; */
   width: 100%;
-}
-
-.s-form-section input:hover {
-  background-color: #023047;
-  transition: 0.3s ease-in-out;
-}
-
-.form-sec-btn {
-  padding: 10px;
-  width: 100px;
-  background-color: #03071e;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.form-sec-btn:hover {
-  background-color: #023047;
-  transition: 0.3s ease-in-out;
-}
-
-/* EDUCATION SECTION */
-.s-education-sec {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 600px;
-  width: 100%;
-  gap: 15px;
-  background-color: #f9f9ed;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-.s-education-sec label {
-  font-size: 18px;
-  margin-bottom: 5px;
-  font-weight: 600;
-}
-
-.s-education-sec input {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #03071e;
-  color: white;
-  font-size: 16px;
-  outline: none;
-  border: 1px solid #fff;
-  /* max-width: 500px; */
-  width: 100%;
-}
-
-.s-education-sec n input:hover {
-  background-color: #023047;
-  transition: 0.3s ease-in-out;
-}
-
-.form-sec-btn {
-  padding: 10px;
-  width: 100px;
-  background-color: #03071e;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.form-sec-btn:hover {
-  background-color: #023047;
-  transition: 0.3s ease-in-out;
-}
-/*input,
-textarea {
-  margin-bottom: 10px;
   padding: 8px;
+  margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-textarea {
-  height: 80px;
-  resize: none;
-}
-
-.button-group {
+.btn-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Space between buttons */
+  gap: 10px; /* Adds space between buttons */
 }
 
-button {
-  padding: 10px;
+.form-sec-btn {
+  flex: 0; /* Makes buttons equal width */
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 14px;
+  transition: 0.3s;
+  text-align: center;
+  margin-top: 20px;
 }
 
-button:hover {
+.form-sec-btn:hover {
+  background-color: #218838;
+}
+
+.skills-container {
+  margin-top: 20px;
+}
+
+.skills-input {
+  padding: 10px;
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.add-skill-btn {
+  padding: 10px 15px;
   background-color: #007bff;
   color: white;
-} */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+.add-skill-btn:hover {
+  background-color: #0056b3;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.remove-skill-btn {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
