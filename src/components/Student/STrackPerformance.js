@@ -5,6 +5,14 @@ const STrackPerformance = () => {
     <>
       <div className="stu-container">
         <h1>Track Performance</h1>
+
+        <div className="s-track">
+          <h2>React Developer</h2>
+          <button>Pending</button>
+
+          <h2>Java Developer</h2>
+          <button>Shortlisted</button>
+        </div>
       </div>
     </>
   );
