@@ -2,7 +2,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 /* Student Dashboard Container */
@@ -13,20 +12,8 @@
   gap: 20px;
   padding: 80px;
   width: 100%;
-  background-color: #003566;
+  /* background-color: #003566; */
   align-items: start;
-}
-
-/* Profile Card */
-.profile-card {
-  width: 400px;
-  height: 200px;
-  background-color: #f9f9ed;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Titles and Text */
@@ -41,6 +28,63 @@
   font-size: 18px;
   margin-top: 10px;
   margin-left: 10px;
+}
+
+/* s-grid-box */
+.s-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 2x2 Grid */
+  width: 75%;
+  gap: 15px; /* Space between boxes */
+  margin-top: 20px;
+}
+
+.s-grid-box {
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.s-grid-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  align-items: flex-start;
+}
+
+.s-grid-p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Different background colors */
+.blue {
+  background-color: #1f23a3;
+}
+
+.green {
+  background-color: #1c9c68;
+}
+
+.yellow {
+  background-color: #e3b324;
+}
+
+.purple {
+  background-color: rebeccapurple;
+}
+
+/* Profile Card */
+.profile-card {
+  width: 500px;
+  height: 200px;
+  background-color: #f9f9ed;
+  border-radius: 10px;
+  /* display: flex;
+  flex-direction: column; */
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Job Opportunity */
@@ -61,8 +105,28 @@
 }
 
 /* Notifications & Updates */
-.s-dash-notification,
-.s-dash-guid,
+.s-dash-notification {
+  width: 600px;
+  height: 200px;
+  background-color: #f9f9ed;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.s-dash-guid {
+  width: 400px;
+  height: 200px;
+  background-color: #f9f9ed;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .s-dash-analytics {
   width: 400px;
   height: 200px;

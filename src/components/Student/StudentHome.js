@@ -9,6 +9,32 @@ import { IoAnalyticsSharp } from "react-icons/io5";
 const StudentHome = () => {
   return (
     <div className="stu-container">
+      {/* total applied jobs: grid */}
+      <div className="s-grid-container">
+        <div className="s-grid-box blue">
+          <h2 className="s-grid-title">Total Applied jobs</h2>
+          <p className="s-grid-p"> 5</p>
+        </div>
+
+        {/* job offere recieved */}
+        <div className="s-grid-box green">
+          <h2 className="s-grid-title">Job Offer Received</h2>
+          <p className="s-grid-p"> 3</p>
+        </div>
+
+        {/* shortlisted application */}
+        <div className="s-grid-box yellow">
+          <h2 className="s-grid-title">Shortlisted Applications</h2>
+          <p className="s-grid-p"> 3</p>
+        </div>
+
+        {/* interview scheduled */}
+        <div className="s-grid-box purple">
+          <h2 className="s-grid-title">Interview Scheduled</h2>
+          <p className="s-grid-p"> 5</p>
+        </div>
+      </div>
+
       {/* Profile Summary - Left Side */}
       <div className="profile-card">
         <h2 className="dash-title">Profile Summary</h2>
