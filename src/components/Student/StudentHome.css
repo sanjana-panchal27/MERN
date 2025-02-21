@@ -137,3 +137,95 @@
   padding: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* student: create profile */
+.profile-container {
+  width: 100%;
+  display: flex;
+  margin-top: 60px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #e3b324;
+}
+
+.s-form-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 15px;
+  background-color: #f9f9ed;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.s-form-section label {
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.s-form-section input {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #03071e;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  height: 30px;
+  width: 50%;
+}
+
+.s-form-section input:hover {
+  background-color: #023047;
+  transition: 0.5s ease;
+}
+
+.form-sec-btn {
+  padding: 10px;
+  width: 22%;
+  background-color: #03071e;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+/*input,
+textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 80px;
+  resize: none;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+} */
