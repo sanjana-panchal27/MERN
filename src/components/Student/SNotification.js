@@ -1,5 +1,6 @@
 import React from "react";
 import "./StudentHome.css";
+import { FaRegBookmark } from "react-icons/fa6";
 const SNotification = () => {
   return (
     <>
@@ -14,8 +15,12 @@ const SNotification = () => {
           </p>
           <p>Feb 20, 2025</p>
           <h3 className="notification-btn">Placement Drive</h3>
-          <button className="save-btn">Save</button>
+          <button className="save-btn">
+            <FaRegBookmark />
+          </button>
+        </div>
 
+        <div className="s-notification-1">
           <h2>Resume Submission Deadline</h2>
           <p>
             Submit your updated resume by Feb 25 for TCS Recruitment.
