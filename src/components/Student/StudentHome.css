@@ -570,3 +570,143 @@
 }
 
 /* RESOURCES & GUIDANCE */
+.s-resources {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-bottom: 80%;
+  margin-right: 50%;
+}
+
+.s-grid-resource {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+.s-grid-box1 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: #d4e9ff;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.s-grid-box2 {
+  margin-left: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: #d4e9ff;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.s-grid-box3 {
+  margin-left: 40px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: #d4e9ff;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.s-grid-box4 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: #d4e9ff;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.s-grid-box5 {
+  margin-left: 20px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: #d4e9ff;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.s-grid-box6 {
+  margin-left: 40px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: #d4e9ff;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.s-grid-box7 {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: #d4e9ff;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.s-grid-box1:hover,
+.s-grid-box2:hover,
+.s-grid-box3:hover,
+.s-grid-box4:hover,
+.s-grid-box5:hover,
+.s-grid-box6:hover,
+.s-grid-box7:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.s-resource-icon {
+  font-size: 24px;
+  color: #007bff;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.s-grid-box1 h2,
+.s-grid-box2 h2,
+.s-grid-box3 h2,
+.s-grid-box4 h2,
+.s-grid-box5 h2,
+.s-grid-box6 h2,
+.s-grid-box7 h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.s-grid-box1 p,
+.s-grid-box2 p,
+.s-grid-box3 p,
+.s-grid-box4 p,
+.s-grid-box5 p,
+.s-grid-box6 p,
+.s-grid-box7 p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.s-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
