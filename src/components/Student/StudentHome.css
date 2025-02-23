@@ -1,23 +1,27 @@
-/* Reset Styles */
 * {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
 }
 
-/* Student Dashboard Container */
 .stu-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  gap: 20px;
-  padding: 80px;
-  width: 100%;
+  /* gap: 20px; */
+  /* padding: 80px; */
+  /* width: 100%; */
   /* background-color: #003566; */
-  /* align-items: start; */
+  align-items: start;
 }
 
-/* Profile Card */
+.stu-container h1 {
+  width: 80%;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile-card {
   width: 500px;
   height: 200px;
@@ -35,7 +39,6 @@
   transition: box-shadow 0.2s ease-in-out;
 }
 
-/* Titles and Text */
 .dash-title {
   color: #03071e;
   font-size: 24px;
@@ -49,12 +52,11 @@
   margin-left: 10px;
 }
 
-/* s-grid-box */
 .s-grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 2x2 Grid */
+  grid-template-columns: repeat(4, 1fr);
   width: 75%;
-  gap: 15px; /* Space between boxes */
+  gap: 15px;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -89,7 +91,6 @@
   font-weight: bold;
 }
 
-/* Different background colors */
 .blue {
   background-color: #1f23a3;
 }
@@ -106,7 +107,6 @@
   background-color: rebeccapurple;
 }
 
-/* Job Opportunity */
 .job-opportunity {
   max-width: 800px;
   width: 100%;
@@ -127,12 +127,10 @@
   transition: box-shadow 0.2s ease-in-out;
 }
 
-/* Icons */
 .s-dash-icon {
   margin-right: 10px;
 }
 
-/* Notifications & Updates */
 .s-dash-notification {
   max-width: 800px;
   width: 100%;
@@ -201,7 +199,7 @@
   grid-template-rows: auto;
   gap: 20px;
   padding: 80px;
-  width: 100%;
+  width: 90%;
 }
 
 .profile-container {
@@ -255,12 +253,12 @@
 
 .btn-container {
   display: flex;
-  justify-content: space-between; /* Space between buttons */
-  gap: 10px; /* Adds space between buttons */
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .form-sec-btn {
-  flex: 0; /* Makes buttons equal width */
+  flex: 0;
   padding: 10px 15px;
   background-color: #28a745;
   color: white;
@@ -329,16 +327,15 @@
   cursor: pointer;
 }
 
-/* search job */
-
 /* Search Input and Button */
 .s-job-search {
   margin-bottom: 80%;
   display: flex;
-  justify-content: center; /* Centers items horizontally */
-  align-items: center; /* Aligns items vertically */
-  gap: 10px; /* Adds spacing between input and button */
-  flex-wrap: wrap; /* Ensures responsiveness */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 90%;
 }
 
 .search {
@@ -364,7 +361,6 @@
   background-color: #218838;
 }
 
-/* Filter Dropdown */
 .s-filter-opt {
 }
 
@@ -375,7 +371,6 @@
   font-size: 14px;
 }
 
-/* Job Cards */
 .s-cards {
   width: 80%;
   margin-top: 20px;
@@ -476,24 +471,24 @@
   margin: 3px 0;
 }
 
-/* Add hover effect */
 .s-job-alert h2:hover {
   color: #28a745;
   transition: 0.3s ease-in-out;
 }
 
+/* TRACK PERFORMANCE */
 .s-track {
   margin-bottom: 80%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
+  align-items: flex-start;
   gap: 20px;
   background: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 500px; /* Adjust width */
+  max-width: 500px;
 }
 
 .s-track h2 {
@@ -513,17 +508,18 @@
 }
 
 .s-track button:first-of-type {
-  background-color: #ffc107; /* Yellow for pending */
+  background-color: #ffc107;
 }
 
 .s-track button:last-of-type {
-  background-color: #28a745; /* Green for shortlisted */
+  background-color: #28a745;
 }
 
 .s-track button:hover {
   opacity: 0.8;
 }
 
+/* PLACEMENT ANALYTICS */
 .s-analytics {
   margin-bottom: 80%;
   background: #f9f9f9;
