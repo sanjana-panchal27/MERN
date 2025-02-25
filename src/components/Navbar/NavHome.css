@@ -274,3 +274,22 @@ button:hover {
   color: black;
   font-size: 16px;
 }
+
+.faq-container{
+  padding: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.faq-container h3{
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-container p{
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
+}

@@ -24,6 +24,7 @@ const FAQs = () => {
       answer:
         "Navigate to the job listings, select a position, and click Apply Now.",
     },
+
   ];
 
   return (
