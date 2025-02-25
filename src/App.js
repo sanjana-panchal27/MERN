@@ -1,38 +1,31 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AdminNavbar from "./components/Admin/AdminNavbar";
-import AdminSidebar from "./components/Admin/AdminSidebar";
-import AdminHome from "./components/Admin/AdminHome";
-import AManageC from "./components/Admin/AManageC";
-import AManageS from "./components/Admin/AManageS";
-import ATrackPerformance from "./components/Admin/ATrackPerformance";
-import AReports from "./components/Admin/AReports";
-import ANotification from "./components/Admin/ANotification";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Navbar/Home";
+import AboutUs from "./components/Navbar/AboutUs";
+import Service from "./components/Navbar/Service";
+import Contact from "./components/Navbar/Contact";
+import FAQs from "./components/Navbar/FAQs";
+import Login from "./components/Login/Login";
+import Footer from "./components/Navbar/Footer";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="admin-profile">
-        <AdminNavbar />
-        <AdminSidebar />
-
-        <Routes>
-          <Route exact path="/" element={<AdminHome />}></Route>
-          <Route exact path="/a-manage-student" element={<AManageS />}></Route>
-          <Route exact path="/a-manage-company" element={<AManageC />}></Route>
-          <Route
-            exact
-            path="/a-track-performance"
-            element={<ATrackPerformance />}
-          ></Route>
-          <Route exact path="/a-reports" element={<AReports />}></Route>
-          <Route
-            exact
-            path="/a-notification"
-            element={<ANotification />}
-          ></Route>
-        </Routes>
+      <div className="app-container">
+        <Navbar />
+        <div className="page-content">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="aboutus" element={<AboutUs />} />
+            <Route exact path="service" element={<Service />} />
+            <Route exact path="contact" element={<Contact />} />
+            <Route exact path="faqs" element={<FAQs />} />
+            <Route exact path="login" element={<Login />}></Route>
+          </Routes>
+        </div>
+        <Footer />
       </div>
     </BrowserRouter>
   );

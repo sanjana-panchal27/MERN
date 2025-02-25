@@ -81,13 +81,15 @@ const AManageS = () => {
     <>
       <div className="admin-container">
         <h1>Manage Students</h1>
+
         <input
           type="text"
           placeholder="Search students..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="search-bar"
+          className="a-search-bar"
         />
+
         <table className="student-table">
           <thead>
             <tr>
