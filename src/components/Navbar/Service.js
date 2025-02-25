@@ -41,8 +41,10 @@ const Service = () => {
               internships.
             </p>
           </div>
+        </div>
 
-          <h2 className="service-text">
+        <div className="s-msg">
+          <h2>
             Our goal is to ensure a smooth and transparent placement process for
             both students and recruiters. 🚀
           </h2>
