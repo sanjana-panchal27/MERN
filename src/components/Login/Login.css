@@ -33,7 +33,6 @@
   font-weight: 700;
 }
 
-/* inputs: dropdonwn ,name, email, ps, confirm ps */
 .inputs {
   display: flex;
   margin-top: 30px;
@@ -41,21 +40,22 @@
   gap: 15px;
 }
 
-/* dropdown input */
-/* label for select user type */
+
 label {
   font-weight: 500;
-  /* margin-bottom: 5px; */
+  padding: 5px;
   font-size: 14px;
 }
 
 select {
-  width: 100%;
-  padding: 8px;
+  width: 100px;
+  height: 25px;
+  padding: 2px;
   border: 1px solid black;
   border-radius: 5px;
   margin-top: 5px;
-  font-size: 16px;
+  margin-bottom: 5px;
+  font-size: 14px;
   font-weight: 400;
 }
 
