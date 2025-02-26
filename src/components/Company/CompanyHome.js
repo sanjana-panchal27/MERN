@@ -87,17 +87,6 @@ const CompanyHome = () => {
     }
   };
 
-  const handleUpdateStatus = (index, status) => {
-    const updatedInterviews = [...interviews];
-    updatedInterviews[index].status = status;
-    setInterviews(updatedInterviews);
-  };
-
-  const handleFeedbackChange = (index, feedback) => {
-    const updatedInterviews = [...interviews];
-    updatedInterviews[index].feedback = feedback;
-    setInterviews(updatedInterviews);
-  };
 
   return (
     <>
@@ -191,10 +180,10 @@ const CompanyHome = () => {
           </div>
 
           <div className="interview-card">
-            <h2 className="text-xl font-semibold mb-4">Interview Scheduling</h2>
+            <h2>Interview Scheduling</h2>
 
             {/* Schedule Interview Form */}
-            <div className="mb-4 flex gap-2">
+            <div className="interview-sec">
               <input
                 type="text"
                 placeholder="Student Name"
@@ -202,7 +191,7 @@ const CompanyHome = () => {
                 onChange={(e) =>
                   setNewInterview({ ...newInterview, student: e.target.value })
                 }
-                className="border p-2 rounded w-1/3"
+                className="c-name"
               />
               <input
                 type="date"
@@ -210,60 +199,17 @@ const CompanyHome = () => {
                 onChange={(e) =>
                   setNewInterview({ ...newInterview, date: e.target.value })
                 }
-                className="border p-2 rounded w-1/3"
+                className="c-date"
               />
               <button
                 onClick={handleAddInterview}
-                className="bg-blue-500 text-white px-4 py-2 rounded"
+                className="c-btn"
               >
                 Add
               </button>
             </div>
 
-            {/* Interview List */}
-            <table className="interview-card">
-              <thead>
-                <tr>
-                  <th>Student</th>
-                  <th>Date</th>
-                  <th>Status</th>
-                  <th>Feedback</th>
-                </tr>
-              </thead>
-              <tbody>
-                {interviews.map((interview, index) => (
-                  <tr key={index} >
-                    <td>{interview.student}</td>
-                    <td>{interview.date}</td>
-                    <td>
-                      <select
-                        value={interview.status}
-                        onChange={(e) =>
-                          handleUpdateStatus(index, e.target.value)
-                        }
-                        className="border p-1"
-                      >
-                        <option value="Pending">Pending</option>
-                        <option value="Attended">Attended</option>
-                        <option value="Not Attended">Not Attended</option>
-                      </select>
-                    </td>
-                    <td>
-                      <input
-                        type="text"
-                        placeholder="Add feedback"
-                        value={interview.feedback}
-                        onChange={(e) =>
-                          handleFeedbackChange(index, e.target.value)
-                        }
-                      
-                      />
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+           </div>
         </div>
       </div>
     </>
