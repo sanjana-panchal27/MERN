@@ -66,7 +66,7 @@ const Sidebar = () => {
 
             {/* placement analytics */}
             <li className="input">
-              <NavLink to="/s-placement-analytics" className="icon">
+              <NavLink to="/s-analytics" className="icon">
                 <IoAnalytics />
                 <span>Placement Analytics</span>
               </NavLink>
