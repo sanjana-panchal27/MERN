@@ -30,9 +30,11 @@ const CFeedback = () => {
 
   return (
     <>
-     <div>
-      <div className="c-feedback">
+        <div className="com-container">
             <h1>Feedback</h1>
+            
+            <div className="c-feedback">
+
             <form onSubmit={handleSubmit}>
                 <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
                 <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
