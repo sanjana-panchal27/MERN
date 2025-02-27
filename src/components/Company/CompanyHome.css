@@ -8,6 +8,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   padding: 80px;
+  align-items: start;
 }
 
 .com-container h1{
@@ -284,3 +285,28 @@
   margin-right: px;
   background-color: #007bff;
 }
+
+/* haju bija sidebar nu lakhvanu baki chhe */
+
+/* FEEDBACK */
+.c-feedback {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 80px;
+  width: 90%;
+}
+
+.c-feedback h1 {
+  font-size: 32px; 
+  color: white;
+  margin-bottom: 40px; 
+  border-radius: 10px;
+  background-color: #060839;
+  margin-left: 25%; 
+  padding: 10px;
+  text-align: left;
+}
+
