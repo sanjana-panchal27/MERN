@@ -37,6 +37,8 @@ const StudentProfile = () => {
           <button onClick={() => setActiveSection("resume")}>Resume</button>
 
           <button onClick={() => setActiveSection("skill")}>Skill</button>
+
+          <button onClick={() => setActiveSection("project")}>Project</button>
         </div>
 
         {/* Section Content with Smooth Transition */}
