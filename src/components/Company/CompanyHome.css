@@ -364,7 +364,9 @@
   background-color: #218838;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -377,6 +379,27 @@ textarea {
   resize: vertical;
 }
 
+.c-btn-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.c-form-sec-btn {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.c-form-sec-btn:hover {
+  background-color: #218838;
+}
+
 /* FEEDBACK */
 .c-feedback {
   text-align: center;
@@ -387,5 +410,3 @@ textarea {
   padding: 80px;
   width: 90%;
 }
-
-

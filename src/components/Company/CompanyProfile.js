@@ -269,12 +269,16 @@ const CompanyProfile = () => {
                     />
                   </div>
                 </form>
+                <div className='c-btn-container'>
                 <button
                   className="c-form-sec-btn"
                   onClick={() => setActiveSection('company')}
                 >
                   Back
                 </button>
+
+                <button className="c-form-sec-btn">Save</button>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
