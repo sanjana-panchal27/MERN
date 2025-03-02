@@ -11,8 +11,7 @@
   align-items: start;
 }
 
-.com-container h1{
-  margin-bottom: 80%;
+.com-container h1 {
   border-radius: 10px;
 }
 
@@ -218,7 +217,7 @@
 }
 
 /* INTERVIEW CARD */
-.interview-card{
+.interview-card {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
@@ -229,22 +228,22 @@
   margin-bottom: 5%;
 }
 
-.interview-card:hover{
+.interview-card:hover {
   transform: scale(1.02);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.interview-card h2{
+.interview-card h2 {
   font-size: 20px;
   color: #060839;
 }
 
-.interview-sec{
+.interview-sec {
   border-radius: 10px;
   padding: 5px;
 }
 
-.c-name{
+.c-name {
   font-size: 14px;
   margin-right: 5px;
   border-radius: 10px;
@@ -253,7 +252,7 @@
   text-align: center;
 }
 
-.c-date{
+.c-date {
   font-size: 14px;
   margin-right: 5px;
   border-radius: 10px;
@@ -262,7 +261,7 @@
   text-align: center;
 }
 
-.c-btn{
+.c-btn {
   font-size: 14px;
   padding: 3px;
   border: 1px solid #ccc;
@@ -271,22 +270,112 @@
   border-radius: 5px;
 }
 
-.c-btn:hover{
+.c-btn:hover {
   background-color: #0f6e48;
   transition: 0.5s;
 }
 
-.interview-card table{
+.interview-card table {
   width: 100%;
 }
 
-.interview-card th{
+.interview-card th {
   color: #060839;
   margin-right: px;
   background-color: #007bff;
 }
 
-/* haju bija sidebar nu lakhvanu baki chhe */
+/* COMPANY: CREATE PROFILE */
+.com-container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 80px;
+  width: 90%;
+}
+
+.c-profile-container {
+  text-align: center;
+  height: 30px;
+  width: 80%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.c-form-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.c-form-nav button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.c-form-nav button:hover {
+  background-color: #0056b3;
+}
+
+.c-form-section {
+  width: 60%;
+  margin: auto;
+  text-align: left;
+}
+
+.c-form-section label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.c-form-section input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.c-form-sec-btn {
+  flex: 0;
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.c-form-sec-btn:hover {
+  background-color: #218838;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+}
 
 /* FEEDBACK */
 .c-feedback {
@@ -298,4 +387,5 @@
   padding: 80px;
   width: 90%;
 }
+
 
