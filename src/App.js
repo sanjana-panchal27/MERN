@@ -40,12 +40,12 @@ import CFeedback from "./components/Company/CFeedback";
 // import SResources from "./components/Student/SResources";
 // import SNotification from "./components/Student/SNotification";
 
-
 function App() {
   return (
     <BrowserRouter>
        {/* <StuNav />
-<       <StuSidebar />
+       <StuSidebar />
+
          <div className="stu-container">
             <Routes>
                 <Route exact path="/" element={<StudentHome />} />
@@ -113,7 +113,7 @@ function App() {
           <Route exact path="/c-shortlist" element={<CShortlist />}></Route>
           <Route exact path="/c-feedback" element={<CFeedback />}></Route>
         </Routes>
-      </div>
+      </div> 
     </BrowserRouter>
   );
 }

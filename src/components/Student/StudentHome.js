@@ -1,3 +1,4 @@
+import React from "react";
 import "./StudentHome.css";
 import { FaBriefcase } from "react-icons/fa";
 import { AiFillNotification } from "react-icons/ai";

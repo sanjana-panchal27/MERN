@@ -1,3 +1,4 @@
+import React from "react";
 import "./StudentHome.css";
 import { FaBook } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";

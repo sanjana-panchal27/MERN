@@ -1,3 +1,4 @@
+import React from "react";
 import "./StudentHome.css";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
