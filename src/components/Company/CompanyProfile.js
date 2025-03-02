@@ -10,7 +10,7 @@ const CompanyProfile = () => {
   const [website, setWebsite] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [aboutUs, setAboutUs] = useState('');
+  const [description, setDescription] = useState('');
 
   // contact details
   const [fullName, setFullName] = useState('');
@@ -22,7 +22,23 @@ const CompanyProfile = () => {
   const [zipCode, setZipCode] = useState('');
   const [contactEmail, setContactEmail] = useState('');
   const [contactPhone, setContactPhone] = useState('');
-  const [socialMedia, setSocialMedia] = useState('');
+  const [linkedin, setLinkedin] = useState('');
+  const [socialMediaLinks, setSocialMediaLinks] = useState({
+    facebook: '',
+    twitter: '',
+    instagram: '',
+    medium: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setSocialMediaLinks({ ...socialMediaLinks, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Social Mediia Links: ', socialMediaLinks);
+  };
 
   const [activeSection, setActiveSection] = useState('company');
 
@@ -104,10 +120,10 @@ const CompanyProfile = () => {
                   onChange={(e) => setPhone(e.target.value)}
                 />
 
-                <label>About Us</label>
+                <label>Description</label>
                 <textarea
-                  value={aboutUs}
-                  onChange={(e) => setAboutUs(e.target.value)}
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
 
                 <button
@@ -134,6 +150,7 @@ const CompanyProfile = () => {
                   type="text"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
+                  placeholder="HR manager/ Hiring Manager"
                 />
 
                 <label>Designation</label>
@@ -141,6 +158,7 @@ const CompanyProfile = () => {
                   type="text"
                   value={designation}
                   onChange={(e) => setDesignation(e.target.value)}
+                  placeholder="HR manager/ Recruiter"
                 />
 
                 <label>Street Address</label>
@@ -185,6 +203,72 @@ const CompanyProfile = () => {
                   onChange={(e) => setContactEmail(e.target.value)}
                 />
 
+                <label>Contact Phone</label>
+                <input
+                  type="contactPhone"
+                  value={contactPhone}
+                  onChange={(e) => setContactPhone(e.target.value)}
+                />
+
+                <label>LinkedIn</label>
+                <input
+                  type="link"
+                  value={linkedin}
+                  onChange={(e) => setLinkedin(e.target.value)}
+                />
+
+                <form onSubmit={handleSubmit}>
+                  <div className="form-group">
+                    <label>Facebook</label>
+                    <input
+                      type="url"
+                      name="facebook"
+                      value={socialMediaLinks.facebook}
+                      onChange={handleChange}
+                      placeholder="Enter Facebook URL"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>Twitter</label>
+                    <input
+                      type="url"
+                      name="twitter"
+                      value={socialMediaLinks.twitter}
+                      onChange={handleChange}
+                      placeholder="Enter Twitter URL"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>LinkedIn</label>
+                    <input
+                      type="url"
+                      name="linkedin"
+                      value={socialMediaLinks.linkedin}
+                      onChange={handleChange}
+                      placeholder="Enter LinkedIn URL"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>Instagram</label>
+                    <input
+                      type="url"
+                      name="instagram"
+                      value={socialMediaLinks.instagram}
+                      onChange={handleChange}
+                      placeholder="Enter Instagram URL"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label>Website</label>
+                    <input
+                      type="url"
+                      name="website"
+                      value={socialMediaLinks.website}
+                      onChange={handleChange}
+                      placeholder="Enter Website URL"
+                    />
+                  </div>
+                </form>
                 <button
                   className="c-form-sec-btn"
                   onClick={() => setActiveSection('company')}
