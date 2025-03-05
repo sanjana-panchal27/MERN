@@ -39,15 +39,10 @@ const CFeedback = () => {
                 <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
                 <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
                 <textarea name="message" placeholder="Your feedback" value={formData.message} onChange={handleChange} required />
-                <button type="submit">Submit</button>
+                <button className="c-fed-btn">Submit</button>
             </form>
 
-            <h3>All Feedback</h3>
-            <ul>
-                {feedbacks.map(fb => (
-                    <li key={fb._id}><strong>{fb.name}:</strong> {fb.message}</li>
-                ))}
-            </ul>
+           
             </div>
         </div>
     </>
