@@ -90,6 +90,7 @@ const CompanyProfile = () => {
                   <option value="Management">Management</option>
                   <option value="Law">Law</option>
                   <option value="Design">Design</option>
+                  <option value="Other">Other</option>
                 </select>
 
                 <label>Location</label>
@@ -269,15 +270,15 @@ const CompanyProfile = () => {
                     />
                   </div>
                 </form>
-                <div className='c-btn-container'>
-                <button
-                  className="c-form-sec-btn"
-                  onClick={() => setActiveSection('company')}
-                >
-                  Back
-                </button>
+                <div className="c-btn-container">
+                  <button
+                    className="c-form-sec-btn"
+                    onClick={() => setActiveSection('company')}
+                  >
+                    Back
+                  </button>
 
-                <button className="c-form-sec-btn">Save</button>
+                  <button className="c-form-sec-btn">Save</button>
                 </div>
               </motion.div>
             )}
