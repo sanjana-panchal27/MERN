@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.status(200).send('Auth Router is working');
+router.route('/').get((req, res) => {
+  res.status(200).send('Hello this is router page');
+});
+
+router.route('/login').get((req, res) => {
+  res.status(200).send('This is Login Page');
 });
 
 module.exports = router;
