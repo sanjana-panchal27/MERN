@@ -8,9 +8,10 @@ const home = async (req, res) => {
 
 const login = async (req, res) => {
   try {
-    res.status(400).send('login page using controllers');
+    console.log(req.body);
+    res.status(400).json({ message: req.body });
   } catch (error) {
-    console.log(error);
+    res.status(500).json('internal server error');
   }
 };
 module.exports = { home, login };
