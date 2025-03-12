@@ -49,11 +49,11 @@ const CPostJob = () => {
                 <p>{job.company}</p>
 
                 <div>
-                  <button onClick={() => updateJob(job.id)}>
+                  <button onClick={() => updateJob(job.id)} className='update'>
                     <MdOutlineSecurityUpdateGood />
                   </button>
 
-                  <button onClick={() => deleteJob(job.id)}>
+                  <button onClick={() => deleteJob(job.id)} className='delete'>
                     <FaMinus />
                   </button>
                 </div>

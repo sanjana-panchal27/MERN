@@ -298,7 +298,6 @@
   background-color: #007bff;
 }
 
-
 /* COMPANY: CREATE PROFILE */
 .com-container {
   text-align: center;
@@ -415,7 +414,7 @@ textarea {
 }
 
 /* POST JOB */
-.com-container{
+.com-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -423,18 +422,176 @@ textarea {
   align-items: start;
 }
 
-.c-post-job{
+.c-post-job {
   margin-bottom: 80%;
   text-align: left;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.c-post-job h2{
+.c-post-job h2 {
   font-size: 20px;
   color: #060839;
 }
 
+.post-job-btn {
+  margin-top: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
 
+.post-job-btn:hover {
+  background: #218838;
+}
 
+.c-card {
+  width: 45%;
+  background: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.c-card h3 {
+  font-size: 18px;
+}
+
+.c-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+.c-card div {
+  margin-top: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.c-card button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.update {
+  color: #28a745;
+}
+
+.update:hover {
+  color: #218838;
+}
+
+.delete {
+  color: rgb(255, 49, 49);
+}
+
+.delete:hover {
+  color: red;
+}
+/* Access Student Profile */
+.c-access {
+  text-align: center;
+  height: 20%;
+  width: 40%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 80%;
+}
+
+.c-access:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.student-list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.student-list h3 {
+  font-size: 20px;
+  color: #060839;
+}
+
+.student-list p {
+  font-size: 14px;
+}
+
+.access-link {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+/* SHORTLIST & SCHEDULE INTERVIEW */
+.c-shortlist {
+  text-align: left;
+  height: 20%;
+  width: 40%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 80%;
+}
+
+.c-shortlist:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.c-shortlist h2 {
+  font-size: 20px;
+  color: #060839;
+  margin-bottom: 20px;
+}
+
+.c-shortlist p {
+  font-size: 14px;
+}
+
+.shortlist-btn {
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.shortlist {
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #218838;
+  color: white;
+}
+
+.schedule {
+  margin-left: 20px;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: rebeccapurple;
+  color: white;
+}
 
 /* FEEDBACK */
 .c-feedback {
@@ -447,19 +604,19 @@ textarea {
   border-radius: 10px;
 }
 
-.c-feedback input{
+.c-feedback input {
   font-size: 16p;
   color: black;
   margin-bottom: 5px;
 }
 
-.c-feedback textarea{
+.c-feedback textarea {
   font-size: 16p;
   color: black;
   margin-bottom: 5px;
 }
 
-.c-fed-btn{
+.c-fed-btn {
   margin-top: 30px;
   font-size: 16px;
   background-color: #0056b3;
@@ -469,6 +626,6 @@ textarea {
   border: none;
 }
 
-.c-fed-btn:hover{
-  background-color:#007bff;
+.c-fed-btn:hover {
+  background-color: #007bff;
 }
