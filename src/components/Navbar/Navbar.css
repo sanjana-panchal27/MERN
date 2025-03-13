@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "roboto", sans-serif;
+  font-family: 'roboto', sans-serif;
 }
 
 /* navbar */
@@ -71,33 +71,4 @@ main {
   display: flex;
   margin: 25%;
 }
-/* footer*/
-footer {
-  background-color: #ff8000;
-  color: black;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 16px;
-  position: relative;
-  width: 100%;
-}
 
-/* footer paragraph */
-footer p {
-  margin: 0;
-  padding: 10px;
-  font-size: 16px;
-}
-
-/* social-media-icon */
-.social-media {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* social media a */
-.social-media a {
-  color: black;
-  align-items: center;
-}
