@@ -1,7 +1,7 @@
-import React from "react";
-import "./Navbar.css";
+import React from 'react';
+import './Navbar.css';
 
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -15,24 +15,24 @@ const Navbar = () => {
             {/* navigation links */}
             <ul>
               <li>
-                <NavLink to="/">Home</NavLink>
+                <NavLink to="/">HOME</NavLink>
               </li>
               <li>
-                <NavLink to="/aboutus">AboutUs</NavLink>
+                <NavLink to="/aboutus">ABOUTUS</NavLink>
               </li>
               <li>
-                <NavLink to="/service">Service</NavLink>
+                <NavLink to="/service">SERVICE</NavLink>
               </li>
               <li>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/contact">CONTACT</NavLink>
               </li>
               <li>
                 <NavLink to="/faqs">FAQs</NavLink>
               </li>
 
               {/* Login btn */}
-              <li>
-                <NavLink to="/login"> Login</NavLink>
+              <li className="login">
+                <NavLink to="/login"> LOGIN</NavLink>
               </li>
             </ul>
           </nav>

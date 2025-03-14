@@ -18,12 +18,12 @@ const Footer = () => {
             </a>
           </div>
 
-        
+          <div className="input-container">
             <input placeholder="ENTER YOUR EMAIL*"></input>
-
             <button className="news-btn">Subscribe</button>
           </div>
-        
+        </div>
+
         {/* <p>&copy; 2025 Rai University Placement Cell. All Rights Reserved.</p>
          */}
       </footer>

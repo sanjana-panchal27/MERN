@@ -15,6 +15,7 @@ const Home = () => {
           <button className="hero-btn">Get Started</button>
         </header>
       </div>
+      
       <div className="home-sec">
         <div className="home-company">
           <section>

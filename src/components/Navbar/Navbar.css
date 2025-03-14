@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'roboto', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 /* navbar */
 .navbar {
   padding: 15px 7%;
-  height: 60px;
-  background-color: #ff8000;
+  height: 75px;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,11 +40,12 @@ ul {
   color: black;
   text-decoration: none;
   padding: 5px 10px;
+  font-size: 16px;
 }
 
 /* Active NavLink styles */
 .navbar a.active {
-  color: white;
+  /* color: white; */
   border-radius: 5px;
 }
 
@@ -61,7 +62,7 @@ li {
 
 /* Hover Effect */
 li:hover {
-  background: whitesmoke;
+  background: beige;
   border-radius: 5px;
   transition: 0.5s;
 }
@@ -72,3 +73,9 @@ main {
   margin: 25%;
 }
 
+.login {
+  background-color: orange;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 10px;
+}
