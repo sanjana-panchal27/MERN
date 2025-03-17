@@ -27,9 +27,10 @@ const Home = () => {
 
           <h2>Unlocking potential, creating opportunities</h2>
           <p>Where students and recruiters unite!</p>
-          <NavLink to="/login">
-            <button className="hero-btn">Get Started</button>
-          </NavLink>
+
+          <button className="hero-btn">
+            <NavLink to="/login">Get Started </NavLink>
+          </button>
         </header>
       </div>
 
@@ -66,14 +67,15 @@ const Home = () => {
 
         <div className="career-guid">
           <section>
-            <NavLink to="/">
-              <img src="./images/img6.jpeg" alt="logo" className="images" />
-            </NavLink>
             <FaBriefcase className="home-icon" />
             <h3 className="head-3">Career Guidance</h3>
             <p className="home-para">
               Get Expert Advice and resources to enhance your career journey.
             </p>
+
+            <NavLink to="/">
+              <img src="./images/img6.jpeg" alt="logo" className="images" />
+            </NavLink>
           </section>
         </div>
 
