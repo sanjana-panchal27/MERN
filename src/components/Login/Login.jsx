@@ -58,10 +58,14 @@ const LoginSignup = () => {
         </div>
 
         {/* confirm password input */}
-        <div className="input">
-          <FaLock className="icon" />
-          <input type="password" placeholder="Confirm Password" />
-        </div>
+        {action === "Login" ? (
+          <div></div>
+        ) : (
+          <div className="input">
+            <FaLock className="icon" />
+            <input type="password" placeholder="Confirm Password" />
+          </div>
+        )}
 
         {/*forgot password (visible only on login page)*/}
         {action === "Sign Up" ? (

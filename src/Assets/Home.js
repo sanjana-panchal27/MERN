@@ -11,37 +11,42 @@ const Home = () => {
     <>
       <div className="hero-section">
         <header className="hero-header">
-          <NavLink to="/">
-            <img src="./images/img1.jpg" alt="logo" className="images" />
-          </NavLink>
+          <div className="hero-img">
+            <NavLink to="/">
+              <img src="./images/img1.jpg" alt="logo" className="img1" />
+            </NavLink>
 
-          <NavLink to="/">
-            <img src="./images/img2.jpeg" alt="logo" className="images" />
-          </NavLink>
+            <NavLink to="/">
+              <img src="./images/img2.jpeg" alt="logo" className="img2" />
+            </NavLink>
 
-          <NavLink to="/">
-            <img src="./images/img3.jpeg" alt="logo" className="images" />
-          </NavLink>
+            <NavLink to="/">
+              <img src="./images/img3.jpeg" alt="logo" className="img3" />
+            </NavLink>
+          </div>
 
           <h2>Unlocking potential, creating opportunities</h2>
           <p>Where students and recruiters unite!</p>
-          <button className="hero-btn">Get Started</button>
+          <NavLink to="/login">
+            <button className="hero-btn">Get Started</button>
+          </NavLink>
         </header>
       </div>
 
       <div className="home-sec">
         <div className="home-company">
           <section>
+            <div className="text-container">
+              <FaHandshake className="home-icon" />
+              <h3 className="head-3">Top Companies Hiring</h3>
+              <p className="home-para">
+                We partner with leading companies to offer the best career
+                opportunities.
+              </p>
+            </div>
             <NavLink to="/">
               <img src="./images/img4.jpeg" alt="logo" className="images" />
             </NavLink>
-
-            <FaHandshake className="home-icon" />
-            <h3 className="head-3">Top Companies Hiring</h3>
-            <p className="home-para">
-              We partner with leading companies to offer the best career
-              opportunities.
-            </p>
           </section>
         </div>
 
