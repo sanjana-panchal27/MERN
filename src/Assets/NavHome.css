@@ -1,0 +1,305 @@
+.images {
+  height: 250px;
+  width: 250px;
+}
+
+.testimonials-img {
+  height: 250px;
+}
+
+.hero-section {
+  display: flex;
+}
+
+.hero-header {
+  text-align: center;
+  padding: 60px;
+  margin: 35px;
+  background-color: #ffd9b6;
+  color: black;
+  width: 100%;
+}
+
+.hero-header h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.hero-header p {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.hero-btn {
+  background-color: #ff8000;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 5px;
+  padding: 12px;
+  border: none;
+  margin: 10px;
+}
+
+.hero-btn:hover {
+  background-color: white;
+  transition: 0.5s;
+}
+
+.home-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}
+
+.home-company {
+  background-color: #ffd9b6;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.success-stories {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.career-guid {
+  background-color: #ffd9b6;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.testimonials {
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.head-3 {
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.home-icon {
+  font-size: 25px;
+}
+
+/* ABOUT US */
+.hero-abt {
+  text-align: left;
+  padding: 60px;
+  color: black;
+  font-size: 16px;
+}
+
+.hero-abt hr {
+  width: 10%;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.abtus {
+  padding: 60px;
+  width: 100%;
+}
+
+.abtus-para {
+  color: black;
+  width: 50%;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.abt-h2 {
+  font-size: 25px;
+  background-color: #ffd9b6;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.abt-h2 p {
+  margin: 10px;
+  color: red;
+}
+
+/* SERVICES */
+.hero-service {
+  text-align: left;
+  padding: 60px;
+  color: black;
+  font-size: 16px;
+}
+
+.hero-service hr {
+  width: 10%;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.service-section {
+  padding: 60px;
+  width: 100%;
+}
+
+.service-para {
+  margin-bottom: 20px;
+  color: black;
+  width: 50%;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.s-service h2 {
+  font-size: 18px;
+  background-color: #ffd9b6;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.c-service {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.s-msg {
+  width: 100%;
+}
+
+.s-msg h2 {
+  font-size: 30px;
+  color: #ff8000;
+  margin-top: 80px;
+  text-align: center;
+}
+
+/* CONTACT US */
+.hero-contact {
+  text-align: left;
+  padding: 60px;
+  color: black;
+  font-size: 16px;
+}
+
+.hero-contact hr {
+  width: 10%;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.contact-sec {
+  padding: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.msg-box {
+  background-color: #ffce96;
+  border-radius: 5px;
+  width: 30%;
+  margin-left: 40%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  width: 80%;
+  margin-left: 10%;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 25%;
+  font-size: 17px;
+  width: 50%;
+  padding: 10px;
+  background-color: #ff8000;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: white;
+  transition: 0.5s;
+}
+
+/* FAQ's */
+.hero-faqs {
+  text-align: left;
+  padding: 60px;
+  color: black;
+  font-size: 16px;
+}
+
+.faq-container {
+  padding: 60px;
+  width: 100%;
+  text-align: center;
+}
+
+.faq-container h3 {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-container p {
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+/* footer {
+  background: #ff8000;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+} */

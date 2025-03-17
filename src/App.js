@@ -1,15 +1,16 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 
-import Navbar from './components/Navbar/Navbar';
-import Home from './components/Navbar/Home';
-import AboutUs from './components/Navbar/AboutUs';
-import Service from './components/Navbar/Service';
-import Contact from './components/Navbar/Contact';
-import FAQs from './components/Navbar/FAQs';
-import Login from './components/Login/Login';
-import Footer from './components/Navbar/Footer';
+import Home from "./Assets/Home";
+import AboutUs from "./Assets/AboutUs";
+import Service from "./Assets/Service";
+import Contact from "./Assets/Contact";
+import FAQs from "./Assets/FAQs";
+import Login from "./components/Login/Login";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 // import AdminNavbar from "./components/Admin/AdminNavbar";
 // import AdminSidebar from "./components/Admin/AdminSidebar";
@@ -41,9 +42,21 @@ import Footer from './components/Navbar/Footer';
 // import SNotification from "./components/Student/SNotification";
 
 function App() {
+  const theme = {
+    media: {
+      sm: "640",
+      md: "768",
+      lg: "992",
+      xl: "1200",
+    },
+  };
+
   return (
-    <BrowserRouter>
-      {/* <StuNav />
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Header />
+
+        {/* <StuNav />
        <StuSidebar />
 
          <div className="stu-container">
@@ -63,22 +76,20 @@ function App() {
             </Routes>
         </div> */}
 
-      <div className="app-container">
-        <Navbar />
-        <div className="page-content">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="aboutus" element={<AboutUs />} />
-            <Route exact path="service" element={<Service />} />
-            <Route exact path="contact" element={<Contact />} />
-            <Route exact path="faqs" element={<FAQs />} />
-            <Route exact path="login" element={<Login />}></Route>
-          </Routes>
+        <div className="app-container">
+          <div className="page-content">
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="aboutus" element={<AboutUs />} />
+              <Route exact path="service" element={<Service />} />
+              <Route exact path="contact" element={<Contact />} />
+              <Route exact path="faqs" element={<FAQs />} />
+              <Route exact path="login" element={<Login />}></Route>
+            </Routes>
+          </div>
         </div>
-        <Footer />
-      </div>
 
-      {/* <div className="admin-profile">
+        {/* <div className="admin-profile">
         <AdminNavbar />
         <AdminSidebar />
 
@@ -100,7 +111,7 @@ function App() {
         </Routes>
       </div> */}
 
-      {/* <div className="company-profile">
+        {/* <div className="company-profile">
         <ComNav />
         <ComSidebar />
 
@@ -113,7 +124,9 @@ function App() {
           <Route exact path="/c-feedback" element={<CFeedback />}></Route>
         </Routes>
       </div>  */}
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
