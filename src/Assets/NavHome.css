@@ -338,12 +338,19 @@ button:hover {
   margin-bottom: 20px;
 }
 
-/* FOOTER */
-/* footer {
-  background: #ff8000;
-  color: black;
+/* ERROR */
+.hero-error {
   text-align: center;
-  padding: 10px 0;
-  width: 100%;
-  position: relative;
-} */
+  padding: 80px;
+  font-size: 20px;
+}
+
+.hero-error p {
+  margin-top: 40px;
+}
+
+.error-btn {
+  margin-top: 40px;
+  margin-left: auto;
+  width: 10%;
+}

@@ -11,6 +11,7 @@ import FAQs from "./Assets/FAQs";
 import Login from "./components/Login/Login";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Error from "../src/Error";
 
 // import AdminNavbar from "./components/Admin/AdminNavbar";
 // import AdminSidebar from "./components/Admin/AdminSidebar";
@@ -85,6 +86,7 @@ function App() {
               <Route exact path="contact" element={<Contact />} />
               <Route exact path="faqs" element={<FAQs />} />
               <Route exact path="login" element={<Login />}></Route>
+              <Route exact path="*" element={<Error />}></Route>
             </Routes>
           </div>
         </div>
