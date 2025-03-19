@@ -256,6 +256,10 @@
   text-align: center;
 }
 
+.contact-sec p {
+  font-size: 20px;
+}
+
 .msg-box {
   background-color: #ffce96;
   border-radius: 5px;
@@ -273,19 +277,21 @@ form {
 }
 
 input {
-  width: 100%;
+  /* width: 100%; */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  text-transform: uppercase;
 }
 
 textarea {
-  width: 100%;
+  /* width: 100%; */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  text-transform: uppercase;
 }
 
 button {
@@ -295,7 +301,7 @@ button {
   font-size: 17px;
   width: 50%;
   padding: 10px;
-  background-color: #ff8000;
+  background-color: #ffa500;
   border: none;
   border-radius: 5px;
 }

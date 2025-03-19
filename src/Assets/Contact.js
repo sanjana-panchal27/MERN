@@ -14,11 +14,30 @@ const Contact = () => {
       </div>
 
       <div className="msg-box">
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <textarea placeholder="Message" rows={6}></textarea>
-          <button type="submit">Submit</button>
+        <form action="https://formspree.io/f/maneqnpb" method="POST">
+          <input
+            type="text"
+            name="username"
+            placeholder="Name"
+            autoComplete="off"
+            required
+          />
+          <input
+            type="email"
+            name="Email"
+            className="email"
+            placeholder="Email"
+            autoComplete="off"
+            required
+          />
+          <textarea
+            name="message"
+            rows={6}
+            placeholder="Message"
+            autoComplete="off"
+            required
+          ></textarea>
+          <button type="submit">SUBMIT</button>
         </form>
       </div>
     </>
