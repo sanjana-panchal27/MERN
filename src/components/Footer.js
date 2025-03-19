@@ -1,6 +1,6 @@
-import { FaLinkedin } from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si';
-import './Footer.css';
+import { FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
+import "./Footer.css";
 const Footer = () => {
   return (
     <>
@@ -23,9 +23,6 @@ const Footer = () => {
             <button className="news-btn">Subscribe</button>
           </div>
         </div>
-
-        {/* <p>&copy; 2025 Rai University Placement Cell. All Rights Reserved.</p>
-         */}
       </footer>
     </>
   );
