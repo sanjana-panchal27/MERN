@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './CompanyHome.css';
+import "./CompanyHome.css";
 const CAccess = () => {
   return (
     <>

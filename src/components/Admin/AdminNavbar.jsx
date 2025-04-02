@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AdminNavbar.css";
-import { IoIosNotifications } from "react-icons/io";
 import { FaUserCircle } from "react-icons/fa";
+import ANotification from "./ANotification";
 
 // navbar component with navigation links and navigation buttons
 const AdminNavbar = () => {
@@ -20,11 +20,9 @@ const AdminNavbar = () => {
 
             {/* rightside navbar icon in one div: right-icon */}
             <div className="right-icon">
-              {/* unique class for navbar notification icon */}
+              {/* Notification Component */}
               <li className="nav-notification">
-                <a href="/" className="nav-icon">
-                  <IoIosNotifications />
-                </a>
+              <ANotification showCount={true} />
               </li>
 
               {/* usercircle profile */}

@@ -267,16 +267,16 @@
   margin-left: 40%;
 }
 
-form {
-  display: flex;
+.contact-form {
+  /* display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 10px; */
   padding: 20px;
   width: 80%;
   margin-left: 10%;
 }
 
-input {
+.contact-input {
   /* width: 100%; */
   padding: 10px;
   border: 1px solid #ccc;

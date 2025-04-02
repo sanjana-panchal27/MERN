@@ -14,8 +14,13 @@ const Contact = () => {
       </div>
 
       <div className="msg-box">
-        <form action="https://formspree.io/f/maneqnpb" method="POST">
+        <form
+          action="https://formspree.io/f/maneqnpb"
+          method="POST"
+          className="contact-form"
+        >
           <input
+            className="contact-input"
             type="text"
             name="username"
             placeholder="Name"
@@ -23,9 +28,9 @@ const Contact = () => {
             required
           />
           <input
+            className="contact-input"
             type="email"
             name="Email"
-            className="email"
             placeholder="Email"
             autoComplete="off"
             required

@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import './CompanyHome.css';
+import { useState } from "react";
+import "./CompanyHome.css";
 
 const jobPostings = [
   {
     id: 1,
-    title: 'Frontend Developer',
-    postedDate: '2025-02-25',
+    title: "Frontend Developer",
+    postedDate: "2025-02-25",
     applications: 12,
   },
   {
     id: 2,
-    title: 'Backend Developer',
-    postedDate: '2025-02-24',
+    title: "Backend Developer",
+    postedDate: "2025-02-24",
     applications: 8,
   },
   {
     id: 3,
-    title: 'UI/UX Designer',
-    postedDate: '2025-02-23',
+    title: "UI/UX Designer",
+    postedDate: "2025-02-23",
     applications: 15,
   },
 ];
@@ -25,33 +25,33 @@ const jobPostings = [
 const studentsData = [
   {
     id: 1,
-    name: 'Alice',
-    skills: 'React, Node.js',
+    name: "Alice",
+    skills: "React, Node.js",
     year: 2024,
     cgpa: 8.5,
-    status: 'Applied',
+    status: "Applied",
   },
   {
     id: 2,
-    name: 'Bob',
-    skills: 'Python, Django',
+    name: "Bob",
+    skills: "Python, Django",
     year: 2023,
     cgpa: 7.8,
-    status: 'Applied',
+    status: "Applied",
   },
   {
     id: 3,
-    name: 'Charlie',
-    skills: 'Java, Spring',
+    name: "Charlie",
+    skills: "Java, Spring",
     year: 2025,
     cgpa: 9.0,
-    status: 'Applied',
+    status: "Applied",
   },
 ];
 
 const CompanyHome = () => {
   const [students, setStudents] = useState(studentsData);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
 
   const handleStatusChange = (id, newStatus) => {
     setStudents(
@@ -69,20 +69,20 @@ const CompanyHome = () => {
 
   const [interviews, setInterviews] = useState([]);
   const [newInterview, setNewInterview] = useState({
-    student: '',
-    date: '',
-    status: 'Pending',
-    feedback: '',
+    student: "",
+    date: "",
+    status: "Pending",
+    feedback: "",
   });
 
   const handleAddInterview = () => {
     if (newInterview.student && newInterview.date) {
       setInterviews([...interviews, newInterview]);
       setNewInterview({
-        student: '',
-        date: '',
-        status: 'Pending',
-        feedback: '',
+        student: "",
+        date: "",
+        status: "Pending",
+        feedback: "",
       });
     }
   };
@@ -158,7 +158,7 @@ const CompanyHome = () => {
                       <button
                         className="c-short-btn"
                         onClick={() =>
-                          handleStatusChange(student.id, 'Shortlisted')
+                          handleStatusChange(student.id, "Shortlisted")
                         }
                       >
                         Shortlist
@@ -166,7 +166,7 @@ const CompanyHome = () => {
                       <button
                         className="c-reject-btn"
                         onClick={() =>
-                          handleStatusChange(student.id, 'Rejected')
+                          handleStatusChange(student.id, "Rejected")
                         }
                       >
                         Reject

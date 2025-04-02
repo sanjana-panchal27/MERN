@@ -73,7 +73,6 @@ h2 {
 /* user profile */
 .user-profile {
   position: relative;
-  margin-left: 20px;
 }
 
 /* user profile btn */
@@ -129,4 +128,8 @@ h2 {
   color: black;
   font-size: 14px;
   /* display: block; */
+}
+
+.profile-icon:hover {
+  background-color: none;
 }

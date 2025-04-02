@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './CompanyHome.css';
+import "./CompanyHome.css";
 const CFeedback = () => {
   const [feedbacks, setFeedbacks] = useState([]);
   const [formData, setFormData] = useState({

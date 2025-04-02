@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CompanyHome.css';
+import "./CompanyHome.css";
 import { FaPlus } from 'react-icons/fa';
 import { FaMinus } from 'react-icons/fa';
 import { MdOutlineSecurityUpdateGood } from 'react-icons/md';

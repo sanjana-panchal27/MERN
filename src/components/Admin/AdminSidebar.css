@@ -20,7 +20,7 @@ h1 {
 }
 
 /* inputs: all contain */
-.inputs {
+.a-inputs {
   display: flex;
   margin-top: 20px;
   margin-left: 10px;
@@ -28,7 +28,7 @@ h1 {
 }
 
 /*input: link + icon */
-.input {
+.a-input {
   display: flex;
   align-items: center;
   padding: 10px;

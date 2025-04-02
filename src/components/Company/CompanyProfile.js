@@ -1,33 +1,33 @@
-import React, { useState } from 'react';
-import './CompanyHome.css';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useActionData } from 'react-router-dom';
+import React, { useState } from "react";
+import "./CompanyHome.css";
+import { motion, AnimatePresence } from "framer-motion";
+import { useActionData } from "react-router-dom";
 
 const CompanyProfile = () => {
-  const [companyName, setCompanyName] = useState('');
-  const [industryType, setIndustryType] = useState('');
-  const [location, setLocation] = useState('');
-  const [website, setWebsite] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [description, setDescription] = useState('');
+  const [companyName, setCompanyName] = useState("");
+  const [industryType, setIndustryType] = useState("");
+  const [location, setLocation] = useState("");
+  const [website, setWebsite] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [description, setDescription] = useState("");
 
   // contact details
-  const [fullName, setFullName] = useState('');
-  const [designation, setDesignation] = useState('');
-  const [streetAddress, setStreetAddress] = useState('');
-  const [city, setCity] = useState('');
-  const [state, setState] = useState('');
-  const [country, setCountry] = useState('');
-  const [zipCode, setZipCode] = useState('');
-  const [contactEmail, setContactEmail] = useState('');
-  const [contactPhone, setContactPhone] = useState('');
-  const [linkedin, setLinkedin] = useState('');
+  const [fullName, setFullName] = useState("");
+  const [designation, setDesignation] = useState("");
+  const [streetAddress, setStreetAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [country, setCountry] = useState("");
+  const [zipCode, setZipCode] = useState("");
+  const [contactEmail, setContactEmail] = useState("");
+  const [contactPhone, setContactPhone] = useState("");
+  const [linkedin, setLinkedin] = useState("");
   const [socialMediaLinks, setSocialMediaLinks] = useState({
-    facebook: '',
-    twitter: '',
-    instagram: '',
-    medium: '',
+    facebook: "",
+    twitter: "",
+    instagram: "",
+    medium: "",
   });
 
   const handleChange = (e) => {
@@ -37,10 +37,10 @@ const CompanyProfile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Social Mediia Links: ', socialMediaLinks);
+    console.log("Social Mediia Links: ", socialMediaLinks);
   };
 
-  const [activeSection, setActiveSection] = useState('company');
+  const [activeSection, setActiveSection] = useState("company");
 
   return (
     <>
@@ -49,11 +49,11 @@ const CompanyProfile = () => {
 
         <div className="c-profile-container">
           <div className="c-form-nav">
-            <button onClick={() => setActiveSection('company')}>
+            <button onClick={() => setActiveSection("company")}>
               Company Info
             </button>
 
-            <button onClick={() => setActiveSection('contact')}>
+            <button onClick={() => setActiveSection("contact")}>
               Contact Details
             </button>
           </div>
@@ -62,7 +62,7 @@ const CompanyProfile = () => {
         {/* Section content with smooth transition */}
         <diiv className="c-form-section">
           <AnimatePresence mode="wait">
-            {activeSection === 'company' && (
+            {activeSection === "company" && (
               <motion.div
                 key="company"
                 initial={{ opacity: 0, x: -50 }}
@@ -74,6 +74,7 @@ const CompanyProfile = () => {
 
                 <label>Company Name</label>
                 <input
+                  className="profile-input"
                   type="text"
                   value={companyName}
                   onChange={(e) => setCompanyName(e.target.value)}
@@ -81,6 +82,7 @@ const CompanyProfile = () => {
 
                 <label>Industry Type</label>
                 <select
+                  className="profile-select"
                   value={industryType}
                   onChange={(e) => setIndustryType(e.target.value)}
                 >
@@ -95,6 +97,7 @@ const CompanyProfile = () => {
 
                 <label>Location</label>
                 <input
+                  className="profile-input"
                   type="text"
                   value={location}
                   onchange={(e) => setLocation(e.target.value)}
@@ -102,6 +105,7 @@ const CompanyProfile = () => {
 
                 <label>Website</label>
                 <input
+                  className="profile-input"
                   type="url"
                   value={website}
                   onChange={(e) => setWebsite(e.target.value)}
@@ -109,6 +113,7 @@ const CompanyProfile = () => {
 
                 <label>Email</label>
                 <input
+                  className="profile-input"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -116,6 +121,7 @@ const CompanyProfile = () => {
 
                 <label>Phone</label>
                 <input
+                  className="profile-input"
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
@@ -123,20 +129,21 @@ const CompanyProfile = () => {
 
                 <label>Description</label>
                 <textarea
+                  className="profile-textarea"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                 ></textarea>
 
                 <button
                   className="c-form-sec-btn"
-                  onClick={() => setActiveSection('contact')}
+                  onClick={() => setActiveSection("contact")}
                 >
                   Next
                 </button>
               </motion.div>
             )}
 
-            {activeSection === 'contact' && (
+            {activeSection === "contact" && (
               <motion.div
                 key="contact"
                 initial={{ opacity: 0, x: -50 }}
@@ -148,6 +155,7 @@ const CompanyProfile = () => {
 
                 <label>Full Name</label>
                 <input
+                  className="profile-input"
                   type="text"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
@@ -156,6 +164,7 @@ const CompanyProfile = () => {
 
                 <label>Designation</label>
                 <input
+                  className="profile-input"
                   type="text"
                   value={designation}
                   onChange={(e) => setDesignation(e.target.value)}
@@ -164,6 +173,7 @@ const CompanyProfile = () => {
 
                 <label>Street Address</label>
                 <input
+                  className="profile-input"
                   type="text"
                   value={streetAddress}
                   onChange={(e) => setStreetAddress(e.target.value)}
@@ -171,6 +181,7 @@ const CompanyProfile = () => {
 
                 <label>City</label>
                 <input
+                  className="profile-input"
                   type="text"
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
@@ -178,6 +189,7 @@ const CompanyProfile = () => {
 
                 <label>State/Province</label>
                 <input
+                  className="profile-input"
                   type="text"
                   value={state}
                   onChange={(e) => setState(e.target.value)}
@@ -185,6 +197,7 @@ const CompanyProfile = () => {
 
                 <label>Country</label>
                 <input
+                  className="profile-input"
                   type="text"
                   value={country}
                   onChange={(e) => setCountry(e.target.value)}
@@ -192,6 +205,7 @@ const CompanyProfile = () => {
 
                 <label>ZIP Code</label>
                 <input
+                  className="profile-input"
                   type="text"
                   value={zipCode}
                   onChange={(e) => setZipCode(e.target.value)}
@@ -199,6 +213,7 @@ const CompanyProfile = () => {
 
                 <label>Contact Email</label>
                 <input
+                  className="profile-input"
                   type="email"
                   value={contactEmail}
                   onChange={(e) => setContactEmail(e.target.value)}
@@ -206,6 +221,7 @@ const CompanyProfile = () => {
 
                 <label>Contact Phone</label>
                 <input
+                  className="profile-input"
                   type="contactPhone"
                   value={contactPhone}
                   onChange={(e) => setContactPhone(e.target.value)}
@@ -213,6 +229,7 @@ const CompanyProfile = () => {
 
                 <label>LinkedIn</label>
                 <input
+                  className="profile-input"
                   type="link"
                   value={linkedin}
                   onChange={(e) => setLinkedin(e.target.value)}
@@ -222,6 +239,7 @@ const CompanyProfile = () => {
                   <div className="form-group">
                     <label>Facebook</label>
                     <input
+                      className="profile-input"
                       type="url"
                       name="facebook"
                       value={socialMediaLinks.facebook}
@@ -232,6 +250,7 @@ const CompanyProfile = () => {
                   <div className="form-group">
                     <label>Twitter</label>
                     <input
+                      className="profile-input"
                       type="url"
                       name="twitter"
                       value={socialMediaLinks.twitter}
@@ -242,6 +261,7 @@ const CompanyProfile = () => {
                   <div className="form-group">
                     <label>LinkedIn</label>
                     <input
+                      className="profile-input"
                       type="url"
                       name="linkedin"
                       value={socialMediaLinks.linkedin}
@@ -252,6 +272,7 @@ const CompanyProfile = () => {
                   <div className="form-group">
                     <label>Instagram</label>
                     <input
+                      className="profile-input"
                       type="url"
                       name="instagram"
                       value={socialMediaLinks.instagram}
@@ -262,6 +283,7 @@ const CompanyProfile = () => {
                   <div className="form-group">
                     <label>Website</label>
                     <input
+                      className="profile-input"
                       type="url"
                       name="website"
                       value={socialMediaLinks.website}
@@ -273,7 +295,7 @@ const CompanyProfile = () => {
                 <div className="c-btn-container">
                   <button
                     className="c-form-sec-btn"
-                    onClick={() => setActiveSection('company')}
+                    onClick={() => setActiveSection("company")}
                   >
                     Back
                   </button>

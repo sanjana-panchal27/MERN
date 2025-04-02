@@ -20,51 +20,51 @@ const ComSidebar = () => {
         <hr />
 
         {/* sidebar links */}
-        <div className="inputs">
+        <div className="c-c-inputs">
           <ul>
             {/* home link */}
-            <li className="input">
-              <NavLink to="/" className="icon">
+            <li className="c-input">
+              <NavLink to="/company-dashboard" className="icon">
                 <FaHome />
                 <span> Dashboard</span>
               </NavLink>
             </li>
 
             {/* Profile Create */}
-            <li className="input">
-              <NavLink to="/c-profile" className="icon">
+            <li className="c-input">
+              <NavLink to="/company-dashboard/c-profile" className="icon">
                 <FaUserEdit />
                 <span>Create Profile</span>
               </NavLink>
             </li>
 
             {/* post job openings */}
-            <li className="input">
-              <NavLink to="/c-postjob" className="icon">
+            <li className="c-input">
+              <NavLink to="/company-dashboard/c-postjob" className="icon">
                 <FaBriefcase />
                 <span>Post Job Openings</span>
               </NavLink>
             </li>
 
             {/* Access Student Profiles */}
-            <li className="input">
-              <NavLink to="/c-access" className="icon">
+            <li className="c-input">
+              <NavLink to="/company-dashboard/c-access" className="icon">
                 <PiStudentBold />
                 <span> Access Student Profiles</span>
               </NavLink>
             </li>
 
             {/* Shortlist & Schedule Interview */}
-            <li className="input">
-              <NavLink to="/c-shortlist" className="icon">
+            <li className="c-input">
+              <NavLink to="/company-dashboard/c-shortlist" className="icon">
                 <MdEventAvailable />
                 <span> Shortlist & Schedule Interview</span>
               </NavLink>
             </li>
 
             {/* feedback */}
-            <li className="input">
-              <NavLink to="/c-feedback" className="icon">
+            <li className="c-input">
+              <NavLink to="/company-dashboard/c-feedback" className="icon">
                 <MdFeedback />
                 <span> Feedback</span>
               </NavLink>

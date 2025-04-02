@@ -377,9 +377,25 @@
   background-color: #218838;
 }
 
-input,
-select,
-textarea {
+.profile-input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.profile-select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.profile-textarea {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
@@ -600,7 +616,7 @@ textarea {
   gap: 20px;
   padding: 80px;
   width: 50%;
-  background-color: #060839;
+  box-shadow: 0 4px 6px rgba(0.1, 0.1, 0.1, 0.3);
   border-radius: 10px;
 }
 

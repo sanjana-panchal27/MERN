@@ -9,7 +9,14 @@ const StudentProfile = () => {
 
   const [skills, setSkills] = useState([]);
   const [newSkill, setNewSkill] = useState("");
-
+  const [projects, setProjects] = useState([]);
+  const [newProject, setNewProject] = useState({
+    title: "",
+    description: "",
+    link: "",
+  });
+  const [resume, setResume] = useState(null);
+  const [resumeUrl, setResumeUrl] = useState("");
   const addSkill = () => {
     if (newSkill.trim() !== "") {
       setSkills([...skills, newSkill]);
@@ -20,6 +27,39 @@ const StudentProfile = () => {
   const removeSkill = (index) => {
     const updatedSkills = skills.filter((_, i) => i !== index);
     setSkills(updatedSkills);
+  };
+
+  const handleProjectChange = (e) => {
+    console.log(e.target.name, e.target.value); // Debugging
+    setNewProject({ ...newProject, [e.target.name]: e.target.value });
+  };
+
+  const addProject = () => {
+    if (newProject.title.trim() && newProject.description.trim()) {
+      setProjects([...projects, newProject]);
+      console.log("Project Added:", newProject); // Debugging
+      setNewProject({ title: "", description: "", link: "" }); // Reset input fields
+    } else {
+      console.log("Please enter title and description.");
+    }
+  };
+
+  const removeProject = (index) => {
+    setProjects(projects.filter((_, i) => i !== index));
+  };
+
+  const handleResumeChange = (e) => {
+    setResume(e.target.files[0]);
+  };
+
+  const uploadResume = async () => {
+    if (!resume) {
+      alert("Please select a resume file.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("resume", resume);
   };
 
   return (
@@ -207,6 +247,24 @@ const StudentProfile = () => {
               >
                 <h2>Resume</h2>
 
+                <div className="resume-container">
+                  <input type="file" onChange={handleResumeChange} />
+                  <button onClick={uploadResume}>Upload Resume</button>
+
+                  {resumeUrl && (
+                    <div>
+                      <h3>Resume:</h3>
+                      <a
+                        href={resumeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View Resume
+                      </a>
+                    </div>
+                  )}
+                </div>
+
                 <div className="btn-container">
                   <button
                     className="form-sec-btn"
@@ -270,6 +328,93 @@ const StudentProfile = () => {
                   >
                     Back
                   </button>
+
+                  <button
+                    className="form-sec-btn"
+                    onClick={() => setActiveSection("project")}
+                  >
+                    Next
+                  </button>
+                </div>
+              </motion.div>
+            )}
+
+            {activeSection === "project" && (
+              <motion.div
+                key="project"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
+                transition={{ duration: 0.4 }}
+              >
+                <h2>Projects</h2>
+
+                <div className="project-container">
+                  <input
+                    type="text"
+                    name="title"
+                    value={newProject.title}
+                    onChange={handleProjectChange}
+                    placeholder="Project Title"
+                    className="project-input"
+                    required
+                  />
+                  <textarea
+                    name="description"
+                    value={newProject.description}
+                    onChange={handleProjectChange}
+                    placeholder="Project Description"
+                    className="project-textarea"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="link"
+                    value={newProject.link}
+                    onChange={handleProjectChange}
+                    placeholder="Project Link (optional)"
+                    className="project-input"
+                  />
+                  <button className="add-project-btn" onClick={addProject}>
+                    Add Project
+                  </button>
+
+                  {/* Display added projects */}
+                  <ul className="project-list">
+                    {projects.map((project, index) => (
+                      <li key={index}>
+                        <strong>{project.title}</strong>: {project.description}{" "}
+                        {project.link && (
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            View Project
+                          </a>
+                        )}
+                        <button onClick={() => removeProject(index)}>
+                          Remove
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="btn-container">
+                    <button
+                      className="form-sec-btn"
+                      onClick={() => setActiveSection("skill")}
+                    >
+                      Back
+                    </button>
+
+                    <button
+                      className="form-sec-btn"
+                      onClick={() => setActiveSection("")}
+                    >
+                      Save
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             )}

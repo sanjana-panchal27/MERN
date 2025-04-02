@@ -22,66 +22,69 @@ const Sidebar = () => {
         <hr />
 
         {/* Sidebar links */}
-        <div className="inputs">
+        <div className="s-s-inputs">
           <ul>
             {/* home link: dashboard */}
-            <li className="input">
-              <NavLink to="/" className="icon">
+            <li className="s-input">
+              <NavLink to="/student-dashboard" className="icon">
                 <FaHome />
                 <span> Dashboard</span>
               </NavLink>
             </li>
 
             {/* create profile */}
-            <li className="input">
-              <NavLink to="/s-profile" className="icon">
+            <li className="s-input">
+              <NavLink to="/student-dashboard/s-profile" className="icon">
                 <FaUserEdit />
                 <span>Create Profile</span>
               </NavLink>
             </li>
 
             {/* search job */}
-            <li className="input">
-              <NavLink to="/s-job-search" className="icon">
+            <li className="s-input">
+              <NavLink to="/student-dashboard/s-job-search" className="icon">
                 <FaSearch />
                 <span>Search Job</span>
               </NavLink>
             </li>
 
             {/* notifications about new job postings */}
-            <li className="input">
-              <NavLink to="/s-job-alert" className="icon">
+            <li className="s-input">
+              <NavLink to="/student-dashboard/s-job-alert" className="icon">
                 <IoIosNotifications />
                 <span>Job Alert</span>
               </NavLink>
             </li>
 
             {/* Track Performance */}
-            <li className="input">
-              <NavLink to="/s-track-performance" className="icon">
+            <li className="s-input">
+              <NavLink
+                to="/student-dashboard/s-track-performance"
+                className="icon"
+              >
                 <FaChartBar />
                 <span>Track Performance</span>
               </NavLink>
             </li>
 
             {/* placement analytics */}
-            <li className="input">
-              <NavLink to="/s-analytics" className="icon">
+            <li className="s-input">
+              <NavLink to="/student-dashboard/s-analytics" className="icon">
                 <IoAnalytics />
                 <span>Placement Analytics</span>
               </NavLink>
             </li>
 
             {/* resources */}
-            <li className="input">
-              <NavLink to="/s-resources" className="icon">
+            <li className="s-input">
+              <NavLink to="/student-dashboard/s-resources" className="icon">
                 <GrResources />
                 <span>Resources & Guidance</span>
               </NavLink>
             </li>
             {/* notification */}
-            <li className="input">
-              <NavLink to="/s-notification" className="icon">
+            <li className="s-input">
+              <NavLink to="/student-dashboard/s-notification" className="icon">
                 <IoIosNotifications />
                 <span>Notification</span>
               </NavLink>

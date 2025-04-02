@@ -1,5 +1,5 @@
-import React from 'react';
-import './CompanyHome.css';
+import React from "react";
+import "./CompanyHome.css";
 const CShortlist = () => {
   return (
     <>
@@ -14,8 +14,8 @@ const CShortlist = () => {
             <p>Email</p>
             <p>Skills</p>
             <div className="shortlist-btn">
-              <button className='shortlist'>Shortlist</button>
-              <button className='schedule'>Schedule Interview</button>
+              <button className="shortlist">Shortlist</button>
+              <button className="schedule">Schedule Interview</button>
             </div>
           </div>
         </div>

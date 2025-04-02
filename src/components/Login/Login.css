@@ -33,7 +33,7 @@
   font-weight: 700;
 }
 
-.inputs {
+.hero-inputs {
   display: flex;
   margin-top: 30px;
   flex-direction: column;
@@ -59,7 +59,7 @@ select {
 }
 
 /* outer input */
-.input {
+.hero-input {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -77,7 +77,7 @@ select {
 }
 
 /* inner input */
-.input input {
+.login-input {
   height: 40px;
   width: 100%;
   background: transparent;
@@ -85,6 +85,7 @@ select {
   outline: none;
   color: black;
   font-size: 16px;
+  margin-left: 18px;
 }
 
 /* forgot password */
