@@ -1,17 +1,14 @@
 import React from "react";
 import "./NavHome.css";
-import { FaHandshake } from "react-icons/fa";
-import { FaRocket } from "react-icons/fa";
-import { FaBriefcase } from "react-icons/fa";
-import { FaUserFriends } from "react-icons/fa";
+import {
+  FaHandshake,
+  FaRocket,
+  FaBriefcase,
+  FaUserFriends,
+} from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import img1 from "../../Assets/images/img1.jpg";
-import img2 from "../../Assets/images/img2.jpeg";
-import img3 from "../../Assets/images/img3.jpeg";
-import img4 from "../../Assets/images/img4.jpeg";
-import img5 from "../../Assets/images/img5.jpeg";
-import img6 from "../../Assets/images/img6.jpeg";
-import img7 from "../../Assets/images/img7.avif";
+import { img1, img2, img3, img4, img5, img6, img7 } from "../../Assets/images";
+
 const Home = () => {
   return (
     <>

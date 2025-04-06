@@ -1,11 +1,11 @@
-import Login from "../pages/Login/Login";
+// import Login from "../pages/Login/Login";
 
-const LoginSignup = () => {
-  return (
-    <>
-      <Login />
-    </>
-  );
-};
+// const LoginSignup = () => {
+//   return (
+//     <>
+//       <Login />
+//     </>
+//   );
+// };
 
-export default LoginSignup;
+// export default LoginSignup;
