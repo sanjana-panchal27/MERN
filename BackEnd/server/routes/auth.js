@@ -1,69 +1,82 @@
+//handles login for all User Types
+
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = require("../models/User"); // Make sure you have this model
+const User = require("../models/User");
+const Student = require("../models/Student");
+const Company = require("../models/Company");
+const Admin = require("../models/Admin");
 const LoginLog = require("../models/Loginlog");
 
-// Login route
-// Modified section of your auth.js route file
+// Test route to verify API is working
+router.get("/test", (req, res) => {
+  res.json({ message: "Auth API is working" });
+});
 
-router.post("/login", async (req, res) => {
+// Register route
+router.post("/register", async (req, res) => {
   try {
-    const { email, password, userType } = req.body;
+    const { name, email, password, userType } = req.body;
 
-    console.log("Login attempt details:", {
+    console.log("Registration attempt for:", email, "as", userType);
+
+    // Check if user already exists
+    let user = await User.findOne({ email });
+    if (user) {
+      return res.status(400).json({ message: "User already exists" });
+    }
+
+    // Create new user
+    user = new User({
+      name,
       email,
-      passwordProvided: !!password,
-      passwordLength: password ? password.length : 0,
-      userType
+      password, // This will be replaced with hashed password below
+      role: userType,
     });
 
-    // Find user in database
-    const user = await User.findOne({ email });
-    
-    if (!user) {
-      console.log("Login failed: User not found");
-      return res.status(401).json({ 
-        message: "Authentication failed. Invalid email or password." 
-      });
-    }
-    
-    console.log("User found details:", {
-      id: user._id,
-      role: user.role,
-      hasPassword: !!user.password,
-      passwordHashLength: user.password ? user.password.length : 0
-    });
-    
-    // REMOVE THE USER TYPE CHECK FOR NOW - focus on password first
-    // We'll add it back after fixing the password issue
-    
-    // Verify password
+    // Hash password - ensure this is working correctly
+    const salt = await bcrypt.genSalt(10);
+    user.password = await bcrypt.hash(password, salt);
+    console.log("Hashed password created:", !!user.password);
+
+    // Save user to database
+    await user.save();
+    // IMPORTANT: This should be the ONLY place where you create role-specific records
     try {
-      // Log original input for debugging
-      console.log("Password comparison inputs:", {
-        providedPassword: password ? "********" : "empty",
-        storedHash: user.password ? user.password.substring(0, 10) + "..." : "empty"
-      });
-      
-      const isMatch = await bcrypt.compare(password, user.password);
-      console.log("Password match result:", isMatch);
-
-      if (!isMatch) {
-        console.log("Login failed: Password mismatch");
-        return res.status(401).json({ 
-          message: "Authentication failed. Invalid password." 
+      if (user.role.toLowerCase() === "student") {
+        const student = new Student({
+          userId: user._id,
+          userName: user.name,
+          email: user.email,
+          userRole: user.role,
         });
+        await student.save();
+        console.log("✅ Student record created for:", user.email);
+      } else if (user.role.toLowerCase() === "company") {
+        const company = new Company({
+          userId: user._id,
+          companyName: user.name,
+          email: user.email,
+          userRole: user.role,
+        });
+        await company.save();
+        console.log("✅ Company record created for:", user.email);
+      } else if (user.role.toLowerCase() === "admin") {
+        const admin = new Admin({
+          userId: user._id,
+          adminName: user.name,
+          email: user.email,
+          userRole: user.role,
+        });
+        await admin.save();
+        console.log("✅ Admin record created for:", user.email);
       }
-    } catch (bcryptError) {
-      console.error("bcrypt compare error:", bcryptError);
-      return res.status(500).json({ 
-        message: "Error verifying password." 
-      });
+    } catch (typeError) {
+      console.error(`❌ Error creating ${user.role} record:`, typeError);
+      // Continue with registration even if this fails
     }
-
-    console.log("Password validated successfully!");
 
     // Create JWT token
     const token = jwt.sign(
@@ -72,20 +85,56 @@ router.post("/login", async (req, res) => {
       { expiresIn: "1h" }
     );
 
-    console.log("Login successful, token created");
-
-    // Return successful response
-    res.json({
+    res.status(201).json({
       token,
       user: {
         id: user._id,
         name: user.name,
         email: user.email,
-        role: user.role
-      }
+        role: user.role,
+      },
     });
   } catch (error) {
-    console.error("Login error:", error);
-    res.status(500).json({ message: "Server error", error: error.message });
+    console.error("Registration error:", error);
+    res.status(500).json({ message: "Server error" });
   }
 });
+// Login route
+router.post("/login", async (req, res) => {
+  const { email, password, userType } = req.body;
+
+  try {
+    console.log("Login attempt for:", email, "as", userType);
+
+    // Check if user exists
+    const user = await User.findOne({ email });
+    console.log("User found:", user ? true : false);
+
+    if (!user || user.role.toLowerCase() !== userType.toLowerCase()) {
+      console.log("Invalid email or userType mismatch");
+      return res.status(401).json({ message: "Invalid email or password" });
+    }
+
+    // Check password
+    const isMatch = await bcrypt.compare(password, user.password);
+    console.log("Password match:", isMatch);
+
+    if (!isMatch) {
+      console.log("Invalid password");
+      return res.status(401).json({ message: "Invalid email or password" });
+    }
+
+    // Generate JWT token
+    const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
+    });
+
+    res.json({ token, role: user.role });
+  } catch (error) {
+    console.error("Login error:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+
+module.exports = router;

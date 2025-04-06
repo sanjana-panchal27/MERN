@@ -12,4 +12,19 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Get admin profile
+router.get("/profile", (req, res) => {
+  res.status(200).json({ message: "Admin profile" });
+});
+
+// Update admin profile
+router.put("/profile", (req, res) => {
+  res.status(200).json({ message: "Profile updated" });
+});
+
+// Get admin dashboard data
+router.get("/admin-dashboard", (req, res) => {
+  res.status(200).json({ message: "Dashboard data" });
+});
+
 module.exports = router;

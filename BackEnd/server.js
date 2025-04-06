@@ -5,10 +5,10 @@ const cors = require("cors");
 const authRoutes = require("./server/routes/authRoutes");
 const adminRoutes = require("./server/routes/adminRoutes");
 const companyRoutes = require("./server/routes/companyRoutes");
-
-const student = require("./server/routes/students");
+const studentRoutes = require("./server/routes/students");
 const reportsRoutes = require("./server/routes/reportsRoutes");
 const feedbackRoutes = require("./server/routes/feedbackRoutes");
+
 // Load environment variables
 dotenv.config();
 
@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 
 // Use auth routes
 app.use("/api/auth", authRoutes);
-app.use("/api/student", student);
+app.use("/api/student", studentRoutes);
 app.use("/api/reports", reportsRoutes);
 app.use("/api/feedback", feedbackRoutes);
 app.use("/api/admins", adminRoutes);

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
   try {
     // Increase timeouts and add connection pool settings
-    const conn = await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/yourdbname', {
+    const conn = await mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/RUPlacementCell', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       serverSelectionTimeoutMS: 30000, // Increase timeout for server selection
@@ -34,7 +34,7 @@ const connectDB = async () => {
     console.error(`Error connecting to MongoDB: ${error.message}`);
     // Don't exit immediately, try to reconnect
     console.log('Attempting to reconnect in 5 seconds...');
-    setTimeout(connectDB, 5000);
+    setTimeout(connectDB, 5050);
   }
 };
 

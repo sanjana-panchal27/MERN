@@ -12,9 +12,8 @@ const LoginLog = require("../models/Loginlog");
 router.get("/test", (req, res) => {
   res.json({ message: "Auth API is working" });
 });
-// In authRoutes.js - registration route
-// Register route
 
+// Register route
 router.post("/register", async (req, res) => {
   try {
     const { name, email, password, userType } = req.body;
@@ -101,119 +100,30 @@ router.post("/register", async (req, res) => {
 
 // Login route
 router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
   try {
-    const { email, password, userType } = req.body;
-
-    console.log("Login attempt for:", email);
-
-    // Find user in database
+    // Check if user exists
     const user = await User.findOne({ email });
-    console.log("User found in DB:", !!user);
-
-    console.log(`User found: ${user !== null}`);
-    console.log(`User role in DB: ${user.role}`);
-    console.log(`User type from request: ${userType}`);
-
-    if (!user || user.role !== userType.toLowerCase()) {
-      // Log failed login attempt - only providing email for non-existent users
-      try {
-        await LoginLog.create({
-          email: email,
-          status: "failed",
-          ipAddress: req.ip,
-          userAgent: req.headers["user-agent"],
-        });
-      } catch (logError) {
-        console.error("Error logging failed login:", logError);
-        // Continue with the response even if logging fails
-      }
-
-      return res
-        .status(401)
-        .json({ message: "Authentication failed. Invalid email or password." });
+    if (!user) {
+      return res.status(401).json({ message: "Invalid email or password" });
     }
 
-    // Check if userType matches (if provided)
-    if (userType && user.role !== userType) {
-      try {
-        await LoginLog.create({
-          userId: user._id,
-          userName: user.name,
-          email: user.email,
-          userRole: user.role,
-          status: "failed",
-          ipAddress: req.ip,
-          userAgent: req.headers["user-agent"],
-        });
-      } catch (logError) {
-        console.error("Error logging failed login:", logError);
-      }
-
-      return res
-        .status(401)
-        .json({ message: "Authentication failed. Invalid user type." });
-    }
-
-    // Verify password
+    // Check password
     const isMatch = await bcrypt.compare(password, user.password);
-    console.log("Password match:", isMatch);
-
     if (!isMatch) {
-      // Log failed login attempt
-      try {
-        await LoginLog.create({
-          userId: user._id,
-          userName: user.name,
-          email: user.email,
-          userRole: user.role,
-          status: "failed",
-          ipAddress: req.ip,
-          userAgent: req.headers["user-agent"],
-        });
-      } catch (logError) {
-        console.error("Error logging failed login:", logError);
-      }
-
-      return res
-        .status(401)
-        .json({ message: "Authentication failed. Invalid email or password." });
+      return res.status(401).json({ message: "Invalid email or password" });
     }
 
-    // Create JWT token
-    const token = jwt.sign(
-      { id: user._id, role: user.role },
-      process.env.JWT_SECRET || "your-secret-key",
-      { expiresIn: "1h" }
-    );
-
-    // Log successful login
-    try {
-      await LoginLog.create({
-        userId: user._id,
-        userName: user.name,
-        email: user.email,
-        userRole: user.role,
-        status: "success",
-        ipAddress: req.ip,
-        userAgent: req.headers["user-agent"],
-      });
-    } catch (logError) {
-      console.error("Error logging successful login:", logError);
-      // Continue with successful login even if logging fails
-    }
-
-    res.json({
-      token,
-      user: {
-        id: user._id,
-        name: user.name,
-        email: user.email,
-        role: user.role,
-      },
+    // Generate JWT token
+    const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET, {
+      expiresIn: "1h",
     });
+
+    res.json({ token, role: user.role });
   } catch (error) {
     console.error("Login error:", error);
-    res.status(500).json({ message: "Server error", error: error.message });
+    res.status(500).json({ message: "Server error" });
   }
 });
 

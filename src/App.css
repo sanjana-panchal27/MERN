@@ -1,6 +1,8 @@
 /* Ensures the content section takes up space */
 * {
-  font-family: "DM Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
 }
 
 .app-container {

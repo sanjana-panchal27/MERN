@@ -1,6 +1,6 @@
-import React from 'react';
-import Navbar from './Navbar'; 
-import Footer from './Footer'; 
+import React from "react";
+import Navbar from "../pages/Navbar/Navbar";
+import Footer from "./Footer";
 
 export const MainLayout = ({ children }) => (
   <>
@@ -11,7 +11,5 @@ export const MainLayout = ({ children }) => (
 );
 
 export const AuthLayout = ({ children }) => (
-  <div className="auth-layout">
-    {children}
-  </div>
+  <div className="auth-layout">{children}</div>
 );

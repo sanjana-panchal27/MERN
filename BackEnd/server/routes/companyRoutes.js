@@ -12,4 +12,19 @@ router.get("/", async (req, res) => {
   }
 });
 
+// Get company profile
+router.get("/profile", (req, res) => {
+  res.status(200).json({ message: "Company profile" });
+});
+
+// Update company profile
+router.put("/profile", (req, res) => {
+  res.status(200).json({ message: "Profile updated" });
+});
+
+// Get company dashboard data
+router.get("/company-dashboard", (req, res) => {
+  res.status(200).json({ message: "Dashboard data" });
+});
+
 module.exports = router;
