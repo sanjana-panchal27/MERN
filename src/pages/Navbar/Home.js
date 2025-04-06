@@ -5,7 +5,13 @@ import { FaRocket } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";
 import { FaUserFriends } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-
+import img1 from "../../Assets/images/img1.jpg";
+import img2 from "../../Assets/images/img2.jpeg";
+import img3 from "../../Assets/images/img3.jpeg";
+import img4 from "../../Assets/images/img4.jpeg";
+import img5 from "../../Assets/images/img5.jpeg";
+import img6 from "../../Assets/images/img6.jpeg";
+import img7 from "../../Assets/images/img7.avif";
 const Home = () => {
   return (
     <>
@@ -13,15 +19,15 @@ const Home = () => {
         <header className="hero-header">
           <div className="hero-img">
             <NavLink to="/">
-              <img src="./images/img1.jpg" alt="logo" className="img1" />
+              <img src={img1} alt="logo" className="img1" />
             </NavLink>
 
             <NavLink to="/">
-              <img src="./images/img2.jpeg" alt="logo" className="img2" />
+              <img src={img2} alt="logo" className="img2" />
             </NavLink>
 
             <NavLink to="/">
-              <img src="./images/img3.jpeg" alt="logo" className="img3" />
+              <img src={img3} alt="logo" className="img3" />
             </NavLink>
           </div>
 
@@ -46,7 +52,7 @@ const Home = () => {
               </p>
             </div>
             <NavLink to="/">
-              <img src="./images/img4.jpeg" alt="logo" className="images" />
+              <img src={img4} alt="logo" className="images" />
             </NavLink>
           </section>
         </div>
@@ -54,7 +60,7 @@ const Home = () => {
         <div className="success-stories">
           <section>
             <NavLink to="/">
-              <img src="./images/img5.jpeg" alt="logo" className="images" />
+              <img src={img5} alt="logo" className="images" />
             </NavLink>
             <FaRocket className="home-icon" />
             <h3 className="head-3">Success Stories</h3>
@@ -74,7 +80,7 @@ const Home = () => {
             </p>
 
             <NavLink to="/">
-              <img src="./images/img6.jpeg" alt="logo" className="images" />
+              <img src={img6} alt="logo" className="images" />
             </NavLink>
           </section>
         </div>
@@ -82,11 +88,7 @@ const Home = () => {
         <div className="testimonials">
           <section>
             <NavLink to="/">
-              <img
-                src="./images/img7.avif"
-                alt="logo"
-                className="testimonials-img"
-              />
+              <img src={img7} alt="logo" className="images" />
             </NavLink>
             <FaUserFriends className="home-icon" />
             <h3 className="head-3">Testimonials</h3>
