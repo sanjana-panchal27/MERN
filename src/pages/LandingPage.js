@@ -1,15 +1,15 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import Home from "../pages/Navbar/Home";
-import AboutUs from "../pages/Navbar/AboutUs";
-import Service from "../pages/Navbar/Service";
-import Contact from "../pages/Navbar/Contact";
-import FAQs from "../pages/Navbar/FAQs";
-import Login from "../pages/Login/Login";
-import Footer from "../pages/Navbar/Footer";
-import Header from "../pages/Navbar/Header";
-import Error from "../Error";
+import Home from '../pages/Navbar/Home';
+import AboutUs from '../pages/Navbar/AboutUs';
+import Service from '../pages/Navbar/Service';
+import Contact from '../pages/Navbar/Contact';
+import FAQs from '../pages/Navbar/FAQs';
+import Login from '../pages/Login/Login';
+import Footer from '../pages/Navbar/Footer';
+import Header from '../pages/Navbar/Header';
+import Error from '../Error';
 
 const LandingPage = () => {
   return (

@@ -15,8 +15,8 @@ router.get("/test", (req, res) => {
   res.json({ message: "Auth API is working" });
 });
 
-// Register route
-router.post("/register", async (req, res) => {
+// signup route
+router.post("/signup", async (req, res) => {
   try {
     const { name, email, password, userType } = req.body;
 
@@ -99,6 +99,7 @@ router.post("/register", async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 });
+
 // Login route
 router.post("/login", async (req, res) => {
   const { email, password, userType } = req.body;
@@ -106,7 +107,6 @@ router.post("/login", async (req, res) => {
   try {
     console.log("Login attempt for:", email, "as", userType);
 
-    // Check if user exists
     const user = await User.findOne({ email });
     console.log("User found:", user ? true : false);
 
@@ -115,7 +115,6 @@ router.post("/login", async (req, res) => {
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
-    // Check password
     const isMatch = await bcrypt.compare(password, user.password);
     console.log("Password match:", isMatch);
 
@@ -124,10 +123,11 @@ router.post("/login", async (req, res) => {
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
-    // Generate JWT token
-    const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET, {
-      expiresIn: "1h",
-    });
+    const token = jwt.sign(
+      { userId: user._id, role: user.role },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" }
+    );
 
     res.json({ token, role: user.role });
   } catch (error) {
@@ -135,6 +135,5 @@ router.post("/login", async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 });
-
 
 module.exports = router;

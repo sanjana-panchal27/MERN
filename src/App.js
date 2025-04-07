@@ -99,39 +99,42 @@
 
 // export default App;
 
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import "./App.css";
-import LandingPage from "./pages/LandingPage";
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import './App.css';
 
-// import AdminDashboard from "./pages/Admin/AdminDashboard";
+import { AuthProvider } from './context/AuthContext';
+import AdminDashboard from './pages/Admin/AdminDashboard';
 // import StudentDashboard from "./pages/Student/StudentDashboard";
-// import CompanyDashboard from "./pages/Company/CompanyDashboard";
+// import CompanyDashboard from './pages/Company/CompanyDashboard';
 // import Logout from "./pages/Logout";
+// import LandingPage from "./pages/LandingPage";
 
 function App() {
   const theme = {
     media: {
-      sm: "640px",
-      md: "768px",
-      lg: "992px",
-      xl: "1200px",
+      sm: '640px',
+      md: '768px',
+      lg: '992px',
+      xl: '1200px',
     },
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/*" element={<LandingPage />} />
-        </Routes>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            {/* <Route path="/*" element={<LandingPage />} /> */}
 
-        {/* <Route path="/admin-dashboard/*" element={<AdminDashboard />} /> */}
-        {/* <Route path="/company-dashboard/*" element={<CompanyDashboard />} /> */}
-        {/* <Route path="/student-dashboard/*" element={<StudentDashboard />} /> */}
-        {/* <Route path="/logout" element={<Logout />}></Route> */}
-      </BrowserRouter>
+            <Route path="/admin-dashboard/*" element={<AdminDashboard />} />
+            {/* <Route path="/company-dashboard/*" element={<CompanyDashboard />} /> */}
+            {/* <Route path="/student-dashboard/*" element={<StudentDashboard />} /> */}
+            {/* <Route path="/logout" element={<Logout />}></Route> */}
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </ThemeProvider>
   );
 }
