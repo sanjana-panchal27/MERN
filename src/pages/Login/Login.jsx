@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaUser, FaEnvelope, FaLock } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import authService from '../../components/utils/auth';
 import './Login.css';
 
@@ -51,14 +51,14 @@ const LoginSignup = () => {
     e.preventDefault();
     setIsLoading(true);
     setError('');
-  
+
     if (action === 'Sign Up') {
       if (password !== confirmPassword) {
-        setError("Passwords do not match");
+        setError('Passwords do not match');
         setIsLoading(false);
         return;
       }
-  
+
       try {
         const response = await fetch('http://localhost:5050/api/auth/signup', {
           method: 'POST',
@@ -67,26 +67,26 @@ const LoginSignup = () => {
           },
           body: JSON.stringify({ name, email, password, userType }),
         });
-  
+
         const data = await response.json();
-        console.log("Signup response:", data);
-  
+        console.log('Signup response:', data);
+
         if (response.ok) {
-          alert("Signup successful! You can now log in.");
-          setAction("Login");
+          alert('Signup successful! You can now log in.');
+          setAction('Login');
         } else {
-          setError(data.message || "Signup failed.");
+          setError(data.message || 'Signup failed.');
         }
       } catch (error) {
-        console.error("Signup error:", error);
-        setError("Signup failed.");
+        console.error('Signup error:', error);
+        setError('Signup failed.');
       } finally {
         setIsLoading(false);
       }
-  
+
       return; // Stop here after signup
     }
-  
+
     // Proceed with login
     try {
       const response = await fetch('http://localhost:5050/api/auth/login', {
@@ -96,25 +96,25 @@ const LoginSignup = () => {
         },
         body: JSON.stringify({ email, password, userType }),
       });
-  
+
       const data = await response.json();
-      console.log("Login response:", data);
-  
+      console.log('Login response:', data);
+
       if (response.ok) {
         localStorage.setItem('token', data.token);
         localStorage.setItem('role', data.role);
         navigate(`/${data.role}-dashboard`);
       } else {
-        setError(data.message || "Invalid email or password.");
+        setError(data.message || 'Invalid email or password.');
       }
     } catch (error) {
-      console.error("Authentication error:", error);
-      setError("Authentication failed. Invalid email or password.");
+      console.error('Authentication error:', error);
+      setError('Authentication failed. Invalid email or password.');
     } finally {
       setIsLoading(false);
     }
   };
-  
+
   return (
     <div className="container">
       <div className="header">
@@ -194,7 +194,14 @@ const LoginSignup = () => {
         )}
         {action === 'Login' && (
           <div className="forgot-password">
-            Forgot password?<span> Click here</span>
+            Forgot password?
+            <NavLink
+              to="/forgot-password"
+              className="click-here
+            "
+            >
+              Click here
+            </NavLink>
           </div>
         )}
         <div className="submit-container">

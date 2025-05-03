@@ -1,75 +1,68 @@
-/* navbar */
+/* full hero section with background image */
+.hero-section-navbar {
+  background-image: url('/src/Assets/images/bgimg.png');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+/* navbar over background image */
 .navbar {
-  padding: 15px 7%;
-  height: 75px;
-  background-color: white;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 30px 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-/* LOGO */
+/* logo */
 .logo {
-  width: 100%;
-  height: 100%;
-  padding: 30px;
-  display: flex;
+  height: 60px;
 }
 
-/* navigation */
-nav {
-  display: flex;
-  align-items: center;
-}
-
-/* navigation links ul */
-ul {
+/* nav links */
+.navbar ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
-/* Default NavLink styles */
 .navbar a {
   color: black;
   text-decoration: none;
-  padding: 5px 10px;
-  font-size: 16px;
-}
-
-/* Active NavLink styles */
-.navbar a.active {
-  /* color: white; */
-  border-radius: 5px;
-}
-
-/* li */
-li {
-  margin: 10px 20px;
   font-size: 18px;
-  font-weight: 530;
-  cursor: pointer;
-  transition: 0.3s ease;
-  background: none;
-  padding: 5px;
+  font-weight: 500;
+  padding: 6px 10px;
+  transition: color 0.3s;
 }
 
-/* Hover Effect */
-li:hover {
-  background: beige;
-  border-radius: 5px;
-  transition: 0.5s;
+.navbar a:hover {
+  color: orange;
 }
 
-/* main */
-main {
-  display: flex;
-  margin: 25%;
+.navbar a.active {
+  border-bottom: 2px solid orange;
 }
 
-.login {
+/* login button styled as nav item */
+.login a {
   background-color: orange;
-  border-radius: 10px;
-  font-size: 14px;
-  padding: 10px;
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.login a:hover {
+  background-color: #e65c00;
 }

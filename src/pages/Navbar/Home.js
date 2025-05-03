@@ -1,38 +1,42 @@
-import React from "react";
-import "./NavHome.css";
+import React, { useEffect, useState } from 'react';
+import './NavHome.css';
 import {
   FaHandshake,
   FaRocket,
   FaBriefcase,
   FaUserFriends,
-} from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-import { img1, img2, img3, img4, img5, img6, img7 } from "../../Assets/images";
+} from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
+import { img1, img3, img4, img5, img6, img7 } from '../../Assets/images';
 
 const Home = () => {
+  const images = [img1, img3];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <div className="hero-section">
         <header className="hero-header">
-          <div className="hero-img">
-            <NavLink to="/">
-              <img src={img1} alt="logo" className="img1" />
-            </NavLink>
-
-            <NavLink to="/">
-              <img src={img2} alt="logo" className="img2" />
-            </NavLink>
-
-            <NavLink to="/">
-              <img src={img3} alt="logo" className="img3" />
-            </NavLink>
+          <div className="slider-wrapper">
+            <img
+              src={images[currentIndex]}
+              alt={`Slide ${currentIndex}`}
+              className="slider-img"
+            />
           </div>
 
           <h2>Unlocking potential, creating opportunities</h2>
           <p>Where students and recruiters unite!</p>
 
           <button className="hero-btn">
-            <NavLink to="/login">Get Started </NavLink>
+            <NavLink to="/login">Get Started</NavLink>
           </button>
         </header>
       </div>

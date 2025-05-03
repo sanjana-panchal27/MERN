@@ -1,6 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
+import ForgotPassword from '../pages/Auth/ForgotPassword';
+import ResetPassword from '../pages/Auth/ResetPassword';
+
 import Home from '../pages/Navbar/Home';
 import AboutUs from '../pages/Navbar/AboutUs';
 import Service from '../pages/Navbar/Service';
@@ -24,6 +27,12 @@ const LandingPage = () => {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/faqs" element={<FAQs />} />
           <Route exact path="/login" element={<Login />}></Route>
+          <Route exact path="/forgot-password" element={<ForgotPassword />} />
+          <Route
+            exact
+            path="/reset-password/:token"
+            element={<ResetPassword />}
+          />
           <Route exact path="/*" element={<Error />}></Route>
         </Routes>
 

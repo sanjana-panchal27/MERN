@@ -56,7 +56,7 @@
 }
 
 .s-grid-box {
-  height: 75%;
+  height: 90%;
   padding: 20px;
   color: white;
   border-radius: 10px;
@@ -692,9 +692,10 @@
 }
 
 /* RESOURCES & GUIDANCE */
+/* RESOURCES & GUIDANCE */
 .s-resources {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: flex-start;
   margin-bottom: 80%;
   margin-right: 50%;
@@ -702,83 +703,18 @@
 
 .s-grid-resource {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
   gap: 30px;
   width: 100%;
 }
 
-.s-grid-box1 {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 20px;
-  background-color: #d4e9ff;
-  margin-bottom: 5px;
-  border-radius: 10px;
-}
-
-.s-grid-box2 {
-  margin-left: 20px;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 20px;
-  background-color: #d4e9ff;
-  margin-bottom: 5px;
-  border-radius: 10px;
-}
-
-.s-grid-box3 {
-  margin-left: 40px;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 20px;
-  background-color: #d4e9ff;
-  margin-bottom: 5px;
-  border-radius: 10px;
-}
-
-.s-grid-box4 {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 20px;
-  background-color: #d4e9ff;
-  margin-bottom: 5px;
-  border-radius: 10px;
-}
-
-.s-grid-box5 {
-  margin-left: 20px;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 20px;
-  background-color: #d4e9ff;
-  margin-bottom: 5px;
-  border-radius: 10px;
-}
-
-.s-grid-box6 {
-  margin-left: 40px;
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 20px;
-  background-color: #d4e9ff;
-  margin-bottom: 5px;
-  border-radius: 10px;
-}
-
+.s-grid-box1,
+.s-grid-box2,
+.s-grid-box3,
+.s-grid-box4,
+.s-grid-box5,
+.s-grid-box6,
 .s-grid-box7 {
-  width: 90%;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -786,6 +722,8 @@
   background-color: #d4e9ff;
   margin-bottom: 5px;
   border-radius: 10px;
+  /* Ensure all boxes have the same width by setting a max-width */
+  width: 100%;
 }
 
 .s-grid-box1:hover,

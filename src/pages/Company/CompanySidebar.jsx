@@ -1,28 +1,34 @@
-import { NavLink } from "react-router-dom";
-import { FaHome } from "react-icons/fa";
-import { FaUserEdit } from "react-icons/fa";
-import { FaBriefcase } from "react-icons/fa";
-import { PiStudentBold } from "react-icons/pi";
-import { MdEventAvailable } from "react-icons/md";
-import { MdFeedback } from "react-icons/md";
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { FaHome, FaUserEdit, FaBriefcase } from 'react-icons/fa';
+import { PiStudentBold } from 'react-icons/pi';
+import { MdEventAvailable, MdFeedback } from 'react-icons/md';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
-import "./CompanySidebar.css";
+import './CompanySidebar.css';
 
-const ComSidebar = () => {
+const CompanySidebar = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      <div className="company-sidebar">
-        <div>
+      {/* Hamburger stays on screen always */}
+      <button className="hamburger-fixed" onClick={toggleSidebar}>
+        <GiHamburgerMenu />
+      </button>
+
+      <div className={`company-sidebar ${isOpen ? 'open' : 'closed'}`}>
+        <div className="sidebar-header">
           <h1 className="title">Company Dashboard</h1>
         </div>
-
-        {/* horizontal line */}
         <hr />
 
-        {/* sidebar links */}
         <div className="c-inputs">
           <ul>
-            {/* home link */}
             <li className="c-input">
               <NavLink to="/company-dashboard" className="icon">
                 <FaHome />
@@ -30,7 +36,6 @@ const ComSidebar = () => {
               </NavLink>
             </li>
 
-            {/* Profile Create */}
             <li className="c-input">
               <NavLink to="/company-dashboard/c-profile" className="icon">
                 <FaUserEdit />
@@ -38,7 +43,6 @@ const ComSidebar = () => {
               </NavLink>
             </li>
 
-            {/* post job openings */}
             <li className="c-input">
               <NavLink to="/company-dashboard/c-postjob" className="icon">
                 <FaBriefcase />
@@ -46,27 +50,24 @@ const ComSidebar = () => {
               </NavLink>
             </li>
 
-            {/* Access Student Profiles */}
             <li className="c-input">
               <NavLink to="/company-dashboard/c-access" className="icon">
                 <PiStudentBold />
-                <span> Access Student Profiles</span>
+                <span>Access Student Profiles</span>
               </NavLink>
             </li>
 
-            {/* Shortlist & Schedule Interview */}
             <li className="c-input">
               <NavLink to="/company-dashboard/c-shortlist" className="icon">
                 <MdEventAvailable />
-                <span> Shortlist & Schedule Interview</span>
+                <span>Shortlist & Schedule Interview</span>
               </NavLink>
             </li>
 
-            {/* feedback */}
             <li className="c-input">
               <NavLink to="/company-dashboard/c-feedback" className="icon">
                 <MdFeedback />
-                <span> Feedback</span>
+                <span>Feedback</span>
               </NavLink>
             </li>
           </ul>
@@ -76,4 +77,4 @@ const ComSidebar = () => {
   );
 };
 
-export default ComSidebar;
+export default CompanySidebar;
