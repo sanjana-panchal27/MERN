@@ -1,6 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import { AuthProvider } from './context/AuthContext';
@@ -9,7 +8,6 @@ import StudentDashboard from './pages/Student/StudentDashboard';
 import CompanyDashboard from './pages/Company/CompanyDashboard';
 import Logout from './pages/Logout';
 import LandingPage from './pages/LandingPage';
-import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (

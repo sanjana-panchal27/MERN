@@ -41,7 +41,7 @@ app.use('/api/student', studentRoutes);
 app.use('/api/reports', reportsRoutes);
 app.use('/api/feedback', feedbackRoutes);
 app.use('/api/admin', adminRoutes);
-app.use('/api/companies', companyRoutes);
+app.use('/api/company', companyRoutes);
 
 // Connect to MongoDB - fixed connection string
 mongoose

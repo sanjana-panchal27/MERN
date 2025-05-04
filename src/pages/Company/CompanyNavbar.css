@@ -83,7 +83,7 @@ h2 {
 }
 
 /* user profile btn */
-.profile-btn {
+.company-profile-btn {
   background: none;
   border: none;
   display: flex;
@@ -97,7 +97,7 @@ h2 {
 /* user profile icon */
 .profile-icon {
   color: black;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 /* Dropdown Menu */

@@ -1,37 +1,52 @@
-// import React from 'react';
-// import { Route, Routes } from 'react-router-dom';
-// import CompanyHome from '../components/Company/CompanyHome';
-// import CompanyProfile from '../components/Company/CompanyProfile';
-// import CPostJob from '../components/Company/CPostJob';
-// import CAccess from '../components/Company/CAccess';
-// import CShortlist from '../components/Company/CShortlist';
-// import CFeedback from '../components/Company/CFeedback';
-// import ProtectedRoute from '../ProtectedRoute';
-// import ComNav from '../components/Company/ComNav';
-// import ComSidebar from '../components/Company/ComSidebar';
+const express = require("express");
+const router = express.Router();
+const Company = require("../models/Company");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
-// const CompanyRoutes = () => {
-//   return (
-//     <Route element={<ProtectedRoute allowedRoles={["Company"]} />}>
-//       <Route
-//         path="/company-dashboard/*"
-//         element={
-//           <div className="company-profile">
-//             <ComNav />
-//             <ComSidebar />
-//             <Routes>
-//               <Route path="/" element={<CompanyHome />} />
-//               <Route path="/c-profile" element={<CompanyProfile />} />
-//               <Route path="/c-postjob" element={<CPostJob />} />
-//               <Route path="/c-access" element={<CAccess />} />
-//               <Route path="/c-shortlist" element={<CShortlist />} />
-//               <Route path="/c-feedback" element={<CFeedback />} />
-//             </Routes>
-//           </div>
-//         }
-//       />
-//     </Route>
-//   );
-// };
+// POST company login
+router.post("/login", async (req, res) => {
+  const { email, password } = req.body;
 
-// export default CompanyRoutes;
+  try {
+    // Find the company by email
+    const company = await Company.findOne({ email });
+
+    console.log("Login attempt for:", email);
+    console.log("Company found:", !!company);
+
+    if (!company) {
+      return res.status(404).json({ message: "Company not found" });
+    }
+
+    console.log("Company userType:", company.userType);
+
+    // Ensure userType is 'company'
+    if (company.userType !== 'company') {
+      return res.status(400).json({ message: "Invalid email or userType mismatch" });
+    }
+
+    // Compare password
+    const isMatch = await bcrypt.compare(password, company.password);
+    console.log("Password match:", isMatch);
+
+    if (!isMatch) {
+      return res.status(400).json({ message: "Invalid email or password" });
+    }
+
+    // Generate JWT
+    const token = jwt.sign(
+      { companyId: company._id },
+      process.env.JWT_SECRET,
+      { expiresIn: "1h" }
+    );
+
+    // Respond with token
+    res.status(200).json({ token, message: "Login successful" });
+  } catch (error) {
+    console.error("Company login error:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+module.exports = router;

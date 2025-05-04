@@ -137,8 +137,6 @@
   color: red;
 }
 
-
-
 .edit-btn {
   background-color: #1f23a3;
   color: white;
@@ -375,16 +373,16 @@
   gap: 10px;
 }
 
-label {
+.report-label {
   font-weight: bold;
   margin-top: 10px;
 }
 
 .reports-select {
-  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  width: 45%;
 }
 
 .reports-input {
@@ -409,8 +407,9 @@ label {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+  margin-right: 20px;
 }
 
-button:hover {
+.pdf-btn:hover {
   background: #0056b3;
 }

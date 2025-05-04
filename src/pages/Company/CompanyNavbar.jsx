@@ -1,8 +1,8 @@
-import { NavLink } from "react-router-dom";
-import "./CompanyNavbar.css";
-import { IoIosNotifications } from "react-icons/io";
-import { FaUserCircle } from "react-icons/fa";
-import { useState } from "react";
+import { NavLink } from 'react-router-dom';
+import './CompanyNavbar.css';
+import { IoIosNotifications } from 'react-icons/io';
+import { FaUserCircle } from 'react-icons/fa';
+import { useState } from 'react';
 
 const ComNav = ({ companyName }) => {
   // dropdown menu navigation
@@ -14,7 +14,7 @@ const ComNav = ({ companyName }) => {
           <ul className="nav-list">
             <li className="div-name">
               <p className="company-welcome">Welcome,</p>
-              <h2>{companyName || "CompanyName"}</h2>
+              <h2>{companyName || 'CompanyName'}</h2>
             </li>
 
             {/* rightside navbar icon in one div: right-icon */}
@@ -29,7 +29,7 @@ const ComNav = ({ companyName }) => {
               {/* usercicle profile */}
               <div className="user-profile">
                 <button
-                  className="profile-btn"
+                  className="company-profile-btn"
                   onClick={() => setDropdownOpen(!dropdownOpen)}
                 >
                   <FaUserCircle className="profile-icon" />

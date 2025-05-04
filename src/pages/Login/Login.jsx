@@ -115,6 +115,7 @@ const LoginSignup = () => {
     }
   };
 
+  
   return (
     <div className="container">
       <div className="header">
@@ -208,7 +209,7 @@ const LoginSignup = () => {
           {action === 'Login' ? (
             <button
               type="button"
-              className="submit signup-btn"
+              className="auth-button"
               onClick={() => setAction('Sign Up')}
             >
               Sign Up
@@ -216,7 +217,7 @@ const LoginSignup = () => {
           ) : (
             <button
               type="button"
-              className="submit login-btn"
+              className="auth-button"
               onClick={() => setAction('Login')}
             >
               Login
@@ -225,7 +226,7 @@ const LoginSignup = () => {
 
           <button
             type="submit"
-            className="submit"
+            className="auth-button"
             disabled={isLoading || apiStatus.includes('Failed')}
           >
             {isLoading ? 'Processing...' : action}

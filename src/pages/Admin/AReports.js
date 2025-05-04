@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from "react";
-import "./AdminHome.css";
+import React, { useState, useEffect } from 'react';
+import './AdminHome.css';
 
 const AReports = () => {
-  const [reportType, setReportType] = useState("students");
-  const [year, setYear] = useState("");
-  const [department, setDepartment] = useState("");
-  const [placementStatus, setPlacementStatus] = useState("");
+  const [reportType, setReportType] = useState('students');
+  const [year, setYear] = useState('');
+  const [department, setDepartment] = useState('');
+  const [placementStatus, setPlacementStatus] = useState('');
   const [reports, setReports] = useState([]); // Store fetched reports
 
   // Fetch reports from backend
   useEffect(() => {
-    fetch("http://localhost:5050/api/reports") // ✅ Changed to correct port 5050
+    fetch('http://localhost:5050/api/reports') // ✅ Changed to correct port 5050
       .then((res) => res.json())
       .then((data) => {
-        console.log("Fetched reports:", data); // Debug log
+        console.log('Fetched reports:', data); // Debug log
         setReports(data);
       })
-      .catch((err) => console.error("Error fetching reports:", err));
+      .catch((err) => console.error('Error fetching reports:', err));
   }, []);
 
   // Handle report generation
@@ -24,31 +24,31 @@ const AReports = () => {
     console.log(`Generating ${format.toUpperCase()} report...`);
 
     fetch(`http://localhost:5050/api/reports/${format}`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        title: "Student Placement Report",
-        summary: "This report contains placement details of students.",
+        title: 'Student Placement Report',
+        summary: 'This report contains placement details of students.',
       }),
     })
       .then(async (res) => {
-        if (!res.ok) throw new Error("Failed to generate report");
+        if (!res.ok) throw new Error('Failed to generate report');
 
         // Get the response as a Blob (Binary Large Object)
         return res.blob();
       })
       .then((blob) => {
         const url = window.URL.createObjectURL(blob);
-        const a = document.createElement("a");
+        const a = document.createElement('a');
         a.href = url;
-        a.download = `Report.${format === "pdf" ? "pdf" : "xlsx"}`;
+        a.download = `Report.${format === 'pdf' ? 'pdf' : 'xlsx'}`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
       })
-      .catch((err) => console.error("Error generating report:", err));
+      .catch((err) => console.error('Error generating report:', err));
   };
 
   return (
@@ -58,7 +58,7 @@ const AReports = () => {
 
         <div className="reports-hero">
           <div className="filter-section">
-            <label>Report Type:</label>
+            <label className="report-label">Report Type:</label>
             <select
               className="reports-select"
               value={reportType}
@@ -68,7 +68,7 @@ const AReports = () => {
               <option value="companies">Companies</option>
             </select>
 
-            <label>Year:</label>
+            <label className="report-label">Year:</label>
             <input
               className="reports-input"
               type="text"
@@ -76,7 +76,7 @@ const AReports = () => {
               onChange={(e) => setYear(e.target.value)}
             />
 
-            <label>Department:</label>
+            <label className="report-label">Department:</label>
             <input
               className="reports-input"
               type="text"
@@ -84,7 +84,7 @@ const AReports = () => {
               onChange={(e) => setDepartment(e.target.value)}
             />
 
-            {reportType === "students" && (
+            {reportType === 'students' && (
               <>
                 <label>Placement Status:</label>
                 <select
@@ -102,13 +102,13 @@ const AReports = () => {
 
           <div className="button-section">
             <button
-              onClick={() => handleGenerateReport("PDF")}
+              onClick={() => handleGenerateReport('PDF')}
               className="pdf-btn"
             >
               Download PDF
             </button>
             <button
-              onClick={() => handleGenerateReport("Excel")}
+              onClick={() => handleGenerateReport('Excel')}
               className="pdf-btn"
             >
               Download Excel
