@@ -1,5 +1,5 @@
-import { useState } from "react";
-import "./NavHome.css";
+import { useState } from 'react';
+import './NavHome.css';
 
 const FAQs = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -10,34 +10,36 @@ const FAQs = () => {
 
   const faqs = [
     {
-      question: "What is the RU Placement Cell?",
+      question: 'What is the RU Placement Cell?',
       answer:
-        "The RU Placement Cell is a platform that connects students with companies for internships and job placements.",
+        'The RU Placement Cell is a platform that connects students with companies for internships and job placements.',
     },
     {
-      question: "How do I register on the platform?",
+      question: 'How do I register on the platform?',
       answer:
-        "Students and companies can Sign In using their email and fill in the required details.",
+        'Students and companies can Sign In using their email and fill in the required details.',
     },
     {
-      question: "How can I apply for a job or internship?",
+      question: 'How can I apply for a job or internship?',
       answer:
-        "Navigate to the job listings, select a position, and click Apply Now.",
+        'Navigate to the job listings, select a position, and click Apply Now.',
     },
-
   ];
 
   return (
     <>
       <div className="hero-faqs">
-        <h1>FAQ's</h1>
+        <h1>
+          FAQ's
+          <hr></hr>
+        </h1>
       </div>
 
       <div className="faq-container">
         {faqs.map((faq, index) => (
           <div key={index} className="faq">
             <h3
-              className={`faq-question ${openIndex === index ? "open" : ""}`}
+              className={`faq-question ${openIndex === index ? 'open' : ''}`}
               onClick={() => toggleFAQ(index)}
             >
               {faq.question}

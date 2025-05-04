@@ -128,10 +128,5 @@ select {
 }
 
 .submit:hover {
-  background: rgb(253, 210, 131);
-}
-/* submit btn gray class */
-.gray {
-  background: #ffde5b;
-  color: black;
+  background: rgb(238, 155, 0);
 }
