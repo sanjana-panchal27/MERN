@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .app-container {
@@ -20,7 +20,7 @@
 
 /* blank space container */
 .stu-container {
-  margin-left: 350px; /* Same width as sidebar */
+  margin-left: 400px; /* Same width as sidebar */
   flex-grow: 1; /* Takes remaining space */
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@
 }
 
 .com-container {
-  margin-left: 350px; /* Same width as sidebar */
+  margin-left: 400px; /* Same width as sidebar */
   flex-grow: 1; /* Takes remaining space */
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@
 }
 
 .admin-container {
-  margin-left: 350px; /* Same width as sidebar */
+  margin-left: 400px; /* Same width as sidebar */
   flex-grow: 1; /* Takes remaining space */
   display: flex;
   flex-direction: column;
@@ -51,7 +51,6 @@
   /* height: calc(100vh - 60px);  */
   background-color: white;
 }
-
 
 /* ====== 📱 Mobile & Tablet Breakpoints ====== */
 

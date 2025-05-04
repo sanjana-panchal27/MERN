@@ -1,21 +1,33 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { FaHome } from "react-icons/fa";
-import { FaUserEdit } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
-import { FaChartBar } from "react-icons/fa";
-import { IoAnalytics } from "react-icons/io5";
-import { GrResources } from "react-icons/gr";
-import { IoIosNotifications } from "react-icons/io";
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { FaHome } from 'react-icons/fa';
+import { FaUserEdit } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
+import { FaChartBar } from 'react-icons/fa';
+import { IoAnalytics } from 'react-icons/io5';
+import { GrResources } from 'react-icons/gr';
+import { IoIosNotifications } from 'react-icons/io';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
-import "./StudentSidebar.css";
+import './StudentSidebar.css';
 
 const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      <div className="student-sidebar">
+      {/* Hamburger stays on screen always */}
+      <button className="hamburger-student" onClick={toggleSidebar}>
+        <GiHamburgerMenu />
+      </button>
+
+      <div className={`student-sidebar ${isOpen ? 'open' : 'closed'}`}>
         <div>
-          <h1 className="title">Student Dashboard</h1>
+          <h1 className="student-header">Student Dashboard</h1>
         </div>
 
         {/* horizontal line */}

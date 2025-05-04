@@ -9,11 +9,11 @@ const StuNav = ({ studentName }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <>
-      <div className="navbar">
+      <div className="student-navbar">
         <nav>
           <ul className="nav-list">
             <li className="div-name">
-              <p>Welcome,</p>
+              <p className="student-welcome">Welcome,</p>
               <h2>{studentName || "StudentName"}</h2>
             </li>
 

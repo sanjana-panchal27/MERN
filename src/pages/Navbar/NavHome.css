@@ -456,7 +456,7 @@ textarea {
 }
 
 /* Submit Button */
-button {
+.contact-submit {
   font-size: 17px;
   padding: 12px;
   width: 100%;
@@ -468,7 +468,7 @@ button {
   transition: 0.3s ease;
 }
 
-button:hover {
+.contact-submit:hover {
   background-color: #005fa3;
 }
 

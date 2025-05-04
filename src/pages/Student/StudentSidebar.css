@@ -1,17 +1,52 @@
 /* sidebar */
 .student-sidebar {
-  width: 350px;
   height: 100%;
   background-color: #000814;
   position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.student-sidebar.closed {
+  transform: translateX(-100%);
+}
+
+/* Hamburger outside sidebar */
+.hamburger-student {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #001934;
+  color: white;
+  border: none;
+  z-index: 200;
+  font-size: 20px;
+  padding: 4px 6px;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-fixed:hover {
+  background: #003366;
 }
 
 /* title */
-h1 {
-  padding: 10px;
-  /* margin-left: 10px; */
+.student-header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
   background-color: #001934;
+  padding: 10px;
+  margin-left: 35px;
 }
 
 /* inputs: all contain */

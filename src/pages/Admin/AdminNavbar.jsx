@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./AdminNavbar.css";
-import { FaUserCircle } from "react-icons/fa";
-import ANotification from "./ANotification";
+import React, { useState } from 'react';
+import './AdminNavbar.css';
+import { FaUserCircle } from 'react-icons/fa';
+import ANotification from './ANotification';
 
 const AdminNavbar = ({ adminName }) => {
   // dropdown menu navigation
@@ -9,20 +9,20 @@ const AdminNavbar = ({ adminName }) => {
 
   return (
     <>
-      <div className="navbar">
+      <div className="admin-navbar">
         <nav>
           <ul className="nav-list">
             <li className="div-name">
-              <p>Welcome,</p>
-              <h2>{adminName || "Name"}</h2>
+              <p className="admin-welcome">Welcome,</p>
+              <h2>{adminName || 'Name'}</h2>
             </li>
 
             {/* rightside navbar icon in one div: right-icon */}
             <div className="right-icon">
               {/* Notification Component */}
-              <li className="nav-notification">
+              <button className="admin-notification">
                 <ANotification showCount={true} />
-              </li>
+              </button>
 
               {/* usercircle profile */}
               <div className="user-profile">

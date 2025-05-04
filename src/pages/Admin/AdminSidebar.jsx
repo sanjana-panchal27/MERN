@@ -1,17 +1,29 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { FaHome, FaUser } from "react-icons/fa";
-import { PiStudentFill } from "react-icons/pi";
-import { TbReportSearch } from "react-icons/tb";
-import { FaChartBar } from "react-icons/fa";
-import "./AdminSidebar.css";
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { FaHome, FaUser } from 'react-icons/fa';
+import { PiStudentFill } from 'react-icons/pi';
+import { TbReportSearch } from 'react-icons/tb';
+import { FaChartBar } from 'react-icons/fa';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import './AdminSidebar.css';
 
 const AdminSidebar = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      <div className="admin-sidebar">
+      {/* Hamburger stays on screen always */}
+      <button className="hamburger-fixed" onClick={toggleSidebar}>
+        <GiHamburgerMenu />
+      </button>
+
+      <div className={`admin-sidebar ${isOpen ? 'open' : 'closed'}`}>
         <div>
-          <h1 className="title">Admin Dashboard</h1>
+          <h1 className="admin-header">Admin Dashboard</h1>
         </div>
 
         {/* horizontal line */}

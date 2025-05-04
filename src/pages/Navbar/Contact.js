@@ -42,7 +42,7 @@ const Contact = () => {
             autoComplete="off"
             required
           ></textarea>
-          <button type="submit">SUBMIT</button>
+          <button type="contact-submit">SUBMIT</button>
         </form>
       </div>
     </>

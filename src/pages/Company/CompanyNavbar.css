@@ -1,14 +1,25 @@
 /* whole navbar container */
-.navbar {
-  background-color: #fb8500;
+.company-navbar {
+  background-color: #f5f7fa;
   height: 60px;
-  width: calc(100% - 350px); /* Navbar width minus sidebar width */
+  width: calc(100% - 380px); /* Adjust for sidebar width */
   position: fixed;
-  left: 350px; /* Starts after sidebar */
+  left: 380px;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.company-navbar h1 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
 }
 
 /* rightside icon: notification + usercircle */
@@ -39,7 +50,7 @@
 }
 
 /* paragraph text styles */
-p {
+.company-welcome {
   color: black;
 }
 

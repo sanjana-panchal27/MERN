@@ -9,11 +9,11 @@ const ComNav = ({ companyName }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
     <>
-      <div className="navbar">
+      <div className="company-navbar">
         <nav>
           <ul className="nav-list">
             <li className="div-name">
-              <p>Welcome,</p>
+              <p className="company-welcome">Welcome,</p>
               <h2>{companyName || "CompanyName"}</h2>
             </li>
 

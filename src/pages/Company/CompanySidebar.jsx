@@ -23,7 +23,7 @@ const CompanySidebar = () => {
 
       <div className={`company-sidebar ${isOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
-          <h1 className="title">Company Dashboard</h1>
+          <h1 className="company-header">Company Dashboard</h1>
         </div>
         <hr />
 

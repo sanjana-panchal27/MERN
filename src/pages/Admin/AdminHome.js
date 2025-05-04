@@ -1,12 +1,5 @@
-import React from "react";
-import "./AdminHome.css";  
-
-import {
-  FaUserGraduate,
-  FaBuilding,
-  FaChartBar,
-  FaFileAlt,
-} from "react-icons/fa";
+import React from 'react';
+import './AdminHome.css';
 import {
   BarChart,
   Bar,
@@ -17,16 +10,16 @@ import {
   ResponsiveContainer,
   LineChart,
   Line,
-} from "recharts";
+} from 'recharts';
 
 const AdminHome = () => {
   const performanceData = [
-    { month: "Jan", students: 5, companies: 3 },
-    { month: "Feb", students: 8, companies: 4 },
-    { month: "Mar", students: 12, companies: 6 },
-    { month: "Apr", students: 15, companies: 8 },
-    { month: "May", students: 18, companies: 10 },
-    { month: "Jun", students: 20, companies: 12 },
+    { month: 'Jan', students: 5, companies: 3 },
+    { month: 'Feb', students: 8, companies: 4 },
+    { month: 'Mar', students: 12, companies: 6 },
+    { month: 'Apr', students: 15, companies: 8 },
+    { month: 'May', students: 18, companies: 10 },
+    { month: 'Jun', students: 20, companies: 12 },
   ];
 
   return (

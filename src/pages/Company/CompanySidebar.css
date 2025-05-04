@@ -15,13 +15,15 @@
 }
 
 /* Header inside sidebar */
-.sidebar-header {
+.company-header {
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   background-color: #001934;
   padding: 10px;
+  margin-left: 25px;
 }
 
 /* Hamburger outside sidebar */
@@ -33,10 +35,19 @@
   color: white;
   border: none;
   z-index: 200;
-  font-size: 24px;
-  padding: 8px;
-  border-radius: 5px;
+  font-size: 20px;
+  padding: 4px 6px;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-fixed:hover {
+  background: #003366;
 }
 
 /* Sidebar link styles */

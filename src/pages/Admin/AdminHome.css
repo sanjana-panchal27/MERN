@@ -137,13 +137,7 @@
   color: red;
 }
 
-button {
-  margin-right: 5px;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
+
 
 .edit-btn {
   background-color: #1f23a3;
@@ -419,76 +413,4 @@ label {
 
 button:hover {
   background: #0056b3;
-}
-
-/* NOTIFICATION */
-.notification-icon {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 30px;
-}
-
-.notification-count {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background: red;
-  color: white;
-  font-size: 12px;
-  border-radius: 50%;
-  padding: 2px 6px;
-}
-
-.notification-dropdown {
-  position: absolute;
-  right: 0;
-  top: 40px;
-  background: white;
-  color: black;
-  width: 280px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  z-index: 1000;
-}
-
-.notification-dropdown h4 {
-  margin: 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-
-.notification-dropdown ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-.notification-dropdown ul li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-  font-size: 14px;
-}
-
-.notification-dropdown ul li:last-child {
-  border-bottom: none;
-}
-
-.clear-btn {
-  width: 100%;
-  padding: 8px;
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-.clear-btn:hover {
-  background-color: #cc0000;
 }
