@@ -1,37 +1,37 @@
-// import React from 'react';
-// import { Route, Routes } from 'react-router-dom';
-// import AdminHome from '../components/Admin/AdminHome';
-// import AManageC from '../components/Admin/AManageC';
-// import AManageS from '../components/Admin/AManageS';
-// import ATrackPerformance from '../components/Admin/ATrackPerformance';
-// import AReports from '../components/Admin/AReports';
-// import ANotification from '../components/Admin/ANotification';
-// import ProtectedRoute from '../ProtectedRoute';
-// import AdminNavbar from '../components/Admin/AdminNavbar';
-// import AdminSidebar from '../components/Admin/AdminSidebar';
+const express = require("express");
+const router = express.Router();
+const Admin = require("../models/Admin");
 
-// const AdminRoutes = () => {
-//   return (
-//     <Route element={<ProtectedRoute allowedRoles={["Admin"]} />}>
-//       <Route
-//         path="/admin-dashboard/*"
-//         element={
-//           <div className="admin-profile">
-//             <AdminNavbar />
-//             <AdminSidebar />
-//             <Routes>
-//               <Route path="/" element={<AdminHome />} />
-//               <Route path="/a-manage-student" element={<AManageS />} />
-//               <Route path="/a-manage-company" element={<AManageC />} />
-//               <Route path="/a-track-performance" element={<ATrackPerformance />} />
-//               <Route path="/a-reports" element={<AReports />} />
-//               <Route path="/a-notification" element={<ANotification />} />
-//             </Routes>
-//           </div>
-//         }
-//       />
-//     </Route>
-//   );
-// };
+// GET admin profile by userId
+router.get("/profile/:userId", async (req, res) => {
+  try {
+    const admin = await Admin.findOne({ userId: req.params.userId });
+    if (!admin) {
+      return res.status(404).json({ message: "Admin not found" });
+    }
+    res.status(200).json(admin);
+  } catch (error) {
+    console.error("Admin profile fetch error:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
 
-// export default AdminRoutes;
+// PUT update admin profile
+router.put("/profile/:userId", async (req, res) => {
+  try {
+    const updatedAdmin = await Admin.findOneAndUpdate(
+      { userId: req.params.userId },
+      req.body,
+      { new: true }
+    );
+    if (!updatedAdmin) {
+      return res.status(404).json({ message: "Admin not found" });
+    }
+    res.status(200).json(updatedAdmin);
+  } catch (error) {
+    console.error("Admin profile update error:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+module.exports = router;
