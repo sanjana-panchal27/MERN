@@ -1,0 +1,90 @@
+.settings-container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.settings-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.settings-container p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.settings-section {
+  margin-bottom: 30px;
+}
+
+.settings-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #444;
+}
+
+.settings-section input[type='text'],
+.settings-section input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.settings-section label {
+  display: block;
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.settings-section input[type='checkbox'] {
+  margin-right: 8px;
+}
+
+.settings-section button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.settings-section button:hover {
+  background-color: #1d4ed8;
+}
+
+.back-btn-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.back-btn {
+  padding: 10px 25px;
+  background-color: #6b7280; /* cool gray */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #4b5563;
+}

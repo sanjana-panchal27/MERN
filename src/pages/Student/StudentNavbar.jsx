@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import "./StudentNavbar.css";
-import { IoIosNotifications } from "react-icons/io";
-import { FaUserCircle } from "react-icons/fa";
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import './StudentNavbar.css';
+import { IoIosNotifications } from 'react-icons/io';
+import { FaUserCircle } from 'react-icons/fa';
 
 const StuNav = ({ studentName }) => {
   // dropdown menu navigation
@@ -14,7 +14,7 @@ const StuNav = ({ studentName }) => {
           <ul className="nav-list">
             <li className="div-name">
               <p className="student-welcome">Welcome,</p>
-              <h2>{studentName || "StudentName"}</h2>
+              <h2>{studentName || 'StudentName'}</h2>
             </li>
 
             {/* rightside navbar icon in one div: right-icon */}
@@ -40,10 +40,7 @@ const StuNav = ({ studentName }) => {
                   <div className="dropdown-menu">
                     <ul>
                       <li>
-                        <NavLink to="/">Profile</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/">Setting</NavLink>
+                        <NavLink to="/settings">Setting</NavLink>
                       </li>
                       <li>
                         <NavLink to="/logout">Log Out</NavLink>
