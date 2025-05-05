@@ -74,10 +74,9 @@ const AdminNavbar = ({ adminName }) => {
                   <div className="dropdown-menu">
                     <ul>
                       <li>
-                        <NavLink to="/">Profile</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/">Setting</NavLink>
+                        <NavLink to="/settings" state={{ userType: 'admin' }}>
+                          Setting
+                        </NavLink>
                       </li>
                       <li>
                         <NavLink to="/logout">Log Out</NavLink>

@@ -40,13 +40,12 @@ const ComNav = ({ companyName }) => {
                   <div className="dropdown-menu">
                     <ul>
                       <li>
-                        <NavLink to="/">Profile</NavLink>
+                        <NavLink to="/settings" state={{ userType: 'company' }}>
+                          Setting
+                        </NavLink>
                       </li>
                       <li>
-                        <NavLink to="/">Setting</NavLink>
-                      </li>
-                      <li>
-                        <NavLink to="/">Log Out</NavLink>
+                        <NavLink to="/logout">Log Out</NavLink>
                       </li>
                     </ul>
                   </div>

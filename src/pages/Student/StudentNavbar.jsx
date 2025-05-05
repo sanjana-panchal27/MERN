@@ -40,7 +40,9 @@ const StuNav = ({ studentName }) => {
                   <div className="dropdown-menu">
                     <ul>
                       <li>
-                        <NavLink to="/settings">Setting</NavLink>
+                        <NavLink to="/settings" state={{ userType: 'student' }}>
+                          Setting
+                        </NavLink>
                       </li>
                       <li>
                         <NavLink to="/logout">Log Out</NavLink>

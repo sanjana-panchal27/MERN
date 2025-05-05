@@ -1,12 +1,22 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Settings.css';
 
 const Setting = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const userType = location.state?.userType; // ✅ Get userType from NavLink state
 
   const handleBack = () => {
-    navigate('/student-dashboard');
+    if (userType === 'student') {
+      navigate('/student-dashboard');
+    } else if (userType === 'admin') {
+      navigate('/admin-dashboard');
+    } else if (userType === 'company') {
+      navigate('/company-dashboard');
+    } else {
+      navigate('/'); // fallback
+    }
   };
 
   return (
