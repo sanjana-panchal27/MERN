@@ -2,18 +2,17 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  /* gap: 20px; */
-  /* padding: 80px; */
-  /* width: 100%; */
-  /* background-color: #003566; */
   align-items: start;
 }
 
-.stu-container h1 {
+.student-heading {
   width: 80%;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
+  background-color: #002246;
+  color: white;
+  padding: 10px;
 }
 
 .profile-card {
@@ -21,8 +20,6 @@
   height: 200px;
   background-color: #f9f9ed;
   border-radius: 10px;
-  /* display: flex;
-  flex-direction: column; */
   padding: 10px;
 }
 
@@ -708,6 +705,7 @@
   width: 100%;
 }
 
+/* Grid Box Styles */
 .s-grid-box1,
 .s-grid-box2,
 .s-grid-box3,
@@ -719,13 +717,15 @@
   flex-direction: column;
   gap: 16px;
   padding: 20px;
-  background-color: #d4e9ff;
-  margin-bottom: 5px;
-  border-radius: 10px;
-  /* Ensure all boxes have the same width by setting a max-width */
+  background-color: #f5f7fa; /* Lighter, modern background color */
+  margin-bottom: 20px; /* Added some spacing between boxes */
+  border-radius: 12px; /* Slightly rounded corners for a soft look */
   width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for better separation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 }
 
+/* Hover Effect */
 .s-grid-box1:hover,
 .s-grid-box2:hover,
 .s-grid-box3:hover,
@@ -733,7 +733,32 @@
 .s-grid-box5:hover,
 .s-grid-box6:hover,
 .s-grid-box7:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover for emphasis */
+}
+
+/* Link Styles */
+.s-grid-box1 a,
+.s-grid-box2 a,
+.s-grid-box3 a,
+.s-grid-box4 a,
+.s-grid-box5 a,
+.s-grid-box6 a,
+.s-grid-box7 a {
+  text-decoration: none; /* Removed text decoration */
+  color: #1a73e8; /* Set link color to blue */
+  font-weight: 600; /* Bold text for emphasis */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.s-grid-box1 a:hover,
+.s-grid-box2 a:hover,
+.s-grid-box3 a:hover,
+.s-grid-box4 a:hover,
+.s-grid-box5 a:hover,
+.s-grid-box6 a:hover,
+.s-grid-box7 a:hover {
+  color: #0c56a0; /* Darker blue on hover */
 }
 
 .s-resource-icon {

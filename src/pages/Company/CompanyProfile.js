@@ -45,7 +45,7 @@ const CompanyProfile = () => {
   return (
     <>
       <div className="com-container">
-        <h1>Company Profile</h1>
+        <h1  className="company-heading">Company Profile</h1>
 
         <div className="c-profile-container">
           <div className="c-form-nav">

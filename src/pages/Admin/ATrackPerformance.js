@@ -1,22 +1,22 @@
-import React from "react";
-import "./AdminHome.css";
+import React from 'react';
+import './AdminHome.css';
 
-import { FiTrendingUp } from "react-icons/fi";
-import { Bar, BarChart, CartesianGrid, XAxis, Tooltip, Legend } from "recharts";
+import { FiTrendingUp } from 'react-icons/fi';
+import { Bar, BarChart, CartesianGrid, XAxis, Tooltip, Legend } from 'recharts';
 
 const chartData = [
-  { month: "January", placed: 10, applied: 50 },
-  { month: "February", placed: 15, applied: 65 },
-  { month: "March", placed: 20, applied: 70 },
-  { month: "April", placed: 18, applied: 60 },
-  { month: "May", placed: 22, applied: 75 },
-  { month: "June", placed: 25, applied: 80 },
+  { month: 'January', placed: 10, applied: 50 },
+  { month: 'February', placed: 15, applied: 65 },
+  { month: 'March', placed: 20, applied: 70 },
+  { month: 'April', placed: 18, applied: 60 },
+  { month: 'May', placed: 22, applied: 75 },
+  { month: 'June', placed: 25, applied: 80 },
 ];
 
 const ATrackPerformance = () => {
   return (
     <div className="admin-container">
-      <h1>Admin Track Performance</h1>
+      <h1 className="admin-heading">Admin Track Performance</h1>
 
       <div className="track-hero">
         <div className="performance-card">
@@ -34,7 +34,7 @@ const ATrackPerformance = () => {
                 axisLine={false}
                 tickMargin={10}
               />
-              <Tooltip cursor={{ fill: "#f3f3f3" }} />
+              <Tooltip cursor={{ fill: '#f3f3f3' }} />
               <Legend />
               <Bar
                 dataKey="placed"

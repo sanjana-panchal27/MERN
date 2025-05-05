@@ -64,7 +64,7 @@ const CPostJob = () => {
 
   return (
     <div className="com-container">
-      <h1>Post Job</h1>
+      <h1  className="company-heading">Post Job</h1>
 
       <div className="c-post-job">
         <h2>Job Openings</h2>

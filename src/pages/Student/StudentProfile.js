@@ -64,7 +64,7 @@ const StudentProfile = () => {
 
   return (
     <div className="stu-container">
-      <h1>Student Profile</h1>
+      <h1 className="student-heading">Student Profile</h1>
 
       <div className="profile-container">
         {/* Navigation Buttons */}

@@ -34,7 +34,7 @@ const CFeedback = () => {
   return (
     <>
       <div className="com-container">
-        <h1>Feedback</h1>
+        <h1  className="company-heading">Feedback</h1>
 
         <div className="c-feedback">
           <form onSubmit={handleSubmit}>

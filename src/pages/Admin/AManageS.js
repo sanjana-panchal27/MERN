@@ -126,7 +126,7 @@ const AManageS = () => {
   return (
     <>
       <div className="admin-container">
-        <h1>Manage Students</h1>
+        <h1 className="admin-heading">Manage Students</h1>
 
         <div className="a-manage-s-hero">
           <div className="s-header">

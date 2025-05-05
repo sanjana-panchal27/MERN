@@ -54,7 +54,7 @@ const AReports = () => {
   return (
     <>
       <div className="admin-container">
-        <h1>Generate Reports</h1>
+        <h1 className="admin-heading">Generate Reports</h1>
 
         <div className="reports-hero">
           <div className="filter-section">

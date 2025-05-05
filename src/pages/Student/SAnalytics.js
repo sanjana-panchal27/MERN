@@ -1,11 +1,11 @@
-import React from "react";
-import "./StudentHome.css";
+import React from 'react';
+import './StudentHome.css';
 
 const SAnalytics = () => {
   return (
     <>
       <div className="stu-container">
-        <h1>Student Analytics</h1>
+        <h1 className="student-heading">Student Analytics</h1>
 
         <div className="s-analytics">
           <h2 className="text-xl font-semibold mb-2">Job Applications</h2>

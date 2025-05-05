@@ -41,7 +41,7 @@ const CAccess = () => {
 
   return (
     <div className="com-container">
-      <h1>Access Student Profiles</h1>
+      <h1 className="company-heading">Access Student Profiles</h1>
 
       <div className="c-access-grid">
         {students.map((student, index) => (

@@ -50,7 +50,7 @@ const SJobSearch = () => {
 
   return (
     <div className="stu-container">
-      <h1>Job Search</h1>
+      <h1 className="student-heading">Job Search</h1>
 
       <div className="s-job-search">
         <input

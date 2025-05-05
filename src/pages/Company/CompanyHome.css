@@ -6,8 +6,14 @@
   align-items: start;
 }
 
-.com-container h1 {
-  border-radius: 10px;
+.company-heading {
+  width: 80%;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #002246;
+  color: white;
+  padding: 10px;
 }
 
 .c-grid-container {
@@ -306,7 +312,7 @@
 
 .c-profile-container {
   text-align: center;
-  height: 30px;
+  height: 70px;
   width: 80%;
   background: #fff;
   padding: 25px;

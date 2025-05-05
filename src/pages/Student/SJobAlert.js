@@ -25,7 +25,7 @@ const SJobAlert = () => {
   return (
     <>
       <div className="stu-container">
-        <h1>Job Alert</h1>
+        <h1 className="student-heading">Job Alert</h1>
 
         <div className="s-job-alert">
           {jobAlerts.map((job, index) => (

@@ -80,7 +80,7 @@ const AManageC = () => {
   return (
     <>
       <div className="admin-container">
-        <h1>Manage Companies</h1>
+        <h1 className="admin-heading">Manage Companies</h1>
 
         <div className="a-manage-c-hero">
           <div className="c-header">

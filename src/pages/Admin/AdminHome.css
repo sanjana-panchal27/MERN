@@ -7,6 +7,16 @@
   width: 70%;
 }
 
+.admin-heading {
+  width: 80%;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #002246;
+  color: white;
+  padding: 10px;
+}
+
 .a-grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -524,4 +524,12 @@ textarea {
   margin-top: 40px;
   margin-left: auto;
   width: 10%;
+  background-color: #007bff;
+  border-radius: 5px;
+  width: 30%;
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  line-height: 1.5;
 }

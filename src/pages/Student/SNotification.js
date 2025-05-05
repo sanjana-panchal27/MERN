@@ -5,7 +5,7 @@ const SNotification = () => {
   return (
     <>
       <div className="stu-container">
-        <h1>Notification</h1>
+        <h1 className="student-heading">Notification</h1>
 
         <div className="s-notification">
           <h2>Upcoming Placement Drive - Google</h2>
