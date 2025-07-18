@@ -1,21 +1,22 @@
 // Navbar.jsx
 
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "./Navbar.css";
-import logo from "../../Assets/images/logo.png";
-
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './Navbar.css';
+// import logo from '../../Assets/images/logo.png';
 
 const Navbar = () => {
   return (
     <div className="hero-section-navbar">
       <nav className="navbar">
-        <NavLink to="/logo">
+        {/* <NavLink to="/logo">
           <img src={logo} alt="logo" className="logo" />
-        </NavLink>
+        </NavLink> */}
         <ul>
           <li>
-            <NavLink to="/" activeClassName="active">HOME</NavLink>
+            <NavLink to="/" activeClassName="active">
+              HOME
+            </NavLink>
           </li>
           <li>
             <NavLink to="/aboutus">ABOUTUS</NavLink>
