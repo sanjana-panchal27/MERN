@@ -70,7 +70,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 <img width="1468" height="681" alt="Image" src="https://github.com/user-attachments/assets/09e43d25-72df-46ba-a511-7b9ab60c2ff7" />
-<img width="638" height="355" alt="Image" src="https://github.com/user-attachments/assets/b908922c-ad42-4f58-8491-bb07d9c45165" />
+<img width="383" height="356" alt="Image" src="https://github.com/user-attachments/assets/bf556f66-a198-48e7-ada1-7a95896cce24" />
+
+<img width="340" height="357" alt="Image" src="https://github.com/user-attachments/assets/a99b0e03-8b1e-4dee-a9a3-34da81eccfba" />
+
+
 <img width="637" height="356" alt="Image" src="https://github.com/user-attachments/assets/202baa32-f1cd-44b1-9a7e-acff2f071365" />
 <img width="644" height="353" alt="Image" src="https://github.com/user-attachments/assets/ecd9621a-fdbc-4244-a474-d82138ab1486" />
 
@@ -79,7 +83,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 <img width="644" height="357" alt="Image" src="https://github.com/user-attachments/assets/0cd177f0-c9dd-411b-9062-8162e58a3ef4" />
 
 <img width="630" height="359" alt="Image" src="https://github.com/user-attachments/assets/ce9919ce-abe3-49a7-9ea1-c8f67a89c369" />
+<img width="638" height="355" alt="Image" src="https://github.com/user-attachments/assets/b908922c-ad42-4f58-8491-bb07d9c45165" />
 
-<img width="383" height="356" alt="Image" src="https://github.com/user-attachments/assets/bf556f66-a198-48e7-ada1-7a95896cce24" />
-
-<img width="340" height="357" alt="Image" src="https://github.com/user-attachments/assets/a99b0e03-8b1e-4dee-a9a3-34da81eccfba" />
