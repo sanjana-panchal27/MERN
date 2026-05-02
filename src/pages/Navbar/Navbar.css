@@ -1,68 +1,100 @@
-/* full hero section with background image */
-.hero-section-navbar {
-  background-image: url('/src/Assets/images/bgimg.png');
-  background-size: cover;
-  background-position: center;
-  height: 600px;
-  width: 100%;
-  position: relative;
-  background-repeat: no-repeat;
-}
-
-/* navbar over background image */
-.navbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 60px;
-  position: absolute;
+/* Sticky Navbar */
+.sticky-nav {
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  width: 100%;
+  z-index: 100;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0; /* Override glassmorphism default if needed */
+  border-left: none;
+  border-right: none;
+  border-top: none;
 }
 
-/* logo */
-.logo {
-  height: 60px;
+.navbar-brand h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.5px;
 }
 
 /* nav links */
 .navbar ul {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 25px;
   margin: 0;
   padding: 0;
 }
 
 .navbar a {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 6px 10px;
-  transition: color 0.3s;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  position: relative;
 }
 
 .navbar a:hover {
-  color: orange;
+  background-color: var(--hover-overlay);
+  color: var(--primary-color);
 }
 
 .navbar a.active {
-  border-bottom: 2px solid orange;
+  color: var(--primary-color);
+}
+
+.navbar a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text-color);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--hover-overlay);
+  transform: rotate(15deg);
 }
 
 /* login button styled as nav item */
 .login a {
-  background-color: orange;
+  background: var(--primary-gradient);
   color: white !important;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: 500;
-  transition: background 0.3s;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-md);
 }
 
 .login a:hover {
-  background-color: rgb(238, 155, 0);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: var(--primary-gradient);
 }

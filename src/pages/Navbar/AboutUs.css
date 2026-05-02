@@ -1,0 +1,249 @@
+/* About Us Wrapper */
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Hero Section */
+.about-hero {
+  position: relative;
+  height: 40vh;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  margin-top: 60px; /* offset for sticky nav */
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+
+/* Content Layout */
+.about-content {
+  padding: 60px 10% 100px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Intro Section */
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  border-radius: 32px;
+  max-width: 900px;
+  margin: -80px auto 0;
+  position: relative;
+  z-index: 10;
+}
+
+.about-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: var(--primary-gradient);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-md);
+}
+
+.about-desc {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.about-desc strong {
+  color: var(--primary-color);
+}
+
+/* Section Headers */
+.about-section-header {
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.about-section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* Mission Grid */
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mission-card {
+  padding: 40px 30px;
+  border-radius: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mission-icon {
+  font-size: 48px;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.mission-card p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Offerings Container */
+.offerings-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.offering-card {
+  flex: 1;
+  padding: 40px;
+  border-radius: 24px;
+}
+
+.offering-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.offering-icon {
+  font-size: 32px;
+}
+
+.offering-header h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.offering-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.offering-list li {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 24px;
+}
+
+.offering-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .offerings-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 3rem;
+  }
+  .about-intro {
+    padding: 30px 20px;
+    margin-top: -40px;
+  }
+  .about-desc {
+    font-size: 1.1rem;
+  }
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tech Grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  width: 100%;
+}
+
+.tech-card {
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.tech-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.tech-card p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.inline-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
