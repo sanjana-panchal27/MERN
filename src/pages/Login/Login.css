@@ -73,7 +73,8 @@
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+  width: 100%;
 }
 
 .input-group {
@@ -83,8 +84,10 @@
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   padding: 0 16px;
-  height: 50px;
+  height: 52px;
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .input-group:focus-within {
@@ -116,27 +119,50 @@
 .select-group {
   justify-content: space-between;
   padding: 0 16px;
+  position: relative;
 }
 
 .select-group label {
   color: var(--text-muted);
   font-size: 0.9rem;
   font-weight: 500;
+  white-space: nowrap;
+  margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .login-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: transparent;
+  background-color: transparent !important;
   border: none;
   outline: none;
   color: var(--text-color);
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
+  flex: 1;
+  padding-right: 24px;
+  text-align: right;
+}
+
+.select-group::after {
+  content: '\25BE';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+  font-size: 0.8rem;
 }
 
 .login-select option {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: #1e1e2e;
+  color: #e2e8f0;
+  padding: 8px;
 }
 
 .forgot-password {
