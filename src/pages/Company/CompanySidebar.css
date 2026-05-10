@@ -1,84 +1,17 @@
-/* Sidebar styles */
-.company-sidebar {
-  height: 100%;
-  background-color: #000814;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: transform 0.3s ease-in-out;
-  z-index: 100;
+/* Reusing modern sidebar styles from StudentSidebar */
+.modern-sidebar.company-sidebar-theme .sidebar-header h2 {
+  background: linear-gradient(135deg, #111827, #374151);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Sidebar closed state */
-.company-sidebar.closed {
-  transform: translateX(-100%);
+.modern-sidebar.company-sidebar-theme .nav-item.active {
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.1), rgba(55, 65, 81, 0.1));
+  color: #111827;
+  border-right: 4px solid #111827;
 }
 
-/* Header inside sidebar */
-.company-header {
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  background-color: #001934;
-  padding: 10px;
-  margin-left: 25px;
-}
-
-/* Hamburger outside sidebar */
-.hamburger-fixed {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  background: #001934;
-  color: white;
-  border: none;
-  z-index: 200;
-  font-size: 20px;
-  padding: 4px 6px;
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hamburger-fixed:hover {
-  background: #003366;
-}
-
-/* Sidebar link styles */
-.c-inputs {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  margin-left: 10px;
-}
-
-.c-input {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  height: 50px;
-}
-
-.c-input:hover {
-  background-color: #003566;
-  border-radius: 5px;
-  width: 90%;
-  transition: 0.5s;
-}
-
-.c-input .icon {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  width: 100%;
-  padding: 10px;
+.modern-sidebar.company-sidebar-theme .nav-item:hover {
+  background: rgba(17, 24, 39, 0.05);
+  color: #111827;
 }

@@ -77,3 +77,19 @@ a {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Common Dashboard Layout Fixes */
+.dashboard-content {
+  margin-top: 80px; /* Adjusts for the fixed navbar height */
+  margin-left: 280px; /* Adjusts for the fixed sidebar width */
+  min-height: calc(100vh - 80px);
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+}

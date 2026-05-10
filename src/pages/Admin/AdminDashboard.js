@@ -21,22 +21,24 @@ const AdminDashboard = () => {
         <AdminNavbar adminName={admin.name} />
         <AdminSidebar />
 
-        <Routes>
-          <Route index element={<AdminHome />}></Route>
-          <Route exact path="a-manage-student" element={<AManageS />}></Route>
-          <Route exact path="a-manage-company" element={<AManageC />}></Route>
-          <Route
-            exact
-            path="a-track-performance"
-            element={<ATrackPerformance />}
-          ></Route>
-          <Route exact path="a-reports" element={<AReports />}></Route>
-          <Route
-            exact
-            path="a-notification"
-            element={<ANotification />}
-          ></Route>
-        </Routes>
+        <div className="dashboard-content">
+          <Routes>
+            <Route index element={<AdminHome />}></Route>
+            <Route exact path="a-manage-student" element={<AManageS />}></Route>
+            <Route exact path="a-manage-company" element={<AManageC />}></Route>
+            <Route
+              exact
+              path="a-track-performance"
+              element={<ATrackPerformance />}
+            ></Route>
+            <Route exact path="a-reports" element={<AReports />}></Route>
+            <Route
+              exact
+              path="a-notification"
+              element={<ANotification />}
+            ></Route>
+          </Routes>
+        </div>
       </div>
     </div>
   );

@@ -22,14 +22,16 @@ const CompanyDashboard = () => {
         <CompanyNavbar companyName={company.name} />
         <CompanySidebar />
 
-        <Routes>
-          <Route index element={<CompanyHome />}></Route>
-          <Route exact path="c-profile" element={<CompanyProfile />}></Route>
-          <Route exact path="c-postjob" element={<CPostJob />}></Route>
-          <Route exact path="c-access" element={<CompanyAccessS />}></Route>
-          <Route exact path="c-shortlist" element={<CShortlist />}></Route>
-          <Route exact path="c-feedback" element={<CompanyFeedback />}></Route>
-        </Routes>
+        <div className="dashboard-content">
+          <Routes>
+            <Route index element={<CompanyHome />}></Route>
+            <Route exact path="c-profile" element={<CompanyProfile />}></Route>
+            <Route exact path="c-postjob" element={<CPostJob />}></Route>
+            <Route exact path="c-access" element={<CompanyAccessS />}></Route>
+            <Route exact path="c-shortlist" element={<CShortlist />}></Route>
+            <Route exact path="c-feedback" element={<CompanyFeedback />}></Route>
+          </Routes>
+        </div>
       </div>
     </>
   );

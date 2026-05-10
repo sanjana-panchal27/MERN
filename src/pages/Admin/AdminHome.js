@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './AdminHome.css';
 import {
   BarChart,
@@ -11,6 +12,20 @@ import {
   LineChart,
   Line,
 } from 'recharts';
+import { FaUserGraduate, FaBuilding, FaCheckCircle, FaChartLine } from 'react-icons/fa';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const AdminHome = () => {
   const performanceData = [
@@ -23,70 +38,108 @@ const AdminHome = () => {
   ];
 
   return (
-    <>
-      <div className="admin-container">
-        <div className="a-grid-container">
-          <div className="a-grid-box blue">
-            <h2 className="a-grid-title">Total Students</h2>
-            <p className="a-grid-p"> 51</p>
-          </div>
+    <motion.div 
+      className="modern-admin-container"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="admin-header">
+        <motion.h1 variants={itemVariants} className="admin-title">
+          Admin Dashboard
+        </motion.h1>
+        <motion.p variants={itemVariants} className="admin-subtitle">
+          Overview of platform activity and placement metrics.
+        </motion.p>
+      </div>
 
-          <div className="a-grid-box yellow">
-            <h2 className="a-grid-title">Total Companies</h2>
-            <p className="a-grid-p"> 50 </p>
+      <motion.div variants={itemVariants} className="a-stats-grid">
+        <motion.div whileHover={{ scale: 1.05 }} className="a-stat-card blue-glass">
+          <div className="stat-icon-wrapper"><FaUserGraduate /></div>
+          <div>
+            <h3>Total Students</h3>
+            <p className="a-stat-value">51</p>
           </div>
+        </motion.div>
 
-          {/* job offere recieved */}
-          <div className="a-grid-box green">
-            <h2 className="a-grid-title">Placed Students</h2>
-            <p className="a-grid-p"> 11 </p>
+        <motion.div whileHover={{ scale: 1.05 }} className="a-stat-card yellow-glass">
+          <div className="stat-icon-wrapper"><FaBuilding /></div>
+          <div>
+            <h3>Total Companies</h3>
+            <p className="a-stat-value">50</p>
           </div>
+        </motion.div>
 
-          {/* shortlisted application */}
-          <div className="a-grid-box purple">
-            <h2 className="a-grid-title">Placement Rate</h2>
-            <p className="a-grid-p"> 3%</p>
+        <motion.div whileHover={{ scale: 1.05 }} className="a-stat-card green-glass">
+          <div className="stat-icon-wrapper"><FaCheckCircle /></div>
+          <div>
+            <h3>Placed Students</h3>
+            <p className="a-stat-value">11</p>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Performance Charts */}
-        <div className="charts-container">
-          {/* Bar Chart */}
-          <div className="chart-box">
+        <motion.div whileHover={{ scale: 1.05 }} className="a-stat-card purple-glass">
+          <div className="stat-icon-wrapper"><FaChartLine /></div>
+          <div>
+            <h3>Placement Rate</h3>
+            <p className="a-stat-value">3%</p>
+          </div>
+        </motion.div>
+      </motion.div>
+
+      {/* Performance Charts */}
+      <motion.div variants={itemVariants} className="charts-container">
+        {/* Bar Chart */}
+        <motion.div whileHover={{ y: -5 }} className="modern-chart-box">
+          <div className="chart-header">
             <h3>Student & Company Growth</h3>
-            <ResponsiveContainer width="100%" height={250}>
-              <BarChart data={performanceData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="month" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="students" fill="#4C4CD4" name="Students" />
-                <Bar dataKey="companies" fill="#E4B02B" name="Companies" />
+          </div>
+          <div className="chart-body">
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={performanceData} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
+                <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{fill: '#64748b'}} />
+                <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b'}} />
+                <Tooltip 
+                  contentStyle={{ borderRadius: '10px', border: 'none', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}
+                  cursor={{fill: 'rgba(241, 245, 249, 0.5)'}}
+                />
+                <Bar dataKey="students" fill="#3b82f6" name="Students" radius={[4, 4, 0, 0]} barSize={30} />
+                <Bar dataKey="companies" fill="#f59e0b" name="Companies" radius={[4, 4, 0, 0]} barSize={30} />
               </BarChart>
             </ResponsiveContainer>
           </div>
+        </motion.div>
 
-          {/* Line Chart */}
-          <div className="chart-box">
+        {/* Line Chart */}
+        <motion.div whileHover={{ y: -5 }} className="modern-chart-box">
+          <div className="chart-header">
             <h3>Placement Trend</h3>
-            <ResponsiveContainer width="100%" height={250}>
-              <LineChart data={performanceData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="month" />
-                <YAxis />
-                <Tooltip />
+          </div>
+          <div className="chart-body">
+            <ResponsiveContainer width="100%" height={300}>
+              <LineChart data={performanceData} margin={{ top: 20, right: 30, left: 0, bottom: 0 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
+                <XAxis dataKey="month" axisLine={false} tickLine={false} tick={{fill: '#64748b'}} />
+                <YAxis axisLine={false} tickLine={false} tick={{fill: '#64748b'}} />
+                <Tooltip 
+                  contentStyle={{ borderRadius: '10px', border: 'none', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}
+                />
                 <Line
                   type="monotone"
                   dataKey="students"
-                  stroke="#24A148"
+                  stroke="#10b981"
+                  strokeWidth={4}
+                  dot={{ r: 6, fill: '#10b981', strokeWidth: 2, stroke: '#fff' }}
+                  activeDot={{ r: 8 }}
                   name="Placed Students"
                 />
               </LineChart>
             </ResponsiveContainer>
           </div>
-        </div>
-      </div>
-    </>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 };
 

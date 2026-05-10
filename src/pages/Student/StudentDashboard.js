@@ -35,17 +35,19 @@ const SDashboard = () => {
     <div className="s-dashboard">
       <StudentNavbar studentName={student.name} />
       <StudentSidebar />
-      <Routes>
-        <Route index element={<StudentHome />} />
-        <Route path="s-profile" element={<StudentProfile />} />
-        <Route path="s-job-search" element={<SJobSearch />} />
-        <Route path="s-job-alert" element={<SJobAlert />} />
-        <Route path="s-analytics" element={<SAnalytics />} />
-        <Route path="s-resources" element={<SResources />} />
-        <Route path="s-notification" element={<SNotification />} />
-        <Route path="s-track-performance" element={<STrackPerformance />} />
-        <Route path="s-video-page/:videoId" element={<VideoPage />} />
-      </Routes>
+      <div className="dashboard-content">
+        <Routes>
+          <Route index element={<StudentHome />} />
+          <Route path="s-profile" element={<StudentProfile />} />
+          <Route path="s-job-search" element={<SJobSearch />} />
+          <Route path="s-job-alert" element={<SJobAlert />} />
+          <Route path="s-analytics" element={<SAnalytics />} />
+          <Route path="s-resources" element={<SResources />} />
+          <Route path="s-notification" element={<SNotification />} />
+          <Route path="s-track-performance" element={<STrackPerformance />} />
+          <Route path="s-video-page/:videoId" element={<VideoPage />} />
+        </Routes>
+      </div>
     </div>
   );
 };

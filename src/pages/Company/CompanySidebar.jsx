@@ -1,78 +1,93 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FaHome, FaUserEdit, FaBriefcase } from 'react-icons/fa';
-import { PiStudentBold } from 'react-icons/pi';
-import { MdEventAvailable, MdFeedback } from 'react-icons/md';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { FaHome, FaUserEdit, FaSearch, FaCommentDots } from 'react-icons/fa';
+import { MdOutlineWork } from 'react-icons/md';
+import { HiMenuAlt2 } from 'react-icons/hi';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import './CompanySidebar.css';
 
 const CompanySidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(window.innerWidth > 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsOpen(true);
+      } else {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMobileSidebar = () => {
+    if (window.innerWidth <= 768) {
+      setIsOpen(false);
+    }
+  };
+
   return (
     <>
-      {/* Hamburger stays on screen always */}
-      <button className="hamburger-fixed" onClick={toggleSidebar}>
-        <GiHamburgerMenu />
+      <button className="mobile-toggle-btn" onClick={toggleSidebar}>
+        <HiMenuAlt2 />
       </button>
 
-      <div className={`company-sidebar ${isOpen ? 'open' : 'closed'}`}>
-        <div className="sidebar-header">
-          <h1 className="company-header">Company Dashboard</h1>
-        </div>
-        <hr />
-
-        <div className="c-inputs">
-          <ul>
-            <li className="c-input">
-              <NavLink to="/company-dashboard" className="icon">
-                <FaHome />
-                <span> Dashboard</span>
-              </NavLink>
-            </li>
-
-            <li className="c-input">
-              <NavLink to="/company-dashboard/c-profile" className="icon">
-                <FaUserEdit />
-                <span>Create Profile</span>
-              </NavLink>
-            </li>
-
-            <li className="c-input">
-              <NavLink to="/company-dashboard/c-postjob" className="icon">
-                <FaBriefcase />
-                <span>Post Job Openings</span>
-              </NavLink>
-            </li>
-
-            <li className="c-input">
-              <NavLink to="/company-dashboard/c-access" className="icon">
-                <PiStudentBold />
-                <span>Access Student Profiles</span>
-              </NavLink>
-            </li>
-
-            <li className="c-input">
-              <NavLink to="/company-dashboard/c-shortlist" className="icon">
-                <MdEventAvailable />
-                <span>Shortlist & Schedule Interview</span>
-              </NavLink>
-            </li>
-
-            <li className="c-input">
-              <NavLink to="/company-dashboard/c-feedback" className="icon">
-                <MdFeedback />
-                <span>Feedback</span>
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            <motion.div 
+              className="sidebar-overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={closeMobileSidebar}
+            />
+            <motion.div 
+              className="modern-sidebar company-sidebar-theme"
+              initial={{ x: '-100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '-100%' }}
+              transition={{ type: 'spring', bounce: 0, duration: 0.4 }}
+            >
+              <div className="sidebar-header">
+                <h2>Company Portal</h2>
+              </div>
+              <div className="sidebar-links">
+                <NavLink to="/company-dashboard" end className={({isActive}) => isActive ? "nav-item active" : "nav-item"} onClick={closeMobileSidebar}>
+                  <FaHome className="nav-icon" />
+                  <span>Dashboard</span>
+                </NavLink>
+                <NavLink to="/company-dashboard/c-profile" className={({isActive}) => isActive ? "nav-item active" : "nav-item"} onClick={closeMobileSidebar}>
+                  <FaUserEdit className="nav-icon" />
+                  <span>Company Profile</span>
+                </NavLink>
+                <NavLink to="/company-dashboard/c-postjob" className={({isActive}) => isActive ? "nav-item active" : "nav-item"} onClick={closeMobileSidebar}>
+                  <MdOutlineWork className="nav-icon" />
+                  <span>Post a Job</span>
+                </NavLink>
+                <NavLink to="/company-dashboard/c-access" className={({isActive}) => isActive ? "nav-item active" : "nav-item"} onClick={closeMobileSidebar}>
+                  <FaSearch className="nav-icon" />
+                  <span>Access Students</span>
+                </NavLink>
+                <NavLink to="/company-dashboard/c-shortlist" className={({isActive}) => isActive ? "nav-item active" : "nav-item"} onClick={closeMobileSidebar}>
+                  <FaSearch className="nav-icon" />
+                  <span>Shortlisted</span>
+                </NavLink>
+                <NavLink to="/company-dashboard/c-feedback" className={({isActive}) => isActive ? "nav-item active" : "nav-item"} onClick={closeMobileSidebar}>
+                  <FaCommentDots className="nav-icon" />
+                  <span>Feedback</span>
+                </NavLink>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 };
